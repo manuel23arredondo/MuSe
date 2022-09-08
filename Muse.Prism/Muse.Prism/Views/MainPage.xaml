@@ -2,10 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Muse.Prism.Views.MainPage"
-             Title="{Binding Title}">
-
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
-
+             BackgroundColor="#E659E3">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="MuSe" FontFamily="Lobster" HorizontalTextAlignment="Center" TextColor="White" FontSize="Header"></Label>
+            <Label Text="Mujer Segura" HorizontalTextAlignment="Center" TextColor="White" FontSize="Large"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+        
 </ContentPage>

@@ -1,0 +1,13 @@
+C:\MuSe\Muse.Prism\Muse.Prism\bin\Debug\netstandard2.0\Muse.Prism.deps.json
+C:\MuSe\Muse.Prism\Muse.Prism\bin\Debug\netstandard2.0\Muse.Prism.dll
+C:\MuSe\Muse.Prism\Muse.Prism\bin\Debug\netstandard2.0\Muse.Prism.pdb
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.csproj.AssemblyReference.cache
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.GeneratedMSBuildEditorConfig.editorconfig
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.AssemblyInfoInputs.cache
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.AssemblyInfo.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.csproj.CoreCompileInputs.cache
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\XamlC.stamp
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.dll
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.pdb
