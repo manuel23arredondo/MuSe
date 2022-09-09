@@ -4,8 +4,15 @@
              xmlns:prism="http://prismlibrary.com"
              x:Class="Muse.Prism.App">
   <Application.Resources>
-
-    <!-- Application resource dictionary -->
+      
+        <ResourceDictionary>
+            <OnPlatform x:Key="Baliung" x:TypeArguments="x:String">
+                <On Platform="Android" Value="FontsFree-Net-Baliung.ttf#FontsFree-Net-Baliung"></On>
+            </OnPlatform>
+            <OnPlatform x:Key="Faradilla" x:TypeArguments="x:String">
+                <On Platform="Android" Value="FaradillaQueenDemo.ttf#FaradillaQueenDemo"></On>
+            </OnPlatform>
+        </ResourceDictionary>
 
   </Application.Resources>
 </prism:PrismApplication>
