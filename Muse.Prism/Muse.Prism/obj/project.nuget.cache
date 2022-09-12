@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nFZwYuX4mocLkytNOqyMGdKMgnUxhm6pkuYHRhIdWmyxr5YHeEh6aq2dat1p99UZk6xBP+ni6PYrmQWDmdNDbQ==",
+  "dgSpecHash": "ptYlufo+m+VAsT8hzQL1Z1fFsd1sfs6Enhf4AkTQduB2OctaXkMMv8bCrmdGoyOyDQK9C3HwEs8Aas50NgULqA==",
   "success": true,
   "projectFilePath": "C:\\MuSe\\Muse.Prism\\Muse.Prism\\Muse.Prism.csproj",
   "expectedPackageFiles": [
@@ -20,9 +20,10 @@
     "C:\\Users\\Manuel\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\Manuel\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Manuel\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.essentials.interfaces\\1.7.0\\xamarin.essentials.interfaces.1.7.0.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512"
+    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.essentials.interfaces\\1.7.3.2\\xamarin.essentials.interfaces.1.7.3.2.nupkg.sha512",
+    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
+    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2515\\xamarin.forms.maps.5.0.0.2515.nupkg.sha512"
   ],
   "logs": []
 }

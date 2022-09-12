@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Muse.Prism.Views.LocationPage"
+             Title="Location"
+             BackgroundColor="#F4E6FF">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="menu.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <maps:Map IsShowingUser="True"></maps:Map>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <Button Grid.Column="1" Text="S.O.S" FontSize="Large" WidthRequest="80" HeightRequest="80" CornerRadius="40" VerticalOptions="Center" HorizontalOptions ="Center" BackgroundColor="#E61414"/>
+                    <Button Grid.Column="0" Grid.Row="0" CornerRadius="60" ScaleX="1.2" Margin="11" HorizontalOptions="Center" Text="Monitorear" TextColor="White" FontFamily="{StaticResource Segoe}" BackgroundColor="#E614B5"></Button>
+                    <Button Grid.Column="0" Grid.Row="1" CornerRadius="60" ScaleX="1.3" Margin="11" HorizontalOptions="CenterAndExpand" Text="Monitores" TextColor="White" FontFamily="{StaticResource Segoe}" BackgroundColor="#E614B5"></Button>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

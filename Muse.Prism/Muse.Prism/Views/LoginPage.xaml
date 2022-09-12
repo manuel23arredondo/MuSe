@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Muse.Prism.Views.LoginPage"
+             BackgroundColor="#F4E6FF"
+             Title="Login">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                
+                <Label Grid.Column="0" Grid.Row="0" Text="MuSe" FontFamily="{StaticResource Segoe}" FontSize="Title" TextColor="#707070" HorizontalTextAlignment="Center"></Label>
+                <Label Grid.Column="0" Grid.Row="0" Text="Mujer Segura" FontFamily="{StaticResource Faradilla}" FontSize="Title" TextColor="#707070" HorizontalTextAlignment="Center"></Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="ic_launcher" Grid.Row="1" Grid.Column="0" Scale="3"></Image>
+                </Grid>
+                    
+                <Label Text="Iniciar sesión" HorizontalTextAlignment="Center" TextColor="#6155A6" Scale="1.5"></Label>
+                
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.7" ScaleX="0.7">
+                        <Entry BackgroundColor="White"  Placeholder="Correo electrónico" PlaceholderColor="Black" TextColor="Black" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Segoe}"/>
+                    </Frame>
+               
+                    <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.7" ScaleX="0.7">
+                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Contraseña" PlaceholderColor="Black" TextColor="Black" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="{StaticResource Segoe}"/>
+                    </Frame>
+
+                    <Button Grid.Column="0" Grid.Row="2" CornerRadius="20" HorizontalOptions="Center" Text="Crear Cuenta" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
+
+                    <ActivityIndicator Grid.Column="0" Grid.Row="3" IsRunning="True"></ActivityIndicator>
+
+                    <Label  Grid.Column="0" Grid.Row="4" Text="¿No tienes cuenta? Regístrate" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" HorizontalTextAlignment="Center"></Label>
+                    <Label  Grid.Column="0" Grid.Row="5" Text="Olvidé mi contraseña" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" HorizontalTextAlignment="Center"></Label>
+                </Grid>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -12,6 +12,12 @@
             <OnPlatform x:Key="Faradilla" x:TypeArguments="x:String">
                 <On Platform="Android" Value="FaradillaQueenDemo.ttf#FaradillaQueenDemo"></On>
             </OnPlatform>
+            <OnPlatform x:Key="Segoe" x:TypeArguments="x:String">
+                <On Platform="Android" Value="FontsFree-Net-Segoe-UI.ttf#FontsFree-Net-Segoe-UI"></On>
+            </OnPlatform>
+            <OnPlatform x:Key="Squishy" x:TypeArguments="x:String">
+                <On Platform="Android" Value="SquishyWhaleDemoRegular.ttf#SquishyWhaleDemoRegular"></On>
+            </OnPlatform>
         </ResourceDictionary>
 
   </Application.Resources>

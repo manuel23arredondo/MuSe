@@ -6,11 +6,11 @@
     
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="40">
-                <Label Text="MuSe" FontFamily="{StaticResource Faradilla}" HorizontalTextAlignment="Center" TextColor="White" FontSize="100"></Label>
+            <StackLayout Padding="35">
+                <Label Text="MuSe" FontFamily="{StaticResource Segoe}" HorizontalTextAlignment="Center" TextColor="White" FontSize="100"></Label>
                 <Label Text="Mujer Segura" FontFamily="{StaticResource Baliung}" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"></Label>
                 <Image Margin="100" Source="ic_launcher" ScaleX="5" ScaleY="5" HorizontalOptions="Center"></Image>
-                <Label Text=" Mujer segura un monitor te acompaña" FontFamily="{StaticResource Faradilla}" FontSize="35" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                <Label Text=" Mujer segura un monitor te acompaña" FontFamily="{StaticResource Baliung}" FontSize="35" HorizontalTextAlignment="Center" TextColor="White"></Label>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

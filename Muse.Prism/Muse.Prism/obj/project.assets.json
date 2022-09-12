@@ -225,7 +225,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.7.0": {
+      "Xamarin.Essentials/1.7.3": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -241,10 +241,10 @@
           }
         }
       },
-      "Xamarin.Essentials.Interfaces/1.7.0": {
+      "Xamarin.Essentials.Interfaces/1.7.3.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Essentials": "1.7.0"
+          "Xamarin.Essentials": "1.7.3"
         },
         "compile": {
           "lib/netstandard2.0/Essential.Interfaces.dll": {}
@@ -253,7 +253,7 @@
           "lib/netstandard2.0/Essential.Interfaces.dll": {}
         }
       },
-      "Xamarin.Forms/5.0.0.2291": {
+      "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
@@ -276,6 +276,22 @@
         "build": {
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.Forms.Maps/5.0.0.2515": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2515"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -1121,10 +1137,10 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.7.0": {
-      "sha512": "xfUJNxtfMC05VBej7fVUg6Zd9VwM2kqW9LH0tcrSA6IsBTl0EsIGkYUOz1BoKT2rseWW8o3kTi5WH/yZV4GgJw==",
+    "Xamarin.Essentials/1.7.3": {
+      "sha512": "b6NfxOfkmMGN54a4OcV/D7KXclWWqFwgixMPzlAku3kfKgUBGW4vBdNaujIBmk57NbGpWB2IS78ek0gDHNKwoQ==",
       "type": "package",
-      "path": "xamarin.essentials/1.7.0",
+      "path": "xamarin.essentials/1.7.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1159,26 +1175,30 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.7.0.nupkg.sha512",
+        "xamarin.essentials.1.7.3.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Essentials.Interfaces/1.7.0": {
-      "sha512": "g6M3LJv+SaArdknb7N2HBIW6F2/Uzd2k7hNYsbuDGZ86RwJThrFL5pSADITYhg2hXcKQZ9izMkueh5FKoCx77A==",
+    "Xamarin.Essentials.Interfaces/1.7.3.2": {
+      "sha512": "jcArB+Fi5TqYSe2jBp22nvCDHDTiOJKCsdFUuyphBeKFbLJ5CQsPKIUeeHk/p4j0NVK3LKKTLK22HMs1BwHeDg==",
       "type": "package",
-      "path": "xamarin.essentials.interfaces/1.7.0",
+      "path": "xamarin.essentials.interfaces/1.7.3.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net6.0-android31.0/Essential.Interfaces.dll",
+        "lib/net6.0-android31.0/Essential.Interfaces.xml",
+        "lib/net6.0-ios15.4/Essential.Interfaces.dll",
+        "lib/net6.0/Essential.Interfaces.dll",
         "lib/netstandard2.0/Essential.Interfaces.dll",
-        "xamarin.essentials.interfaces.1.7.0.nupkg.sha512",
+        "xamarin.essentials.interfaces.1.7.3.2.nupkg.sha512",
         "xamarin.essentials.interfaces.nuspec"
       ]
     },
-    "Xamarin.Forms/5.0.0.2291": {
-      "sha512": "No5HI+c05RBDT5Oe7ZSRaO+cQVeZNhrYdchvczNeZdWQiwrux8RJcVg8chI4DZ2xODeBjF0juIF9u1A5ysZ+uQ==",
+    "Xamarin.Forms/5.0.0.2515": {
+      "sha512": "n/Y/xk1idWRkxk7xItwvNwwda7CHpIk7JxD6tXkGXmTqiVGV1xRkepf5aKXFkQLM9KIQhXXYBxPsdyJysPpktw==",
       "type": "package",
-      "path": "xamarin.forms/5.0.0.2291",
+      "path": "xamarin.forms/5.0.0.2515",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1387,8 +1407,42 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.5.0.0.2291.nupkg.sha512",
+        "xamarin.forms.5.0.0.2515.nupkg.sha512",
         "xamarin.forms.nuspec"
+      ]
+    },
+    "Xamarin.Forms.Maps/5.0.0.2515": {
+      "sha512": "B+fC4m/UIT0SScSisejywpWRUZy/aWYUOxCZae0aV2OYWYV7dE9cJvN9PcCVeAT/Ed+xf3rxWhXahvm5RWsJgg==",
+      "type": "package",
+      "path": "xamarin.forms.maps/5.0.0.2515",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.5.0.0.2515.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
       ]
     }
   },
@@ -1396,8 +1450,9 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "Prism.DryIoc.Forms >= 8.1.97",
-      "Xamarin.Essentials.Interfaces >= 1.7.0",
-      "Xamarin.Forms >= 5.0.0.2291"
+      "Xamarin.Essentials.Interfaces >= 1.7.3.2",
+      "Xamarin.Forms >= 5.0.0.2515",
+      "Xamarin.Forms.Maps >= 5.0.0.2515"
     ]
   },
   "packageFolders": {
@@ -1457,11 +1512,15 @@
           },
           "Xamarin.Essentials.Interfaces": {
             "target": "Package",
-            "version": "[1.7.0, )"
+            "version": "[1.7.3.2, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[5.0.0.2291, )"
+            "version": "[5.0.0.2515, )"
+          },
+          "Xamarin.Forms.Maps": {
+            "target": "Package",
+            "version": "[5.0.0.2515, )"
           }
         },
         "imports": [

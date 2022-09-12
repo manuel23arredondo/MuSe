@@ -4,6 +4,7 @@ using Prism.Ioc;
 using UIKit;
 
 
+
 namespace Muse.Prism.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -22,6 +23,7 @@ namespace Muse.Prism.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Xamarin.FormsMaps.Init();
             LoadApplication(new App(new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);

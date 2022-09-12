@@ -1,0 +1,10 @@
+C:\MuSe\MuSe.Common\bin\Debug\netstandard2.1\MuSe.Common.deps.json
+C:\MuSe\MuSe.Common\bin\Debug\netstandard2.1\MuSe.Common.dll
+C:\MuSe\MuSe.Common\bin\Debug\netstandard2.1\MuSe.Common.pdb
+C:\MuSe\MuSe.Common\obj\Debug\netstandard2.1\MuSe.Common.csproj.AssemblyReference.cache
+C:\MuSe\MuSe.Common\obj\Debug\netstandard2.1\MuSe.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\MuSe\MuSe.Common\obj\Debug\netstandard2.1\MuSe.Common.AssemblyInfoInputs.cache
+C:\MuSe\MuSe.Common\obj\Debug\netstandard2.1\MuSe.Common.AssemblyInfo.cs
+C:\MuSe\MuSe.Common\obj\Debug\netstandard2.1\MuSe.Common.csproj.CoreCompileInputs.cache
+C:\MuSe\MuSe.Common\obj\Debug\netstandard2.1\MuSe.Common.dll
+C:\MuSe\MuSe.Common\obj\Debug\netstandard2.1\MuSe.Common.pdb

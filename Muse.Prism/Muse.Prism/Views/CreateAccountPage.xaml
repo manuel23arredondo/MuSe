@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Muse.Prism.Views.CreateAccountPage"
+             BackgroundImageSource="login"
+             Title="Create account">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="12">
+                <Grid Padding="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Frame IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.7">
+                        <Entry Grid.Column="0" Grid.Row="0" BackgroundColor="White"  Placeholder="Nombre(s)" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
+                        <Entry BackgroundColor="White"  Placeholder="Apellido paterno" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="2" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
+                        <Entry  BackgroundColor="White"  Placeholder="Apellido materno" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="3" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
+                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Contraseña" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="4" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
+                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Confirma contraseña" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Fecha de nacimiento" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="True" Padding="0" CornerRadius="22" ScaleY="0.8">
+                        <DatePicker TextColor="Black"></DatePicker>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
+                        <Entry MaxLength="4" Keyboard="Numeric" BackgroundColor="White"  Placeholder="Código de Seguridad" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+
+                    <Button Grid.Column="0" Grid.Row="3" CornerRadius="20" HorizontalOptions="Center" Text="Crear Cuenta" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
+
+                    <ActivityIndicator Grid.Column="0" Grid.Row="4" IsRunning="True"></ActivityIndicator>
+
+                    <Label  Grid.Column="0" Grid.Row="6" Text="¿Ya tienes cuenta? Inicia sesión" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" HorizontalTextAlignment="Center"></Label>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
