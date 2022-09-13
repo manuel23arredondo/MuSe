@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="D:\FaradillaQueenDemo.ttf" Link="Fonts\FaradillaQueenDemo.ttf" />
-    <Content Include="D:\FontsFree-Net-Baliung.ttf" Link="Fonts\FontsFree-Net-Baliung.ttf" />
-    <Content Include="D:\FontsFree-Net-Segoe-UI.ttf" Link="Fonts\FontsFree-Net-Segoe-UI.ttf" />
-    <Content Include="D:\SquishyWhaleDemoRegular.ttf" Link="Fonts\SquishyWhaleDemoRegular.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.7.3.2" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />

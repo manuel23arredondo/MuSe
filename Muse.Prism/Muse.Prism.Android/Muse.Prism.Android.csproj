@@ -76,18 +76,10 @@
     <LinkDescription Include="LinkerSettings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="D:\FontsFree-Net-Segoe-UI.ttf">
-      <Link>Assets\FontsFree-Net-Segoe-UI.ttf</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="D:\FontsFree-Net-Baliung.ttf">
-      <Link>Assets\FontsFree-Net-Baliung.ttf</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="D:\SquishyWhaleDemoRegular.ttf">
-      <Link>Assets\SquishyWhaleDemoRegular.ttf</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="D:\FaradillaQueenDemo.ttf">
-      <Link>Assets\FaradillaQueenDemo.ttf</Link>
-    </AndroidAsset>
+    <AndroidAsset Include="Assets\FontsFree-Net-Segoe-UI.ttf" />
+    <AndroidAsset Include="Assets\SquishyWhaleDemoRegular.ttf" />
+    <AndroidAsset Include="Assets\FaradillaQueenDemo.ttf" />
+    <AndroidAsset Include="Assets\FontsFree-Net-Baliung.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>

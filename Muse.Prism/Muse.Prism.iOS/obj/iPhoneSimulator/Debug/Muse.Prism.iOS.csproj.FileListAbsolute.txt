@@ -51,6 +51,8 @@ C:\MuSe\Muse.Prism\Muse.Prism.iOS\bin\iPhoneSimulator\Debug\vi\Xamarin.Forms.Pla
 C:\MuSe\Muse.Prism\Muse.Prism.iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
 C:\MuSe\Muse.Prism\Muse.Prism.iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
 C:\MuSe\Muse.Prism\Muse.Prism.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+C:\MuSe\Muse.Prism\Muse.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Maps.dll
+C:\MuSe\Muse.Prism\Muse.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Maps.iOS.dll
 C:\MuSe\Muse.Prism\Muse.Prism.iOS\bin\iPhoneSimulator\Debug\Muse.Prism.dll
 C:\MuSe\Muse.Prism\Muse.Prism.iOS\bin\iPhoneSimulator\Debug\Muse.Prism.pdb
 C:\MuSe\Muse.Prism\Muse.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
