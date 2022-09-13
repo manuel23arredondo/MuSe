@@ -19,7 +19,7 @@ namespace Muse.Prism
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/LocationPage");
+            await NavigationService.NavigateAsync("NavigationPage/CodePage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -31,6 +31,7 @@ namespace Muse.Prism
             containerRegistry.RegisterForNavigation<CreateAccountPage, CreateAccountPageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<LocationPage, LocationPageViewModel>();
+            containerRegistry.RegisterForNavigation<CodePage, CodePageViewModel>();
         }
     }
 }

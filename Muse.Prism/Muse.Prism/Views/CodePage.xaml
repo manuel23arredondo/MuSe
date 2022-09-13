@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Muse.Prism.Views.CodePage"
+             BackgroundImageSource="login"
+             Title="SOS Activated">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Camera"></ToolbarItem>
+        <ToolbarItem IconImageSource="Location"></ToolbarItem>
+        <ToolbarItem IconImageSource="Mic"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="S.O.S. Activado" HorizontalTextAlignment="Center" FontSize="45" FontFamily="{StaticResource Segoe}" TextColor="#6155A6"></Label>
+                <Label Text="Tu ubicación en tiempo real ha sido enviada a todos tus contactos de confianza, esta se guardará en la nube de MuSe, el teléfono está grabando audio y video en este momento, este se detendrá hasta que se desactive el modo S.O.S." FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="22" HorizontalTextAlignment="Start"></Label>
+                <Label Margin="0,25"  Text="Para desactivar el modo S.O.S presiona el botón 'Desactivar' e introduce tu código de seguridad" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="22" HorizontalTextAlignment="Start"></Label>
+                <Label Text="Por favor introduce el código de seguridad" HorizontalTextAlignment="Center" FontSize="30" FontFamily="{StaticResource Segoe}" TextColor="#6155A6"></Label>
+                <Frame IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8" HorizontalOptions="Center">
+                    <Entry MaxLength="4" Keyboard="Numeric" BackgroundColor="White"  Placeholder="Código de Seguridad" PlaceholderColor="Black" TextColor="Black" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Button Grid.Column="0" Grid.Row="0" CornerRadius="60" ScaleX="1.25" Margin="0,25,0,0" HorizontalOptions="Center" Text="Desactivar" TextColor="White" FontFamily="{StaticResource Segoe}" BackgroundColor="#E614B5"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

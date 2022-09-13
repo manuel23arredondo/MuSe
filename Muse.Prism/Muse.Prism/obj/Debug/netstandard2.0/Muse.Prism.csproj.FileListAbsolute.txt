@@ -14,3 +14,4 @@ C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.pdb
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\CreateAccountPage.xaml.g.cs
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\LocationPage.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\CodePage.xaml.g.cs
