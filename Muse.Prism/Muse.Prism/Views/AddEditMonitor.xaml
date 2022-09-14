@@ -40,7 +40,7 @@
                     </Frame>
 
                     <Frame Grid.Column="0" Grid.Row="3" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
-                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Número telefónico" PlaceholderColor="Black" TextColor="Black"/>
+                        <Entry Keyboard="Numeric" MaxLength="10" BackgroundColor="White"  Placeholder="Número telefónico" PlaceholderColor="Black" TextColor="Black"/>
                     </Frame>
 
                 </Grid>

@@ -20,23 +20,15 @@
                         <DataTemplate>
                             <ViewCell>
                                 <Grid Padding="10">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
                                     <Label TextColor="#6155A6" FontSize="20" Grid.Column="0" Text="{Binding Name}" FontFamily="{StaticResource Segoe}"/>
-                                    <Label TextColor="#6155A6" FontSize="20" Grid.Column="1" Text="{Binding Location}" FontFamily="{StaticResource Segoe}"/>
-                                    <Label TextColor="#6155A6" FontSize="20" Grid.Row="1" Text="{Binding Date}" FontFamily="{StaticResource Segoe}"/>
+                                    <Label TextColor="#6155A6" FontSize="20" Grid.Row="1" Grid.Column="0" Text="{Binding Location}" FontFamily="{StaticResource Segoe}"/>
+                                    <Label TextColor="#6155A6" FontSize="20" Grid.Row="2" Text="{Binding Date}" FontFamily="{StaticResource Segoe}"/>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Margin="0,420,-250,-70"  Grid.Column="1" Text="S.O.S" FontSize="Large" WidthRequest="90" HeightRequest="90" CornerRadius="50" VerticalOptions="Center" HorizontalOptions ="Center" BackgroundColor="#E61414"/>
+                <Button Margin="200,-500,-10,0" Text="S.O.S" FontSize="Large" WidthRequest="90" HeightRequest="90" CornerRadius="50"  HorizontalOptions ="Center" BackgroundColor="#E61414"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

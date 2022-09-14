@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\MuSe\\Muse.Prism\\Muse.Prism.iOS\\Muse.Prism.iOS.csproj",
         "projectName": "Muse.Prism.iOS",
         "projectPath": "C:\\MuSe\\Muse.Prism\\Muse.Prism.iOS\\Muse.Prism.iOS.csproj",
-        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\jonh1\\.nuget\\packages\\",
         "outputPath": "C:\\MuSe\\Muse.Prism\\Muse.Prism.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
@@ -18,7 +18,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonh1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -79,14 +79,14 @@
         "projectUniqueName": "C:\\MuSe\\Muse.Prism\\Muse.Prism\\Muse.Prism.csproj",
         "projectName": "Muse.Prism",
         "projectPath": "C:\\MuSe\\Muse.Prism\\Muse.Prism\\Muse.Prism.csproj",
-        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\jonh1\\.nuget\\packages\\",
         "outputPath": "C:\\MuSe\\Muse.Prism\\Muse.Prism\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonh1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

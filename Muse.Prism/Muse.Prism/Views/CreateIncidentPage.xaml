@@ -29,8 +29,8 @@
                     </Grid.RowDefinitions>
 
                     
-                    <Frame Grid.Column="0" BackgroundColor="Transparent" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
-                        <Picker x:Name="pickeract" TextColor="Black" SelectedIndexChanged="PickerAction_SelectedIndexChanged" TitleColor="Black"></Picker>
+                    <Frame Grid.Column="0" BackgroundColor="White" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
+                        <Picker x:Name="pickeract" TextColor="Black" TitleColor="Black"></Picker>
                     </Frame>
                     
                     <Frame Grid.Column="0" Grid.Row="2" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
@@ -59,7 +59,7 @@
                         <DatePicker TextColor="Black" HorizontalOptions="Center"></DatePicker>
                     </Frame>
 
-                    <Button Grid.Column="0" Grid.Row="2" CornerRadius="20" HorizontalOptions="Center" Text="Guardar Incidentes" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
+                    <Button Grid.Column="0" Grid.Row="2" CornerRadius="20" HorizontalOptions="Center" Text="Guardar incidente" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
 
                     <ActivityIndicator Grid.Column="0" Grid.Row="4" IsRunning="True"></ActivityIndicator>
                 </Grid>

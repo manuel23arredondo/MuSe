@@ -52,7 +52,7 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <Frame Grid.Column="0" BackgroundColor="Transparent" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
+                    <Frame Grid.Column="0" BackgroundColor="White" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
                         <Picker x:Name="pickermon" TextColor="Black" TitleColor="Black"></Picker>
                     </Frame>
 

@@ -9,5 +9,10 @@ namespace Muse.Prism
         public string Name { get; set; }
 
         public string FathersName { get; set; }
+
+        public override string ToString()
+        {
+            return (Name + ' ' + FathersName);
+        }
     }
 }

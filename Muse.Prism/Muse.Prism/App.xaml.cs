@@ -19,7 +19,7 @@ namespace Muse.Prism
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/AccompanimentPage");
+            await NavigationService.NavigateAsync("NavigationPage/MonitoreadasPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
