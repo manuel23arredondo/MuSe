@@ -28,9 +28,9 @@
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="1" Text="{Binding Action}" FontFamily="{StaticResource Segoe}"/>
-                                    <Label Grid.Column="1" Text="{Binding Location}" FontFamily="{StaticResource Segoe}"/>
-                                    <Label Grid.Column="1" Text="{Binding Date}" FontFamily="{StaticResource Segoe}"/>
+                                    <Label TextColor="#6155A6" FontSize="20" Grid.Column="0" Text="{Binding Name}" FontFamily="{StaticResource Segoe}"/>
+                                    <Label TextColor="#6155A6" FontSize="20" Grid.Column="1" Text="{Binding Location}" FontFamily="{StaticResource Segoe}"/>
+                                    <Label TextColor="#6155A6" FontSize="20" Grid.Row="1" Text="{Binding Date}" FontFamily="{StaticResource Segoe}"/>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

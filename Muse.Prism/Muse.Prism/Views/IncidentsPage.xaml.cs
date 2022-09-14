@@ -1,39 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Muse.Prism.Views
 {
+    [DesignTimeVisible(false)]
     public partial class IncidentsPage : ContentPage
     {
-        public IList<Incidents> Incidents { get; private set; }
+        public IList<Incident> Incidents { get; private set; }
         public IncidentsPage()
         {
             InitializeComponent();
-            Incidents = new List<Incidents>();
-            Incidents.Add(new Incidents
+            Incidents = new List<Incident>();
+            Incidents.Add(new Incident
             {
-                Action = "Patear",
-                Ubication = "Camino Real a Cholula",
+                Name = "Patear",
+                Location = "Camino Real a Cholula",
                 Date = DateTime.Now
             });
             
-            Incidents.Add(new Incidents
+            Incidents.Add(new Incident
             {
-                Action = "Abuso Sexual",
-                Ubication = "Angelópolis",
+                Name = "Abuso Sexual",
+                Location = "Angelópolis",
                 Date = DateTime.Now
             });
+
+            BindingContext = this;
         }
 
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Incidents tappedItem = e.Item as Incidents;
+            Incident tappedItem = e.Item as Incident;
         }
         
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Incidents selectedItem = e.SelectedItem as Incidents;
+            Incident selectedItem = e.SelectedItem as Incident;
         }
     }
 }

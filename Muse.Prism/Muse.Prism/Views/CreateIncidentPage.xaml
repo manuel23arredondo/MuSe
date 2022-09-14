@@ -14,6 +14,8 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="12">
+                
+                <Label FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"  Text="Seleccione la acción violenta"></Label>
                 <Grid Padding="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
@@ -26,11 +28,12 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <Frame IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="1">
-                        <Entry Grid.Column="0" Grid.Row="0" BackgroundColor="White"  Placeholder="Seleccione la acción violenta..." PlaceholderColor="Black" TextColor="Black"/>
+                    
+                    <Frame Grid.Column="0" BackgroundColor="Transparent" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
+                        <Picker x:Name="pickeract" TextColor="Black" SelectedIndexChanged="PickerAction_SelectedIndexChanged" TitleColor="Black"></Picker>
                     </Frame>
-
-                    <Frame Grid.Column="0" Grid.Row="2" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="1">
+                    
+                    <Frame Grid.Column="0" Grid.Row="2" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
                         <Entry BackgroundColor="White"  Placeholder="Ingrese la locación" PlaceholderColor="Black" TextColor="Black"/>
                     </Frame>
                 </Grid>
