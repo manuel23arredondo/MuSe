@@ -21,6 +21,7 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
 
                     <Frame IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.7">
@@ -36,10 +37,14 @@
                     </Frame>
 
                     <Frame Grid.Column="0" Grid.Row="3" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
-                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Contraseña" PlaceholderColor="Black" TextColor="Black"/>
+                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Número telefónico" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+                    
+                    <Frame Grid.Column="0" Grid.Row="4" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
+                        <Entry IsPassword="True" BackgroundColor="White" Placeholder="Contraseña" PlaceholderColor="Black" TextColor="Black"/>
                     </Frame>
 
-                    <Frame Grid.Column="0" Grid.Row="4" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
+                    <Frame Grid.Column="0" Grid.Row="5" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
                         <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Confirma contraseña" PlaceholderColor="Black" TextColor="Black"/>
                     </Frame>
                 </Grid>
@@ -62,11 +67,11 @@
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="True" Padding="0" CornerRadius="22" ScaleY="0.8">
-                        <DatePicker TextColor="Black"></DatePicker>
+                        <DatePicker TextColor="Black" HorizontalOptions="Center"></DatePicker>
                     </Frame>
 
                     <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.8">
-                        <Entry MaxLength="4" Keyboard="Numeric" BackgroundColor="White"  Placeholder="Código de Seguridad" PlaceholderColor="Black" TextColor="Black"/>
+                        <Entry MaxLength="4" Keyboard="Numeric" HorizontalTextAlignment="Center" BackgroundColor="White"  Placeholder="Código de Seguridad" PlaceholderColor="Black" TextColor="Black"/>
                     </Frame>
 
                     <Button Grid.Column="0" Grid.Row="3" CornerRadius="20" HorizontalOptions="Center" Text="Crear Cuenta" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>

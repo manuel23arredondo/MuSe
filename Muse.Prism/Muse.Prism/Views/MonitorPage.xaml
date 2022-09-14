@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Muse.Prism.Views.MonitorPage"
+             BackgroundImageSource="login"
+             Title="Monitores">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="ic_add.png"></ToolbarItem>
+        <ToolbarItem IconImageSource="ic_edit.png"></ToolbarItem>
+        <ToolbarItem IconImageSource="ic_delete.png"></ToolbarItem>
+        <ToolbarItem IconImageSource="menu.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="85,15,50,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Juana Rodríguez" Grid.Column="0" Grid.Row="0" TextColor="Blue" Scale="1.5" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label Text="Mayte Hernández" Grid.Column="0" Grid.Row="2" TextColor="Blue" Scale="1.5" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label Text="Luisa Pérez" Grid.Column="0" Grid.Row="4" TextColor="Blue" Scale="1.5" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label Text="Sofia Sánchez" Grid.Column="0" Grid.Row="6" TextColor="Blue" Scale="1.5" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label Text="Ninel Juárez" Grid.Column="0" Grid.Row="8" TextColor="Blue" Scale="1.5" FontFamily="{StaticResource Segoe}"></Label>
+                </Grid>
+
+                <Button Margin="0,420,-250,-70"  Grid.Column="1" Text="S.O.S" FontSize="Large" WidthRequest="90" HeightRequest="90" CornerRadius="50" VerticalOptions="Center" HorizontalOptions ="Center" BackgroundColor="#E61414"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

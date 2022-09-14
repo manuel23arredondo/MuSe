@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Muse.Prism.Views.AccompanimentPage"
+             BackgroundImageSource="login"
+             Title="Accompaniment">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="menu.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="12">
+                <Grid Padding="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Frame IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="1">
+                        <Entry Grid.Column="0" Grid.Row="0" BackgroundColor="White"  Placeholder="Indique el punto de partida..." PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+
+                    <Frame Grid.Column="0" Grid.Row="2" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="1">
+                        <Entry BackgroundColor="White"  Placeholder="Ingrese el punto de llegada..." PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Seleccione el monitor" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="1">
+                        <Entry BackgroundColor="White"  Placeholder="Selecciona el monitor" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+
+                    <Button Grid.Column="0" Grid.Row="2" CornerRadius="20" HorizontalOptions="Center" Text="Guardar Acompañamiento" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
+
+                    <ActivityIndicator Grid.Column="0" Grid.Row="4" IsRunning="True"></ActivityIndicator>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
