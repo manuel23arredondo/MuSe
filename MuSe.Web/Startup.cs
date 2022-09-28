@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MuSe.Web.Data;
+using MuSe.Web.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +26,19 @@ namespace MuSe.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddIdentity<User, IdentityRole>(cfg =>
+            //{
+
+            //    cfg.User.RequireUniqueEmail = true;
+            //    cfg.Password.RequireDigit = false;
+            //    cfg.Password.RequiredUniqueChars = 0;
+            //    cfg.Password.RequireLowercase = false;
+            //    cfg.Password.RequireNonAlphanumeric = false;
+            //    cfg.Password.RequireUppercase = false;
+            //    cfg.Password.RequiredLength = 6; //123456
+
+            //})
+
             services.AddControllersWithViews();
         }
 
