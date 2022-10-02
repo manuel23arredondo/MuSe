@@ -22,3 +22,6 @@ C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.dll
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Muse.Prism.pdb
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\CreateIncidentPage.xaml.g.cs
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\AccompanimentPage.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\RecoveryAccountPage.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\ResetPasswordPage.xaml.g.cs

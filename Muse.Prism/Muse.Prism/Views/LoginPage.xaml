@@ -40,11 +40,11 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     
-                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.7" ScaleX="0.7">
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" >
                         <Entry BackgroundColor="White"  Placeholder="Correo electrónico" PlaceholderColor="Black" TextColor="Black" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Segoe}"/>
                     </Frame>
                
-                    <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.7" ScaleX="0.7">
+                    <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="true" Padding="0" CornerRadius="22">
                         <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Contraseña" PlaceholderColor="Black" TextColor="Black" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="{StaticResource Segoe}"/>
                     </Frame>
 

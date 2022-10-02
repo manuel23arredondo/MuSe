@@ -25898,6 +25898,9 @@ namespace Muse.Prism.Droid
 			// aapt resource value: 0x7F0700B0
 			public const int tooltip_frame_light = 2131165360;
 			
+			// aapt resource value: 0x7F0700B1
+			public const int user = 2131165361;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

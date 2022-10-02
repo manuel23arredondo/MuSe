@@ -785,3 +785,8 @@ C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\stamp\_ConvertResourcesCases
 C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\stamp\_GenerateJavaStubs.stamp
 C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
+C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-hdpi\user.png
+C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-mdpi\user.png
+C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-xhdpi\user.png
+C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-xxhdpi\user.png
+C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-xxxhdpi\user.png

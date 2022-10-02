@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Muse.Prism.Views.ProfilePage"
+             BackgroundImageSource="login"
+             Title="Profile">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="ic_edit.png"></ToolbarItem>
+        <ToolbarItem IconImageSource="menu.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image HeightRequest="200" Source="user.png"></Image>
+                <Button Grid.Column="0" Grid.Row="3" CornerRadius="20" HorizontalOptions="Center" Text="Cambiar foto" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
+                <Grid Padding="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="0" Grid.Column="0" Text="Nombre" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label TextColor="#6273BD" FontSize="28" Grid.Row="0" Grid.Column="1" Text="María Pérez" FontFamily="{StaticResource Segoe}"></Label>
+
+                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="1" Grid.Column="0" Text="Celular" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label TextColor="#6273BD" FontSize="28" Grid.Row="1" Grid.Column="1" Text="1234567890" FontFamily="{StaticResource Segoe}"></Label>
+
+                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="2" Grid.Column="0" Text="Email" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label TextColor="#6273BD" FontSize="28" Grid.Row="2" Grid.Column="1" Text="mar@gmail.com" FontFamily="{StaticResource Segoe}"></Label>
+
+                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="3" Grid.Column="0" Text="Nacimiento" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label TextColor="#6273BD" FontSize="28" Grid.Row="3" Grid.Column="1" Text="30/09/2001" FontFamily="{StaticResource Segoe}"></Label>
+
+                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="4" Grid.Column="0" Text="Nombre" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label TextColor="#6273BD" FontSize="28" Grid.Row="4" Grid.Column="1" Text="María Pérez" FontFamily="{StaticResource Segoe}"></Label>
+                </Grid>
+
+                <Button Margin="200,100,-10,0" Text="S.O.S" FontSize="Large" WidthRequest="90" HeightRequest="90" CornerRadius="50"  HorizontalOptions ="Center" BackgroundColor="#E61414"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

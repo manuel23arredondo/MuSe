@@ -29,11 +29,11 @@
                     </Grid.RowDefinitions>
 
                     
-                    <Frame Grid.Column="0" BackgroundColor="White" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
+                    <Frame Grid.Column="0" BackgroundColor="White" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
                         <Picker x:Name="pickeract" TextColor="Black" TitleColor="Black"></Picker>
                     </Frame>
                     
-                    <Frame Grid.Column="0" Grid.Row="2" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleY="0.75">
+                    <Frame Grid.Column="0" Grid.Row="2" IsClippedToBounds="true" Padding="0" CornerRadius="22">
                         <Entry BackgroundColor="White"  Placeholder="Ingrese la locación" PlaceholderColor="Black" TextColor="Black"/>
                     </Frame>
                 </Grid>
@@ -55,7 +55,7 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="True" Padding="0" CornerRadius="22" ScaleY="0.8">
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="True" Padding="0" CornerRadius="22">
                         <DatePicker TextColor="Black" HorizontalOptions="Center"></DatePicker>
                     </Frame>
 
