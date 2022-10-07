@@ -19,7 +19,7 @@ namespace Muse.Prism
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/ResetPasswordPage");
+            await NavigationService.NavigateAsync("NavigationPage/IncidentsPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

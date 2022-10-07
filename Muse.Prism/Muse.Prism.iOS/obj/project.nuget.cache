@@ -1,19 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "mdovaUmUOIfRCpnx53inFzqvNFz6PFC/8Yp2Howi+mMgTaVnikOXn9eOhg0rOH48512g4qZtCu15oUQpoeS+hw==",
+  "dgSpecHash": "/soGQcmZXQBZCqYwqRR2kc2QBp4S09dRv82lAx2+F1zV76HnS0JOr/PLSFM8Mudit7KsaO2755V2soqn8aK/gQ==",
   "success": true,
   "projectFilePath": "C:\\MuSe\\Muse.Prism\\Muse.Prism.iOS\\Muse.Prism.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Manuel\\.nuget\\packages\\dryioc.dll\\4.7.7\\dryioc.dll.4.7.7.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\prism.dryioc.forms\\8.1.97\\prism.dryioc.forms.8.1.97.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\prism.forms\\8.1.97\\prism.forms.8.1.97.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.essentials.interfaces\\1.7.3.2\\xamarin.essentials.interfaces.1.7.3.2.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
-    "C:\\Users\\Manuel\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2515\\xamarin.forms.maps.5.0.0.2515.nupkg.sha512"
+    "C:\\Users\\jonh1\\.nuget\\packages\\dryioc.dll\\4.7.7\\dryioc.dll.4.7.7.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\prism.dryioc.forms\\8.1.97\\prism.dryioc.forms.8.1.97.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\prism.forms\\8.1.97\\prism.forms.8.1.97.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\xamarin.essentials.interfaces\\1.7.3.2\\xamarin.essentials.interfaces.1.7.3.2.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
+    "C:\\Users\\jonh1\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2515\\xamarin.forms.maps.5.0.0.2515.nupkg.sha512"
   ],
   "logs": []
 }
