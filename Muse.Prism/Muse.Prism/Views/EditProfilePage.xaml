@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             BackgroundImageSource="login"
+             x:Class="Muse.Prism.Views.EditProfilePage"
+             Title="Edit profile">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="menu.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="12">
+                <Image HeightRequest="200" Source="user.png"></Image>
+                <Button Grid.Column="0" Grid.Row="3" CornerRadius="20" HorizontalOptions="Center" Text="Cambiar foto" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
+
+                <Label Text="Nombre(s)" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid Padding="2">
+                    <Frame IsClippedToBounds="true" Padding="0" CornerRadius="22" >
+                        <Entry Grid.Column="0" Grid.Row="0" BackgroundColor="White"  Placeholder="Nombre(s)" PlaceholderColor="#6155A6" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Apellido paterno" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry BackgroundColor="White"  Placeholder="Apellido paterno" PlaceholderColor="#6155A6" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Apellido materno" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry  BackgroundColor="White"  Placeholder="Apellido materno" PlaceholderColor="#6155A6" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Correo electrónico" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry BackgroundColor="White"  Placeholder="Correo electrónico" PlaceholderColor="#6155A6" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Número telefónico" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry Keyboard="Numeric" BackgroundColor="White"  Placeholder="Número telefónico" PlaceholderColor="#6155A6" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Contraseña" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry IsPassword="True" BackgroundColor="White" Placeholder="Contraseña" PlaceholderColor="#6155A6" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Confirmar contraseña" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Confirma contraseña" PlaceholderColor="#6155A6" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Fecha de nacimiento" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="True" Padding="0" CornerRadius="22">
+                        <DatePicker TextColor="Black" HorizontalOptions="Center"></DatePicker>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Código de seguridad" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry MaxLength="4" Keyboard="Numeric" HorizontalTextAlignment="Center" BackgroundColor="White"  Placeholder="Código de seguridad" PlaceholderColor="Black" TextColor="Black"/>
+                    </Frame>
+
+                    <Button  Grid.Column="0" Grid.Row="2" CornerRadius="20" HorizontalOptions="Center" Text="Guardar" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
+
+                    <ActivityIndicator Grid.Column="0" Grid.Row="3" IsRunning="True"></ActivityIndicator>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

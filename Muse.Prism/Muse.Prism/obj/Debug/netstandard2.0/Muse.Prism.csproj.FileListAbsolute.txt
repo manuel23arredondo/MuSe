@@ -25,3 +25,6 @@ C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\AccompanimentPage.x
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\RecoveryAccountPage.xaml.g.cs
 C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\ResetPasswordPage.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\EditProfilePage.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\HelpDirectoryPage.xaml.g.cs
+C:\MuSe\Muse.Prism\Muse.Prism\obj\Debug\netstandard2.0\Views\ViolentometerPage.xaml.g.cs

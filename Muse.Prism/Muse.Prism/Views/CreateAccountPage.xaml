@@ -13,46 +13,52 @@
                 <Image HeightRequest="200" Source="user.png"></Image>
                 <Button Grid.Column="0" Grid.Row="3" CornerRadius="20" HorizontalOptions="Center" Text="Cambiar foto" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
 
+                <Label Text="Nombre(s)" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
                 <Grid Padding="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    
                     <Frame IsClippedToBounds="true" Padding="0" CornerRadius="22" >
-                        <Entry Grid.Column="0" Grid.Row="0" BackgroundColor="White"  Placeholder="Nombre(s)" PlaceholderColor="Black" TextColor="Black"/>
+                        <Entry Grid.Column="0" Grid.Row="0" BackgroundColor="White"  Placeholder="Nombre(s)" PlaceholderColor="#6155A6" TextColor="Black"/>
                     </Frame>
+                </Grid>
+                
+                <Label Text="Apellido paterno" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry BackgroundColor="White"  Placeholder="Apellido paterno" PlaceholderColor="#6155A6" TextColor="Black"/>
+                    </Frame>
+                </Grid>
 
-                    <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="true" Padding="0" CornerRadius="22">
-                        <Entry BackgroundColor="White"  Placeholder="Apellido paterno" PlaceholderColor="Black" TextColor="Black"/>
+                <Label Text="Apellido materno" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry  BackgroundColor="White"  Placeholder="Apellido materno" PlaceholderColor="#6155A6" TextColor="Black"/>
                     </Frame>
+                </Grid>
 
-                    <Frame Grid.Column="0" Grid.Row="2" IsClippedToBounds="true" Padding="0" CornerRadius="22">
-                        <Entry  BackgroundColor="White"  Placeholder="Apellido materno" PlaceholderColor="Black" TextColor="Black"/>
+                <Label Text="Correo electrónico" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry BackgroundColor="White"  Placeholder="Correo electrónico" PlaceholderColor="#6155A6" TextColor="Black"/>
                     </Frame>
+                </Grid>
 
-                    <Frame Grid.Column="0" Grid.Row="3" IsClippedToBounds="true" Padding="0" CornerRadius="22">
-                        <Entry BackgroundColor="White"  Placeholder="Correo electrónico" PlaceholderColor="Black" TextColor="Black"/>
+                <Label Text="Número telefónico" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry Keyboard="Numeric" BackgroundColor="White"  Placeholder="Número telefónico" PlaceholderColor="#6155A6" TextColor="Black"/>
                     </Frame>
+                </Grid>
 
-                    <Frame Grid.Column="0" Grid.Row="4" IsClippedToBounds="true" Padding="0" CornerRadius="22">
-                        <Entry Keyboard="Numeric" BackgroundColor="White"  Placeholder="Número telefónico" PlaceholderColor="Black" TextColor="Black"/>
+                <Label Text="Contraseña" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry IsPassword="True" BackgroundColor="White" Placeholder="Contraseña" PlaceholderColor="#6155A6" TextColor="Black"/>
                     </Frame>
-                    
-                    <Frame Grid.Column="0" Grid.Row="5" IsClippedToBounds="true" Padding="0" CornerRadius="22">
-                        <Entry IsPassword="True" BackgroundColor="White" Placeholder="Contraseña" PlaceholderColor="Black" TextColor="Black"/>
-                    </Frame>
+                </Grid>
 
-                    <Frame Grid.Column="0" Grid.Row="6" IsClippedToBounds="true" Padding="0" CornerRadius="22">
-                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Confirma contraseña" PlaceholderColor="Black" TextColor="Black"/>
+                <Label Text="Confirmar contraseña" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" FontSize="Medium"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                        <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Confirma contraseña" PlaceholderColor="#6155A6" TextColor="Black"/>
                     </Frame>
                 </Grid>
 

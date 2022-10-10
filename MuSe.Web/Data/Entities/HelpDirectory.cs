@@ -1,6 +1,5 @@
 ﻿namespace MuSe.Web.Data.Entities
 {
-    using System;
     using System.ComponentModel.DataAnnotations;
 
     public class HelpDirectory
@@ -18,9 +17,31 @@
         public string PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "{0} es obligatorio")]
-        [MaxLength(80, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres.")]
+        [MaxLength(50, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
+        [Display(Name = "Calle")]
+        public string Street { get; set; }
+
+        [Required(ErrorMessage = "{0} es obligatorio")]
+        [MaxLength(50, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
+        [Display(Name = "Número interior")]
+        public string InsideNumber { get; set; }
+
+        [Required(ErrorMessage = "{0} es obligatorio")]
+        [Display(Name = "Número interior")]
+        public int OutsideNumber { get; set; }
+
+        [Required(ErrorMessage = "{0} es obligatorio")]
+        [MaxLength(50, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
+        [Display(Name = "Colonia")]
+        public string Colony { get; set; }
+
+        [Required(ErrorMessage = "{0} es obligatorio")]
+        [MaxLength(6, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
+        [Display(Name = "Código postal")]
+        public int PostCode { get; set; }
+
         [Display(Name = "Dirección")]
-        public string Address { get; set; }
+        public string FullName => $"{Street} {InsideNumber} {OutsideNumber} {Colony} {PostCode}";
 
         [Required(ErrorMessage = "{0} es obligatorio")]
         [MaxLength(80, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres.")]

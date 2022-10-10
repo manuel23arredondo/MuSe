@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MuSe.Web.Data.Entities.Violentometer>
+
+@{
+    ViewData["Title"] = "Violentómetro";
+}
+
+<h1>Violentómetro</h1>
+
+<p>
+    @if (this.User.IsInRole("Admin"))
+    {
+        <a asp-action="Create" class="btn btn-success">Agregar acción violenta</a>
+    }
+</p>

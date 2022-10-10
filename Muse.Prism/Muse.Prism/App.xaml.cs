@@ -19,7 +19,7 @@ namespace Muse.Prism
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/IncidentsPage");
+            await NavigationService.NavigateAsync("NavigationPage/ViolentometerPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -42,6 +42,9 @@ namespace Muse.Prism
             containerRegistry.RegisterForNavigation<ProfilePage, ProfilePageViewModel>();
             containerRegistry.RegisterForNavigation<RecoveryAccountPage, RecoveryAccountPageViewModel>();
             containerRegistry.RegisterForNavigation<ResetPasswordPage, ResetPasswordPageViewModel>();
+            containerRegistry.RegisterForNavigation<EditProfilePage, EditProfilePageViewModel>();
+            containerRegistry.RegisterForNavigation<HelpDirectoryPage, HelpDirectoryPageViewModel>();
+            containerRegistry.RegisterForNavigation<ViolentometerPage, ViolentometerPageViewModel>();
         }
     }
 }

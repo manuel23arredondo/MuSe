@@ -16,7 +16,6 @@
         <ScrollView>
             <StackLayout>
                 <Image HeightRequest="200" Source="user.png"></Image>
-                <Button Grid.Column="0" Grid.Row="3" CornerRadius="20" HorizontalOptions="Center" Text="Cambiar foto" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
                 <Grid Padding="15">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
@@ -30,13 +29,13 @@
                     <Label TextColor="#6155A6" FontSize="28" Grid.Row="0" Grid.Column="0" Text="Nombre" FontFamily="{StaticResource Segoe}"></Label>
                     <Label TextColor="#6273BD" FontSize="28" Grid.Row="0" Grid.Column="1" Text="María Pérez" FontFamily="{StaticResource Segoe}"></Label>
 
-                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="1" Grid.Column="0" Text="Celular" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="1" Grid.Column="0" Text="Numero telefónico" FontFamily="{StaticResource Segoe}"></Label>
                     <Label TextColor="#6273BD" FontSize="28" Grid.Row="1" Grid.Column="1" Text="1234567890" FontFamily="{StaticResource Segoe}"></Label>
 
                     <Label TextColor="#6155A6" FontSize="28" Grid.Row="2" Grid.Column="0" Text="Email" FontFamily="{StaticResource Segoe}"></Label>
                     <Label TextColor="#6273BD" FontSize="28" Grid.Row="2" Grid.Column="1" Text="mar@gmail.com" FontFamily="{StaticResource Segoe}"></Label>
 
-                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="3" Grid.Column="0" Text="Nacimiento" FontFamily="{StaticResource Segoe}"></Label>
+                    <Label TextColor="#6155A6" FontSize="28" Grid.Row="3" Grid.Column="0" Text="Fecha de nacimiento" FontFamily="{StaticResource Segoe}"></Label>
                     <Label TextColor="#6273BD" FontSize="28" Grid.Row="3" Grid.Column="1" Text="30/09/2001" FontFamily="{StaticResource Segoe}"></Label>
 
                     <Label TextColor="#6155A6" FontSize="28" Grid.Row="4" Grid.Column="0" Text="Nombre" FontFamily="{StaticResource Segoe}"></Label>

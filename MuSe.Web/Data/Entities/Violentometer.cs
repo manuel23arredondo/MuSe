@@ -5,7 +5,6 @@
 
     public class Violentometer
     {
-        [Display(Name = "Clave")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "{0} es obligatorio")]
@@ -13,6 +12,7 @@
         [Display(Name = "Descripción")]
         public string Description { get; set; }
 
+        public Reliability Reliability { get; set; }
         public ICollection<Incident> Incidents { get; set; }
     }
 }

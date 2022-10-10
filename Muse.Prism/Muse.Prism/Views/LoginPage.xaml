@@ -24,37 +24,34 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <Image Source="ic_launcher" Grid.Row="1" Grid.Column="0" Scale="3"></Image>
+                    <Image Source="ic_launcher" Grid.Row="1" Grid.Column="0" Scale="3"></Image>                
+                    <Label Grid.Row="3" Text="Iniciar sesión" HorizontalTextAlignment="Center" TextColor="#6155A6" Scale="1.5"></Label>
                 </Grid>
                     
-                <Label Text="Iniciar sesión" HorizontalTextAlignment="Center" TextColor="#6155A6" Scale="1.5"></Label>
-                
-                <Grid Padding="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    
+
+                <Label Text="Correo electrónico" HorizontalTextAlignment="Center" TextColor="#6155A6" Scale="1.5"></Label>
+                <Grid Padding="10">
                     <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" >
                         <Entry BackgroundColor="White"  Placeholder="Correo electrónico" PlaceholderColor="Black" TextColor="Black" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Segoe}"/>
                     </Frame>
-               
-                    <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="true" Padding="0" CornerRadius="22">
+                </Grid>
+                
+                <Label Text="Contraseña" HorizontalTextAlignment="Center" TextColor="#6155A6" Scale="1.5"></Label>
+                <Grid>
+                    <Frame Grid.Column="0" Grid.Row="0" IsClippedToBounds="true" Padding="0" CornerRadius="22" ScaleX="0.94">
                         <Entry IsPassword="True" BackgroundColor="White"  Placeholder="Contraseña" PlaceholderColor="Black" TextColor="Black" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="{StaticResource Segoe}"/>
                     </Frame>
-
-                    <Button Grid.Column="0" Grid.Row="2" CornerRadius="20" HorizontalOptions="Center" Text="Crear Cuenta" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
-
-                    <ActivityIndicator Grid.Column="0" Grid.Row="3" IsRunning="True"></ActivityIndicator>
-
-                    <Label  Grid.Column="0" Grid.Row="4" Text="¿No tienes cuenta? Regístrate" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" HorizontalTextAlignment="Center"></Label>
-                    <Label  Grid.Column="0" Grid.Row="5" Text="Olvidé mi contraseña" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" HorizontalTextAlignment="Center"></Label>
+                    
+                    <Button CornerRadius="20" Grid.Row="1" HorizontalOptions="Center" Text="Entrar" TextColor="#6155A6" FontFamily="{StaticResource Segoe}" BackgroundColor="White"></Button>
                 </Grid>
+                    
+
+                    <ActivityIndicator IsRunning="True"></ActivityIndicator>
+
+                    <Label Text="¿No tienes cuenta? Regístrate" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Olvidé mi contraseña" FontFamily="{StaticResource Segoe}" TextColor="#6155A6" HorizontalTextAlignment="Center"></Label>
+
                 
             </StackLayout>
         </ScrollView>

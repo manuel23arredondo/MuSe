@@ -79,3 +79,6 @@ C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Violentometer\Index.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Directory\Index.cshtml.g.cs

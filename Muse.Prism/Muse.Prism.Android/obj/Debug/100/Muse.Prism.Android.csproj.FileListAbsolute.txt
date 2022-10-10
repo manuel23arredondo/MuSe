@@ -790,3 +790,4 @@ C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-mdpi\user.png
 C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-xhdpi\user.png
 C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-xxhdpi\user.png
 C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-xxxhdpi\user.png
+C:\MuSe\Muse.Prism\Muse.Prism.Android\obj\Debug\100\res\drawable-hdpi\violentometro.png

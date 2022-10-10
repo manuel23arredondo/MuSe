@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Muse.Prism.Views.ViolentometerPage"
+             BackgroundImageSource="login"
+             Title="Violentometer">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="menu.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="12">
+                <Image HeightRequest="650" Source="Violentometro.PNG"></Image>
+                <Button Margin="200,0,-10,0" Text="S.O.S" FontSize="Large" WidthRequest="90" HeightRequest="90" CornerRadius="50"  HorizontalOptions ="Center" BackgroundColor="#E61414"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

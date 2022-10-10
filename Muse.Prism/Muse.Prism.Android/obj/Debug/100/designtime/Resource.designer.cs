@@ -25901,6 +25901,9 @@ namespace Muse.Prism.Droid
 			// aapt resource value: 0x7F0700B1
 			public const int user = 2131165361;
 			
+			// aapt resource value: 0x7F0700B2
+			public const int Violentometro = 2131165362;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

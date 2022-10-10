@@ -4,7 +4,6 @@
     using System.ComponentModel.DataAnnotations;
     public class KindOfPlace
     {
-        [Display(Name = "Clave")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "{0} es obligatorio")]

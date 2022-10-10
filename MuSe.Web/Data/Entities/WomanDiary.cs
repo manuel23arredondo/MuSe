@@ -4,7 +4,6 @@
     using System.ComponentModel.DataAnnotations;
     public class WomanDiary
     {
-        [Display(Name = "Clave")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "{0} es obligatorio")]
@@ -18,5 +17,6 @@
         public DateTime DiaryDate { get; set; }
 
         public Woman Woman { get; set; }
+        public Mood Mood { get; set; }
     }
 }
