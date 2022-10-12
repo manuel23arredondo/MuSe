@@ -31,25 +31,6 @@
                 await CheckAdmin(user, "Admin");
             }
 
-            if (!this.dataContext.Womans.Any())
-            {
-                var user = await CheckUser("Monica", "Lopez", "272 115 0000", DateTime.Now, "moni@gmail.com", "123456");
-                await CheckWoman(user, "Woman", "XXX");
-                user = await CheckUser("María", "Ruiz", "272 155 1000", DateTime.Now, "mari@gmail.com", "123456");
-                await CheckWoman(user, "Woman", "XXX");
-                user = await CheckUser("Natalia", "Cortés", "272 895 0560", DateTime.Now, "naty@gmail.com", "123456");
-                await CheckWoman(user, "Woman", "XXX");
-            }
-
-            if (!this.dataContext.Monitors.Any())
-            {
-                var user = await CheckUser("Carlos", "Lopez", "272 115 0000", DateTime.Now, "arma.l@gmail.com", "123456");
-                await CheckMonitor(user, "Monitor", "XXX");
-                user = await CheckUser("Martín", "Ruiz", "272 155 1000", DateTime.Now, "tonl@gmail.com", "123456");
-                await CheckMonitor(user, "Monitor", "XXX");
-                user = await CheckUser("Manuel", "Cortés", "272 895 0560", DateTime.Now, "corpeter@gmail.com", "123456");
-                await CheckMonitor(user, "Monitor", "XXX");
-            }
 
             if (!this.dataContext.HelpTypes.Any())
             {

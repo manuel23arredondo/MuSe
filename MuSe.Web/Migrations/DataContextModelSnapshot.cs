@@ -736,7 +736,7 @@ namespace MuSe.Web.Migrations
                         .HasForeignKey("MoodId");
 
                     b.HasOne("MuSe.Web.Data.Entities.Woman", "Woman")
-                        .WithMany()
+                        .WithMany("WomanDiaries")
                         .HasForeignKey("WomanId");
                 });
 #pragma warning restore 612, 618

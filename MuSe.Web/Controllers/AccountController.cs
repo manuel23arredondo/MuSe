@@ -3,6 +3,9 @@
     using Microsoft.AspNetCore.Mvc;
     using MuSe.Web.Helpers;
     using MuSe.Web.Models;
+    using System;
+    using System.Security.Cryptography;
+    using System.Text;
     using System.Threading.Tasks;
 
     public class AccountController : Controller
@@ -62,5 +65,46 @@
             await this.userHelper.LogoutAsync();
             return this.RedirectToAction("Index", "Home");
         }
+
+
+        [HttpGet]
+        public IActionResult StartRecovery()
+        {
+            RecoveryViewModel model = new RecoveryViewModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult StartRecovery(RecoveryViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return View(model);
+
+            }
+
+            string token = GetSha256(Guid.NewGuid().ToString());
+
+            return View();
+        }
+
+        public IActionResult Recovery()
+        {
+            return View();
+        }
+
+        #region HELPERS
+        private string GetSha256(string str)
+        {
+            SHA256 sha256 = SHA256Managed.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = sha256.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
+        }
+
+        #endregion
     }
 }

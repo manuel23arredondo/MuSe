@@ -3898,7 +3898,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Manuel\\.nuget\\packages\\": {},
+    "C:\\Users\\jonh1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -3907,7 +3907,7 @@
       "projectUniqueName": "C:\\MuSe\\Muse.Prism\\Muse.Prism.Android\\Muse.Prism.Android.csproj",
       "projectName": "Muse.Prism.Android",
       "projectPath": "C:\\MuSe\\Muse.Prism\\Muse.Prism.Android\\Muse.Prism.Android.csproj",
-      "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\jonh1\\.nuget\\packages\\",
       "outputPath": "C:\\MuSe\\Muse.Prism\\Muse.Prism.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
@@ -3915,7 +3915,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jonh1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

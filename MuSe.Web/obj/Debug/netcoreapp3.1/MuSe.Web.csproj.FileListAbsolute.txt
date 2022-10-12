@@ -111,3 +111,7 @@ C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Womans\Index.cshtml.g.cs
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Womans\AccountCreated.cshtml.g.cs
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Monitors\Index.cshtml.g.cs
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Monitors\AccountCreated.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Recovery.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Womans\Profile.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\StartRecovery.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Incidents\Index.cshtml.g.cs

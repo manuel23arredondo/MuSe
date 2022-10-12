@@ -42,6 +42,13 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Violentometers" asp-action="Index">Violentómetro</a>
                             </li>
+                            </ul>
+                        <ul class="navbar-nav flex-grow-1">
+                            @if (this.User.IsInRole("Woman"))
+                        {
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Incidents" asp-action="Index">Incidentes</a>
+                        }
+
                     </ul>
                     @if (this.User.IsInRole("Admin"))
                     {
