@@ -2,7 +2,7 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
-    public class CurrentRiskSituation
+    public class CurrentRiskSituation:IEntity
     {
         public int Id { get; set; }
 

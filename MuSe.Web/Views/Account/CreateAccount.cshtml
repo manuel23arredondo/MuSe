@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Tipo de cuenta";
+}
+
+<link rel="stylesheet" href="~/css/login.css" />
+
+<body>
+    <form asp-action="Create" enctype="multipart/form-data">
+        <section class="form-register"> 
+         <h4>¿Qué tipo de cuenta quiere crear?</h4>
+            <a asp-area="" asp-controller="Womans" asp-action="Create" class="btn btn-block botons">Mujer</a>            
+            <a asp-area="" asp-controller="Monitors" asp-action="Create" class="btn btn-block botons">Monitor</a>
+        </section>
+    </form>
+</body>

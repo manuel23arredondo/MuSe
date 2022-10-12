@@ -1,6 +1,6 @@
 ﻿namespace MuSe.Web.Data.Entities
 {
-    public class IEntity
+    public interface IEntity
     {
         int Id { get; set; }
     }

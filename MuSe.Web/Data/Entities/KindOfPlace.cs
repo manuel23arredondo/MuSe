@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    public class KindOfPlace
+    public class KindOfPlace:IEntity
     {
         public int Id { get; set; }
 

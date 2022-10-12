@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    public class MonitorWoman
+    public class MonitorWoman:IEntity
     {
         public int Id { get; set; }
 

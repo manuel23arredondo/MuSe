@@ -1,0 +1,48 @@
+﻿@model MuSe.Web.Models.MonitorViewModel
+
+@{
+    ViewData["Title"] = "Crear cuenta de monitor";
+}
+
+<link rel="stylesheet" href="~/css/login.css" />
+
+<body>
+    <form asp-action="Create" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="ImageUrl" />
+        <section class="form-register">
+            <h4>Crear cuenta de monitor</h4>
+            <label asp-for="User.FirstName" class="control-label"></label>
+            <input asp-for="User.FirstName" class="controls" placeholder="Ingrese su nombre">
+            <span asp-validation-for="User.FirstName" class="text-danger"></span>
+
+            <label asp-for="User.LastName" class="control-label"></label>
+            <input asp-for="User.LastName" class="controls" placeholder="Ingrese tus apellidos">
+            <span asp-validation-for="User.LastName" class="text-danger"></span>
+
+            <label asp-for="User.PhoneNumber" class="control-label"></label>
+            <input asp-for="User.PhoneNumber" class="controls" placeholder="Ingrese tu número celular" maxlength="15">
+            <span asp-validation-for="User.PhoneNumber" class="text-danger"></span>
+
+            <label asp-for="User.BirhtDate" class="control-label"></label>
+            <input asp-for="User.BirhtDate" class="controls" type="date" name="trip-start" />
+            <span asp-validation-for="User.BirhtDate" class="text-danger"></span>
+
+            <label asp-for="User.Email" class="control-label"></label>
+            <input asp-for="User.Email" class="controls" placeholder="Ingrese su email">
+            <span asp-validation-for="User.Email" class="text-danger"></span>
+
+            <label asp-for="Contrasenia" class="control-label"></label>
+            <input asp-for="Contrasenia" class="controls" placeholder="Ingrese su contraseña" type="password" minlength="6">
+            <span asp-validation-for="Contrasenia" class="text-danger"></span>
+
+            <label asp-for="ImageFile" class="control-label"></label>
+            <input asp-for="ImageFile" class="controls" type="file" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+
+            <input class="botons" type="submit" value="Crear cuenta" />
+
+            <p><a asp-controller="Account" asp-action="Login">¿Ya tienes cuenta? Inicia sesión</a></p>
+        </section>
+    </form>
+</body>

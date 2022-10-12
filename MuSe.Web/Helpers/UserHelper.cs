@@ -109,8 +109,7 @@
         public async Task<List<User>> GetAllUsersAsync()
         {
             return await _userManager.Users
-                .OrderBy(u => u.FathersName)
-                .ThenBy(u => u.MothersName)
+                .OrderBy(u => u.LastName)
                 .ThenBy(u => u.FirstName)
                 .ToListAsync();
         }

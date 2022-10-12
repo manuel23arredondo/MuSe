@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    public class Mood
+    public class Mood : IEntity
     {
         public int Id { get; set; }
 

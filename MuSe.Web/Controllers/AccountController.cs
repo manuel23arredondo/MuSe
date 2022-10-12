@@ -47,6 +47,16 @@
             return this.View(model);
         }
 
+        [HttpGet]
+        public IActionResult CreateAccount()
+        {
+            if (this.User.Identity.IsAuthenticated)
+            {
+                return this.RedirectToAction("Index", "Home");
+            }
+            return this.View();
+        }
+
         public async Task<IActionResult> Logout()
         {
             await this.userHelper.LogoutAsync();

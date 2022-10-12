@@ -8,6 +8,7 @@
     public class DataContext : IdentityDbContext<User>
     {
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<CodeTemp> CodeTemps { get; set; }
         public DbSet<CurrentRiskSituation> CurrentRiskSituations { get; set; }
         public DbSet<HelpDirectory> HelpDirectories { get; set; }
         public DbSet<HelpType> HelpTypes { get; set; }

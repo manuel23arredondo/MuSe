@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public class Violentometer
+    public class Violentometer:IEntity
     {
         public int Id { get; set; }
 

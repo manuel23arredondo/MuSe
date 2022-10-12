@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    public class HelpType
+    public class HelpType:IEntity
     {
         public int Id { get; set; }
 

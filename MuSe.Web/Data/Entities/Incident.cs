@@ -3,7 +3,7 @@
     using System;
     using System.ComponentModel.DataAnnotations;
 
-    public class Incident
+    public class Incident:IEntity
     {
         public int Id { get; set; }
 

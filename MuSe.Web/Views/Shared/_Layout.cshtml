@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-info border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><h1>MuSe</h1></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -18,18 +18,47 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row">
                     <ul class="navbar-nav flex-grow-1">
+                        @if (this.User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catálogos</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-area="" asp-controller="HelpTypes" asp-action="Index">Tipos de ayuda</a>
+                                    <div class="dropdown-divider"></div>
+
+                                    <a class="dropdown-item" asp-area="" asp-controller="Moods" asp-action="Index">Sentimientos</a>
+                                    <div class="dropdown-divider"></div>
+
+                                    <a class="dropdown-item" asp-area="" asp-controller="Reliabilities" asp-action="Index">Gravedad de la acción</a>
+                                    <div class="dropdown-divider"></div>
+
+                                    <a class="dropdown-item" asp-area="" asp-controller="KindOfPlaces" asp-action="Index">Tipos de lugar</a>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                            <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Violentometers" asp-action="Index">Violentómetro</a>
+                            </li>
+                    </ul>
+                    @if (this.User.IsInRole("Admin"))
+                    {
+                    <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Womans" asp-action="Index">Mujeres</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Violentometer" asp-action="Index">Violentómetro</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Monitors" asp-action="Index">Monitores</a>
                         </li>
                     </ul>
+                    }
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Directory" asp-action="Index">Directorio de organizaciones</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Directories" asp-action="Index">Directorio de organizaciones</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">

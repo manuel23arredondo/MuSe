@@ -2,7 +2,7 @@
 
 namespace MuSe.Web.Data.Entities
 {
-    public class OwnWomanPlace
+    public class OwnWomanPlace:IEntity
     {
         public int Id { get; set; }
 
