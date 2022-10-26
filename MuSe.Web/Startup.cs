@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MuSe.Web.Data;
 using MuSe.Web.Data.Entities;
+using MuSe.Web.Data.Repositories;
 using MuSe.Web.Helpers;
 
 namespace MuSe.Web
@@ -33,6 +34,7 @@ namespace MuSe.Web
                 cfg.Password.RequireUppercase = false;
                 cfg.Password.RequiredLength = 6; //123456
             })
+
             .AddEntityFrameworkStores<DataContext>();
             services.AddDbContext<DataContext>(cfg =>
             {
@@ -43,6 +45,8 @@ namespace MuSe.Web
             services.AddScoped<IUserHelper, UserHelper>();
             services.AddScoped<ICombosHelper, CombosHelper>();
             services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<IHelpTypeRepository, HelpTypeRepository>();
+            
             services.AddControllersWithViews();
 
             services.ConfigureApplicationCookie(options =>

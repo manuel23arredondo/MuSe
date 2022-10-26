@@ -2,24 +2,23 @@
 {
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
-    using MuSe.Web.Data;
     using MuSe.Web.Data.Entities;
-    using System;
+    using MuSe.Web.Data.Repositories;
     using System.Linq;
     using System.Threading.Tasks;
 
     public class HelpTypesController : Controller
     {
-        private readonly DataContext _context;
+        private readonly IHelpTypeRepository repository;
 
-        public HelpTypesController(DataContext context)
+        public HelpTypesController(IHelpTypeRepository repository)
         {
-            _context = context;
+            this.repository = repository;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.HelpTypes.ToListAsync());
+            return View(this.repository.GetAll());
         }
 
         [HttpGet]
@@ -34,8 +33,7 @@
         {
             if (ModelState.IsValid)
             {
-                _context.Add(helpType);
-                await _context.SaveChangesAsync();
+                await this.repository.CreateAsync(helpType);
                 return RedirectToAction(nameof(Index));
             }
             return View(helpType);
@@ -49,7 +47,7 @@
                 return NotFound();
             }
 
-            var helpType = await _context.HelpTypes.FindAsync(id);
+            var helpType = await this.repository.GetByIdAsync(id.Value);
             if (helpType == null)
             {
                 return NotFound();
@@ -70,12 +68,11 @@
             {
                 try
                 {
-                    _context.Update(helpType);
-                    await _context.SaveChangesAsync();
+                    await this.repository.UpdateAsync(helpType);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!HelpTypeExists(helpType.Id))
+                    if (!await this.repository.ExistAsync(helpType.Id))
                     {
                         return NotFound();
                     }
@@ -97,8 +94,7 @@
                 return NotFound();
             }
 
-            var helpType = await _context.HelpTypes
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var helpType = await this.repository.GetByIdAsync(id.Value);
             if (helpType == null)
             {
                 return NotFound();
@@ -111,23 +107,9 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var helpType = await _context.HelpTypes.FindAsync(id);
-            _context.HelpTypes.Remove(helpType);
-            try
-            {
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError(string.Empty, "No se pueden eliminar registros");
-            }
-            return View(helpType);
-        }
-
-        private bool HelpTypeExists(int id)
-        {
-            return _context.HelpTypes.Any(e => e.Id == id);
+            var helpType = await this.repository.GetByIdAsync(id);
+            await this.repository.DeleteAsync(helpType);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
