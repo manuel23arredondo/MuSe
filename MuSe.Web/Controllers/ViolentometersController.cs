@@ -23,6 +23,8 @@
 
         public async Task<IActionResult> Index()
         {
+            
+
             return View(await this.dataContext.Violentometers
                 .Include(r => r.Reliability)
                 .ToListAsync());

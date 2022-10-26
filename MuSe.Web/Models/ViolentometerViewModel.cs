@@ -10,6 +10,8 @@
         [Display(Name = "Gravedad de la acción violenta")]
         public int ReliabilityId { get; set; }
 
+        public string color { get; set; }
+
         public IEnumerable<SelectListItem> Reliabilities { get; set; }
     }
 }

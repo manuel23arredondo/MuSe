@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Violentómetro";
 }
+@*
+<link rel="stylesheet" href="~/css/violentometer.css" />*@
 
 <h1>Violentómetro</h1>
 
@@ -12,7 +14,7 @@
         <a asp-action="Create" class="btn btn-success">Crear acción violenta</a>
     }
 </p>
-<table class="table table-dark">
+<table>
     <thead>
         <tr>
             <th>
@@ -27,21 +29,61 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Reliability.Description)
-                </td>
-                <td>
-                    @if (this.User.IsInRole("Admin"))
-                    {
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
-                    }
-                </td>
-            </tr>
+            @if(item.Reliability.Description == "Leve")
+            {
+                <tr style="background-color: yellow;">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Reliability.Description)
+                    </td>
+                    <td>
+                        @if (this.User.IsInRole("Admin"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                        }
+                    </td>
+                </tr>
+            }
+
+            @if (item.Reliability.Description == "Intermedia")
+            {
+                <tr style="background-color: orange;">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Reliability.Description)
+                    </td>
+                    <td>
+                        @if (this.User.IsInRole("Admin"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                        }
+                    </td>
+                </tr>
+            }
+            @if (item.Reliability.Description == "Grave")
+            {
+                <tr style="background-color: red;">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Reliability.Description)
+                    </td>
+                    <td>
+                        @if (this.User.IsInRole("Admin"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                        }
+                    </td>
+                </tr>
+            }
         }
     </tbody>
 </table>

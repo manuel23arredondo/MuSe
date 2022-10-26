@@ -66,45 +66,50 @@
             return this.RedirectToAction("Index", "Home");
         }
 
-
         [HttpGet]
-        public IActionResult StartRecovery()
+        public IActionResult MyProfile()
         {
-            RecoveryViewModel model = new RecoveryViewModel();
-            return View(model);
+            return this.View();
         }
 
-        [HttpPost]
-        public IActionResult StartRecovery(RecoveryViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                return View(model);
+        //[HttpGet]
+        //public IActionResult StartRecovery()
+        //{
+        //    RecoveryViewModel model = new RecoveryViewModel();
+        //    return View(model);
+        //}
 
-            }
+        //[HttpPost]
+        //public IActionResult StartRecovery(RecoveryViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        return View(model);
 
-            string token = GetSha256(Guid.NewGuid().ToString());
+        //    }
 
-            return View();
-        }
+        //    string token = GetSha256(Guid.NewGuid().ToString());
 
-        public IActionResult Recovery()
-        {
-            return View();
-        }
+        //    return View();
+        //}
 
-        #region HELPERS
-        private string GetSha256(string str)
-        {
-            SHA256 sha256 = SHA256Managed.Create();
-            ASCIIEncoding encoding = new ASCIIEncoding();
-            byte[] stream = null;
-            StringBuilder sb = new StringBuilder();
-            stream = sha256.ComputeHash(encoding.GetBytes(str));
-            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
-            return sb.ToString();
-        }
+        //public IActionResult Recovery()
+        //{
+        //    return View();
+        //}
 
-        #endregion
+        //#region HELPERS
+        //private string GetSha256(string str)
+        //{
+        //    SHA256 sha256 = SHA256Managed.Create();
+        //    ASCIIEncoding encoding = new ASCIIEncoding();
+        //    byte[] stream = null;
+        //    StringBuilder sb = new StringBuilder();
+        //    stream = sha256.ComputeHash(encoding.GetBytes(str));
+        //    for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+        //    return sb.ToString();
+        //}
+
+        //#endregion
     }
 }

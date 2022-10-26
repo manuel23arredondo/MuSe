@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Mi perfil";
+}
+
+@if (this.User.Identity.IsAuthenticated)
+{
+    <a>@this.User.Identity.Name</a>
+    <a>@this.User.Identity.IsAuthenticated.</a>
+}
+else
+{
+    <li>
+        <a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-success">Login</a>
+    </li>
+}
