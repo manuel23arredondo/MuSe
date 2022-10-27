@@ -145,23 +145,21 @@
             await userHelper.AddUserToRoleAsync(user, rol);
         }
 
-        private async Task CheckWoman(User user, string rol, string imageUrl)
+        private async Task CheckWoman(User user, string rol)
         {
             this.dataContext.Womans.Add(new Woman
             {
-                User = user, 
-                ImageUrl = imageUrl
+                User = user
             });
             await this.dataContext.SaveChangesAsync();
             await userHelper.AddUserToRoleAsync(user, rol);
         }
 
-        private async Task CheckMonitor(User user, string rol, string imageUrl)
+        private async Task CheckMonitor(User user, string rol)
         {
             this.dataContext.Monitors.Add(new Monitor
             {
-                User = user,
-                ImageUrl = imageUrl
+                User = user
             });
             await this.dataContext.SaveChangesAsync();
             await userHelper.AddUserToRoleAsync(user, rol);

@@ -5,7 +5,7 @@
     using System.ComponentModel.DataAnnotations;
     public class WomanViewModel:Woman
     {
-        [Display(Name = "Foto")]
+        [Display(Name = "Imagen")]
         public IFormFile ImageFile { get; set; }
 
         [Display(Name = "Contraseña")]

@@ -10,7 +10,7 @@ using MuSe.Web.Data;
 namespace MuSe.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221012151633_initial")]
+    [Migration("20221027160142_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

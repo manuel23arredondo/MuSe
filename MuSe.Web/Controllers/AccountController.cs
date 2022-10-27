@@ -1,6 +1,8 @@
 ﻿namespace MuSe.Web.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+    using MuSe.Web.Data;
     using MuSe.Web.Helpers;
     using MuSe.Web.Models;
     using System;
@@ -10,10 +12,12 @@
 
     public class AccountController : Controller
     {
+        private readonly DataContext dataContext;
         private readonly IUserHelper userHelper;
 
-        public AccountController(IUserHelper userHelper)
+        public AccountController(IUserHelper userHelper, DataContext dataContext)
         {
+            this.dataContext = dataContext;
             this.userHelper = userHelper;
         }
 
@@ -67,9 +71,9 @@
         }
 
         [HttpGet]
-        public IActionResult MyProfile()
+        public async Task <IActionResult> MyProfile()
         {
-            return this.View();
+            return View(await dataContext.Users.ToListAsync());
         }
 
         //[HttpGet]

@@ -29,6 +29,7 @@
         [Display(Name = "Fecha de nacimiento")]
         public DateTime BirhtDate { get; set; }
 
+
         //[Display(Name = "Edad")]
         //public int Edad
         //{

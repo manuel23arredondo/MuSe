@@ -2,11 +2,9 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    public class Monitor
+    public class Monitor : IEntity
     {
         public int Id { get; set; }
-
-
 
         [Display(Name = "Imagen")]
         public string ImageUrl { get; set; }

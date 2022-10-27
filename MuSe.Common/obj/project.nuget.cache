@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bfDA3xQJKcwX4yICuj78kkXDtOk8r0RxEjI02s/vCDn0YRR+A5N26j3zUh2XqHM9aWTiQcBZOj5k1u4G8ipYgQ==",
+  "dgSpecHash": "l4m8q3Pgy96YIF6pLoJO0PNtb4ZDj2J5VsCRaGltrftdGAoTeQTvKlm10b4XxN1MS12zMhXN33IJoVBzSbUWEg==",
   "success": true,
   "projectFilePath": "C:\\MuSe\\MuSe.Common\\MuSe.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Manuel\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\jonh1\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

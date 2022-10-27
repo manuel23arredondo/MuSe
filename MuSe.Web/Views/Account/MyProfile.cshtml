@@ -1,11 +1,16 @@
-﻿@{
+﻿@model IEnumerable<MuSe.Web.Data.Entities.User>
+
+@{
     ViewData["Title"] = "Mi perfil";
 }
 
 @if (this.User.Identity.IsAuthenticated)
 {
     <a>@this.User.Identity.Name</a>
-    <a>@this.User.Identity.IsAuthenticated.</a>
+    @foreach (var item in Model)
+    {
+    <a>@Html.DisplayFor(modelItem => item.FullName)</a>
+    }
 }
 else
 {
