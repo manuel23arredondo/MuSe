@@ -6,7 +6,7 @@
 @*
 <link rel="stylesheet" href="~/css/violentometer.css" />*@
 
-<h1>Violentómetro</h1>
+<h1 style="text-align:center;">Violentómetro</h1>
 
 <p>
     @if (this.User.IsInRole("Admin"))
@@ -14,7 +14,8 @@
         <a asp-action="Create" class="btn btn-success">Crear acción violenta</a>
     }
 </p>
-<table>
+<div class="row d-flex justify-content-center">
+<table style="text-align: center;"> 
     <thead>
         <tr>
             <th>
@@ -87,3 +88,4 @@
         }
     </tbody>
 </table>
+</div>
