@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZKOCooLDAuFFyrIfsS3eThUehUS0UFzT0HMTBO4jjKdZxmw+t+F0vjTgxDsfEki0tab7lliRJxgl/h8olmDt9A==",
+  "dgSpecHash": "l4m8q3Pgy96YIF6pLoJO0PNtb4ZDj2J5VsCRaGltrftdGAoTeQTvKlm10b4XxN1MS12zMhXN33IJoVBzSbUWEg==",
   "success": true,
-  "projectFilePath": "C:\\MuSeV6\\MuSe.Common\\MuSe.Common.csproj",
+  "projectFilePath": "C:\\MuSe\\MuSe.Common\\MuSe.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\swagm\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\jonh1\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

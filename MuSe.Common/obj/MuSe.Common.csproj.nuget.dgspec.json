@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MuSeV6\\MuSe.Common\\MuSe.Common.csproj": {}
+    "C:\\MuSe\\MuSe.Common\\MuSe.Common.csproj": {}
   },
   "projects": {
-    "C:\\MuSeV6\\MuSe.Common\\MuSe.Common.csproj": {
+    "C:\\MuSe\\MuSe.Common\\MuSe.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MuSeV6\\MuSe.Common\\MuSe.Common.csproj",
+        "projectUniqueName": "C:\\MuSe\\MuSe.Common\\MuSe.Common.csproj",
         "projectName": "MuSe.Common",
-        "projectPath": "C:\\MuSeV6\\MuSe.Common\\MuSe.Common.csproj",
-        "packagesPath": "C:\\Users\\swagm\\.nuget\\packages\\",
-        "outputPath": "C:\\MuSeV6\\MuSe.Common\\obj\\",
+        "projectPath": "C:\\MuSe\\MuSe.Common\\MuSe.Common.csproj",
+        "packagesPath": "C:\\Users\\jonh1\\.nuget\\packages\\",
+        "outputPath": "C:\\MuSe\\MuSe.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\swagm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonh1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
