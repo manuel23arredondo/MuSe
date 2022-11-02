@@ -22,7 +22,7 @@
         }
 
         //[HttpPost]
-        //public async Task<IActionResult> PostHelpType()
+        //public async Task<IActionResult> PostHelpType([FromBody])
         //{
 
         //}

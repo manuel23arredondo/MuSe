@@ -46,6 +46,7 @@ namespace MuSe.Web
             services.AddScoped<ICombosHelper, CombosHelper>();
             services.AddScoped<IImageHelper, ImageHelper>();
             services.AddScoped<IHelpTypeRepository, HelpTypeRepository>();
+            services.AddScoped<IHelpDirectoryRepository, HelpDirectoryRepository>();
             
             services.AddControllersWithViews();
 
