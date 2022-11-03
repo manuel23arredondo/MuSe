@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+          integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+          crossorigin="" />
+    <link rel="stylesheet" type="text/css" href="~/css/mapa.css" />
+    
+    <title>Organizaciones de ayuda</title>
+    <h1>Localización de organizaciones de ayuda</h1>
+
+    <select name="select-location" id="select-location">
+        <option value="-1">Selecciona una organización</option>
+        <option value="19.42573029772769, -99.14786782329821">Centro de Atención a la violencia Intrafamiliar C.A.V.I.</option>
+        <option value="19.44914740858582, -99.15915268299553">Asociación para el Desarrollo Integral de Personas Violadas A.C.</option>
+    </select>
+</head>
+<body>
+    
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+            integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+            crossorigin=""></script>
+    <script src="~/js/mapa.js"></script>
+</body>
+</html>

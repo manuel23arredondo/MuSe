@@ -234,3 +234,7 @@ C:\MuSeV6\MuSe.Web\obj\Debug\netcoreapp3.1\MuSe.Web.csproj.CopyComplete
 C:\MuSeV6\MuSe.Web\obj\Debug\netcoreapp3.1\MuSe.Web.dll
 C:\MuSeV6\MuSe.Web\obj\Debug\netcoreapp3.1\MuSe.Web.pdb
 C:\MuSeV6\MuSe.Web\obj\Debug\netcoreapp3.1\MuSe.Web.genruntimeconfig.cache
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\WomanDiaries\Create.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\WomanDiaries\Details.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\WomanDiaries\Index.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Directories\Map.cshtml.g.cs

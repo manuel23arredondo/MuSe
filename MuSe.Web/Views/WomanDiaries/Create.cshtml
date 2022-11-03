@@ -1,0 +1,72 @@
+﻿@model MuSe.Web.Models.DirectorViewModel
+
+@{
+    ViewData["Title"] = "Agregar organización de ayuda";
+}
+
+<h1>Agregar</h1>
+
+<h4>Organización de ayuda</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="OrganizationName" class="control-label"></label>
+                <input asp-for="OrganizationName" size="16" class="form-control" type="text" />
+                <span asp-validation-for="OrganizationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" size="16" class="form-control" type="text" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Street" class="control-label"></label>
+                <input asp-for="Street" size="16" class="form-control" type="text" />
+                <span asp-validation-for="Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InsideNumber" class="control-label"></label>
+                <input asp-for="InsideNumber" size="16" class="form-control" type="text" />
+                <span asp-validation-for="InsideNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OutsideNumber" class="control-label"></label>
+                <input asp-for="OutsideNumber" size="16" class="form-control" type="text" />
+                <span asp-validation-for="OutsideNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colony" class="control-label"></label>
+                <input asp-for="Colony" size="16" class="form-control" type="text" />
+                <span asp-validation-for="Colony" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostCode" class="control-label"></label>
+                <input asp-for="PostCode" size="16" class="form-control" type="text" maxlength="5" />
+                <span asp-validation-for="PostCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" size="16" class="form-control" type="text" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="HelpTypeId" class="control-label"></label>
+                <select asp-for="HelpTypeId" asp-items="Model.HelpTypes" class="form-control"></select>
+                <span asp-validation-for="HelpType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-info">Regresar a la lista</a>
+</div>

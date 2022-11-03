@@ -21,6 +21,11 @@
             this.combosHelper = combosHelper;
         }
 
+        public IActionResult Map()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Index()
         {
             return View(await this.dataContext.HelpDirectories
