@@ -86,13 +86,14 @@
                 }
                 else
                 {
-                <button type="button" onclick="document.getElementById('id01').style.display='block'"><img src="~/images/login.png" height="80" width="100" /></button>
+                <a asp-area="" asp-controller="Account" asp-action="Login"><img src="~/images/login.png" height="80" width="100" /></a>
+                @*<button type="button" onclick="document.getElementById('id01').style.display='block'"><img src="~/images/login.png" height="80" width="100" /></button>
                 <div id="id01" class="modal">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <div class="container">
                     <section class="form-register">
                         <h4>Login</h4>
-                        @*@model MuSe.Web.Models.LoginViewModel
+                        @model MuSe.Web.Models.LoginViewModel
                         <form method="post">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -120,10 +121,10 @@
                                 <input type="submit" value="Login" class="controls" />
                                 <p><a asp-controller="Account" asp-action="CreateAccount">Crear cuenta</a></p>
                             </div>
-                        </form>*@
+                        </form>
                     </section>
                     </div>
-                </div>
+                </div>*@
                 }
             </div>
         </nav>
