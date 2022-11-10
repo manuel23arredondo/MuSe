@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\MuSe\\MuSe.Web\\MuSe.Web.csproj",
         "projectName": "MuSe.Web",
         "projectPath": "C:\\MuSe\\MuSe.Web\\MuSe.Web.csproj",
-        "packagesPath": "C:\\Users\\jonh1\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
         "outputPath": "C:\\MuSe\\MuSe.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jonh1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
