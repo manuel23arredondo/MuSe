@@ -4,7 +4,6 @@
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data.Entities;
     using MuSe.Web.Data.Repositories;
-    using System.Linq;
     using System.Threading.Tasks;
 
     public class HelpTypesController : Controller
@@ -18,7 +17,7 @@
 
         public IActionResult Index()
         {
-            return View(this.repository.GetAll());
+            return View(this.repository.GetHelpTypeWithHelpDirectories());
         }
 
         [HttpGet]

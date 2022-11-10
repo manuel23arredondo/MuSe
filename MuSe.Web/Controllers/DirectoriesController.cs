@@ -5,6 +5,7 @@
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data;
     using MuSe.Web.Data.Entities;
+    using MuSe.Web.Data.Repositories;
     using MuSe.Web.Helpers;
     using MuSe.Web.Models;
     using System;
@@ -13,11 +14,12 @@
     {
         private readonly DataContext dataContext;
         private readonly ICombosHelper combosHelper;
+        private readonly IHelpDirectoryRepository repository;
 
-        public DirectoriesController(DataContext dataContext,
+        public DirectoriesController(IHelpDirectoryRepository repository,
             ICombosHelper combosHelper)
         {
-            this.dataContext = dataContext;
+            this.repository = repository;
             this.combosHelper = combosHelper;
         }
 
@@ -26,11 +28,9 @@
             return View();
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await this.dataContext.HelpDirectories
-                .Include(h => h.HelpType)
-                .ToListAsync());
+            return View(this.repository.GetHelpDirectoriesWithHelpTypes());
         }
 
         [Authorize(Roles = "Admin")]

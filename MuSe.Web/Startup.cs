@@ -47,7 +47,8 @@ namespace MuSe.Web
             services.AddScoped<IImageHelper, ImageHelper>();
             services.AddScoped<IHelpTypeRepository, HelpTypeRepository>();
             services.AddScoped<IHelpDirectoryRepository, HelpDirectoryRepository>();
-            
+            services.AddScoped<IKindOfPlaceRepository, KindOfPlaceRepository>();
+
             services.AddControllersWithViews();
 
             services.ConfigureApplicationCookie(options =>

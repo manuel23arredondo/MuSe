@@ -1,0 +1,22 @@
+﻿namespace MuSe.Web.Data.Repositories
+{
+    using Microsoft.EntityFrameworkCore;
+    using MuSe.Web.Data.Entities;
+    using System.Linq;
+    public class KindOfPlaceRepository : GenericRepository<KindOfPlace>, IKindOfPlaceRepository
+    {
+        private readonly DataContext context;
+
+        public KindOfPlaceRepository(DataContext context) : base(context)
+        {
+            this.context = context;
+        }
+
+        public IQueryable GetKindOfPlaceWithOwnWomanPlaces()
+        {
+            return this.context.KindOfPlaces
+                .Include(c => c.OwnWomanPlaces)
+                .OrderBy(c => c.Description);
+        }
+    }
+}

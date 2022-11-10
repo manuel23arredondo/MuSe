@@ -2,23 +2,21 @@
 {
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
-    using MuSe.Web.Data;
     using MuSe.Web.Data.Entities;
-    using System;
-    using System.Linq;
+    using MuSe.Web.Data.Repositories;
     using System.Threading.Tasks;
     public class KindOfPlacesController : Controller
     {
-        private readonly DataContext _context;
+        private readonly IKindOfPlaceRepository repository;
 
-        public KindOfPlacesController(DataContext context)
+        public KindOfPlacesController(IKindOfPlaceRepository repository)
         {
-            _context = context;
+            this.repository = repository;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.KindOfPlaces.ToListAsync());
+            return View(this.repository.GetKindOfPlaceWithOwnWomanPlaces());
         }
 
         [HttpGet]
@@ -33,8 +31,7 @@
         {
             if (ModelState.IsValid)
             {
-                _context.Add(kindOfPlace);
-                await _context.SaveChangesAsync();
+                await this.repository.CreateAsync(kindOfPlace);
                 return RedirectToAction(nameof(Index));
             }
             return View(kindOfPlace);
@@ -48,7 +45,7 @@
                 return NotFound();
             }
 
-            var kindOfPlace = await _context.KindOfPlaces.FindAsync(id);
+            var kindOfPlace = await this.repository.GetByIdAsync(id.Value);
             if (kindOfPlace == null)
             {
                 return NotFound();
@@ -69,12 +66,11 @@
             {
                 try
                 {
-                    _context.Update(kindOfPlace);
-                    await _context.SaveChangesAsync();
+                    await this.repository.UpdateAsync(kindOfPlace);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!KindOfPlacesExists(kindOfPlace.Id))
+                    if (!await this.repository.ExistAsync(kindOfPlace.Id))
                     {
                         return NotFound();
                     }
@@ -96,37 +92,22 @@
                 return NotFound();
             }
 
-            var mood = await _context.KindOfPlaces
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (mood == null)
+            var kindOfPlace = await this.repository.GetByIdAsync(id.Value);
+            if (kindOfPlace == null)
             {
                 return NotFound();
             }
 
-            return View(mood);
+            return View(kindOfPlace);
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var kindOfPlace = await _context.KindOfPlaces.FindAsync(id);
-            _context.KindOfPlaces.Remove(kindOfPlace);
-            try
-            {
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError(string.Empty, "No se pueden eliminar registros");
-            }
-            return View(kindOfPlace);
-        }
-
-        private bool KindOfPlacesExists(int id)
-        {
-            return _context.HelpTypes.Any(e => e.Id == id);
+            var kindOfPlace = await this.repository.GetByIdAsync(id);
+            await this.repository.DeleteAsync(kindOfPlace);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

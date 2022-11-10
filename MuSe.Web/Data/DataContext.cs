@@ -38,7 +38,7 @@
             {
                 fk.DeleteBehavior = DeleteBehavior.Restr­ict;
             }
-
+              
             base.OnModelCreating(builder);
         }
     }
