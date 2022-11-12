@@ -17,7 +17,7 @@
 
         public IActionResult Index()
         {
-            return View(this.repository.GetHelpTypeWithHelpDirectories());
+            return View(this.repository.GetAll());
         }
 
         [HttpGet]

@@ -4,21 +4,22 @@
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data;
     using MuSe.Web.Data.Entities;
+    using MuSe.Web.Data.Repositories;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
     public class ReliabilitiesController : Controller
     {
-        private readonly DataContext _context;
+        private readonly IReliabilityRepository repository;
 
-        public ReliabilitiesController(DataContext context)
+        public ReliabilitiesController(IReliabilityRepository repository)
         {
-            _context = context;
+            this.repository = repository;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Reliabilities.ToListAsync());
+            return View(this.repository.GetAll());
         }
 
         [HttpGet]
@@ -33,8 +34,7 @@
         {
             if (ModelState.IsValid)
             {
-                _context.Add(reliability);
-                await _context.SaveChangesAsync();
+                await this.repository.CreateAsync(reliability);
                 return RedirectToAction(nameof(Index));
             }
             return View(reliability);
@@ -48,7 +48,7 @@
                 return NotFound();
             }
 
-            var reliability = await _context.Reliabilities.FindAsync(id);
+            var reliability = await this.repository.GetByIdAsync(id.Value);
             if (reliability == null)
             {
                 return NotFound();
@@ -69,12 +69,11 @@
             {
                 try
                 {
-                    _context.Update(reliability);
-                    await _context.SaveChangesAsync();
+                    await this.repository.UpdateAsync(reliability);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ReliabilityExists(reliability.Id))
+                    if (!await this.repository.ExistAsync(reliability.Id))
                     {
                         return NotFound();
                     }
@@ -96,8 +95,7 @@
                 return NotFound();
             }
 
-            var mood = await _context.Reliabilities
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var mood = await this.repository.GetByIdAsync(id.Value);
             if (mood == null)
             {
                 return NotFound();
@@ -110,23 +108,9 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var reliability = await _context.Reliabilities.FindAsync(id);
-            _context.Reliabilities.Remove(reliability);
-            try
-            {
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError(string.Empty, "No se pueden eliminar registros");
-            }
-            return View(reliability);
-        }
-
-        private bool ReliabilityExists(int id)
-        {
-            return _context.HelpTypes.Any(e => e.Id == id);
+            var reliability = await this.repository.GetByIdAsync(id);
+            await this.repository.DeleteAsync(reliability);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

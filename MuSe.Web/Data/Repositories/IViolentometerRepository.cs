@@ -1,0 +1,10 @@
+﻿namespace MuSe.Web.Data.Repositories
+{
+    using MuSe.Web.Data.Entities;
+    using System.Linq;
+
+    public interface IViolentometerRepository : IGenericRepository<Violentometer>
+    {
+        IQueryable GetViolentometersWithReliabilities();
+    }
+}

@@ -5,6 +5,7 @@
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data;
     using MuSe.Web.Data.Entities;
+    using MuSe.Web.Data.Repositories;
     using MuSe.Web.Helpers;
     using MuSe.Web.Models;
     using System;
@@ -15,19 +16,19 @@
         private readonly DataContext dataContext;
         private readonly IUserHelper userHelper;
         private readonly IImageHelper imageHelper;
+        private readonly IWomanRepository repository;
 
-        public WomansController(DataContext dataContext, IImageHelper imageHelper, IUserHelper userHelper)
+        public WomansController(IWomanRepository repository ,DataContext dataContext, IImageHelper imageHelper, IUserHelper userHelper)
         {
             this.dataContext = dataContext;
             this.imageHelper = imageHelper;
             this.userHelper = userHelper;
+            this.repository = repository;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await dataContext.Womans
-                .Include(t => t.User)
-                .ToListAsync());
+            return View(this.repository.GetWomanWithUsers());
         }
 
         public IActionResult AccountCreated()

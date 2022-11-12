@@ -5,6 +5,7 @@
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data;
     using MuSe.Web.Data.Entities;
+    using MuSe.Web.Data.Repositories;
     using MuSe.Web.Helpers;
     using MuSe.Web.Models;
     using System;
@@ -13,21 +14,18 @@
     {
         private readonly DataContext dataContext;
         private readonly ICombosHelper combosHelper;
+        private readonly IViolentometerRepository repository;
 
-        public ViolentometersController(DataContext dataContext,
+        public ViolentometersController(IViolentometerRepository repository,
             ICombosHelper combosHelper)
         {
-            this.dataContext = dataContext;
+            this.repository = repository;
             this.combosHelper = combosHelper;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            
-
-            return View(await this.dataContext.Violentometers
-                .Include(r => r.Reliability)
-                .ToListAsync());
+            return View(this.repository.GetViolentometersWithReliabilities());
         }
 
         [Authorize(Roles = "Admin")]

@@ -1,9 +1,10 @@
 ﻿//namespace MuSe.Web.Data.Repositories
 //{
 //    using Microsoft.EntityFrameworkCore;
+//    using MuSe.Web.Data.Entities;
 //    using System.Linq;
 
-//    public class UserRepository : GenericRepository<UserRepository>, IUserRepository
+//    public class UserRepository : GenericRepository<User>, IUserRepository
 //    {
 //        private readonly DataContext context;
 
@@ -12,15 +13,11 @@
 //            this.context = context;
 //        }
 
-//        public IQueryable GetHelpTypeWithHelpDirectories()
+//        public IQueryable GetUsersWithWomansOrMonitors()
 //        {
-//            return this.context.HelpTypes
-//                .Include(c => c.HelpDirectories)
+//            return this.context.Users
+//                .Include(c => )
 //                .OrderBy(c => c.Description);
-//        }
-//        public IQueryable GetUser()
-//        {
-//            throw new System.NotImplementedException();
 //        }
 //    }
 //}

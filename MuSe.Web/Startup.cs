@@ -48,6 +48,12 @@ namespace MuSe.Web
             services.AddScoped<IHelpTypeRepository, HelpTypeRepository>();
             services.AddScoped<IHelpDirectoryRepository, HelpDirectoryRepository>();
             services.AddScoped<IKindOfPlaceRepository, KindOfPlaceRepository>();
+            services.AddScoped<IMoodRepository, MoodRepository>();
+            services.AddScoped<IReliabilityRepository, ReliabilityRepository>();
+            services.AddScoped<IViolentometerRepository, ViolentometerRepository>();
+            services.AddScoped<IWomanRepository, WomanRepository>();
+            services.AddScoped<IMonitorRepository, MonitorRepository>();
+            //services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddControllersWithViews();
 

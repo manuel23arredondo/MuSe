@@ -7,19 +7,20 @@
     using System.Threading.Tasks;
     using System;
     using System.Linq;
+    using MuSe.Web.Data.Repositories;
 
     public class MoodsController : Controller
     {
-        private readonly DataContext _context;
+        private readonly IMoodRepository repository;
 
-        public MoodsController(DataContext context)
+        public MoodsController(IMoodRepository repository)
         {
-            _context = context;
+            this.repository = repository;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Moods.ToListAsync());
+            return View(this.repository.GetAll());
         }
 
         [HttpGet]
@@ -34,8 +35,7 @@
         {
             if (ModelState.IsValid)
             {
-                _context.Add(mood);
-                await _context.SaveChangesAsync();
+                await this.repository.CreateAsync(mood);
                 return RedirectToAction(nameof(Index));
             }
             return View(mood);
@@ -49,7 +49,7 @@
                 return NotFound();
             }
 
-            var mood = await _context.Moods.FindAsync(id);
+            var mood = await this.repository.GetByIdAsync(id.Value);
             if (mood == null)
             {
                 return NotFound();
@@ -70,12 +70,11 @@
             {
                 try
                 {
-                    _context.Update(mood);
-                    await _context.SaveChangesAsync();
+                    await this.repository.UpdateAsync(mood);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MoodsExists(mood.Id))
+                    if (!await this.repository.ExistAsync(mood.Id))
                     {
                         return NotFound();
                     }
@@ -97,8 +96,7 @@
                 return NotFound();
             }
 
-            var mood = await _context.Moods
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var mood = await this.repository.GetByIdAsync(id.Value);
             if (mood == null)
             {
                 return NotFound();
@@ -111,23 +109,9 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var mood = await _context.Moods.FindAsync(id);
-            _context.Moods.Remove(mood);
-            try
-            {
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError(string.Empty, "No se pueden eliminar registros");
-            }
-            return View(mood);
-        }
-
-        private bool MoodsExists(int id)
-        {
-            return _context.HelpTypes.Any(e => e.Id == id);
+            var mood = await this.repository.GetByIdAsync(id);
+            await this.repository.DeleteAsync(mood);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
