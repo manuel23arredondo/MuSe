@@ -4,6 +4,7 @@
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data.Entities;
     using MuSe.Web.Data.Repositories;
+    using System;
     using System.Threading.Tasks;
 
     public class HelpTypesController : Controller
@@ -107,8 +108,17 @@
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var helpType = await this.repository.GetByIdAsync(id);
-            await this.repository.DeleteAsync(helpType);
-            return RedirectToAction(nameof(Index));
+
+            try
+            {
+                await this.repository.DeleteAsync(helpType);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "No se pueden eliminar registros");
+            }
+            return View(helpType);
         }
     }
 }

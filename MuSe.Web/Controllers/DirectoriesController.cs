@@ -17,10 +17,11 @@
         private readonly IHelpDirectoryRepository repository;
 
         public DirectoriesController(IHelpDirectoryRepository repository,
-            ICombosHelper combosHelper)
+            ICombosHelper combosHelper, DataContext dataContext)
         {
             this.repository = repository;
             this.combosHelper = combosHelper;
+            this.dataContext = dataContext;
         }
 
         public IActionResult Map()
@@ -61,8 +62,7 @@
                     Email = model.Email,
                     HelpType = await this.dataContext.HelpTypes.FindAsync(model.HelpTypeId)
                 };
-                this.dataContext.Add(helpDirectory);
-                await this.dataContext.SaveChangesAsync();
+                await this.repository.CreateAsync(helpDirectory);
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
@@ -80,6 +80,8 @@
             var helpDirectory = await this.dataContext.HelpDirectories
                 .Include(h => h.HelpType)
                 .FirstOrDefaultAsync(p => p.Id == id);
+
+            //var helpDirectory = await this.repository.GetByIdAsync(id.Value);
 
             if (helpDirectory == null)
             {
@@ -123,31 +125,30 @@
                     HelpType = await this.dataContext.HelpTypes.FindAsync(model.HelpTypeId)
                 };
 
-                this.dataContext.Update(helpDirectory);
-                await this.dataContext.SaveChangesAsync();
+                await this.repository.UpdateAsync(helpDirectory);
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
         }
 
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var helpDirectory = await dataContext.HelpDirectories
-                .Include(h => h.HelpType)
-                .FirstOrDefaultAsync(m => m.Id == id);
+        //    var helpDirectory = await dataContext.HelpDirectories
+        //        .Include(h => h.HelpType)
+        //        .FirstOrDefaultAsync(m => m.Id == id);
 
-            if (helpDirectory == null)
-            {
-                return NotFound();
-            }
+        //    if (helpDirectory == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(helpDirectory);
-        }
+        //    return View(helpDirectory);
+        //}
 
         [Authorize(Roles = "Admin")]
         [HttpGet]
@@ -158,9 +159,11 @@
                 return NotFound();
             }
 
-            var helpDirectory = await dataContext.HelpDirectories
-                .Include(h => h.HelpType)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            //var helpDirectory = await dataContext.HelpDirectories
+            //    .Include(h => h.HelpType)
+            //    .FirstOrDefaultAsync(m => m.Id == id);
+
+            var helpDirectory = await this.repository.GetByIdAsync(id.Value);
 
             if (helpDirectory == null)
             {
@@ -173,11 +176,11 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var helpDirectory = await dataContext.HelpDirectories.FindAsync(id);
-            dataContext.HelpDirectories.Remove(helpDirectory);
+            var helpDirectory = await this.repository.GetByIdAsync(id);
+            
             try
             {
-                await dataContext.SaveChangesAsync();
+                await this.repository.DeleteAsync(helpDirectory);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)

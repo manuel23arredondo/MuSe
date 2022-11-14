@@ -17,10 +17,11 @@
         private readonly IViolentometerRepository repository;
 
         public ViolentometersController(IViolentometerRepository repository,
-            ICombosHelper combosHelper)
+            ICombosHelper combosHelper, DataContext dataContext)
         {
             this.repository = repository;
             this.combosHelper = combosHelper;
+            this.dataContext = dataContext;
         }
 
         public IActionResult Index()
@@ -49,8 +50,7 @@
                     Description = model.Description,
                     Reliability = await this.dataContext.Reliabilities.FindAsync(model.ReliabilityId)
                 };
-                this.dataContext.Add(violentometer);
-                await this.dataContext.SaveChangesAsync();
+                await this.repository.CreateAsync(violentometer);
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
@@ -97,8 +97,7 @@
                     Reliability = await this.dataContext.Reliabilities.FindAsync(model.ReliabilityId)
                 };
 
-                this.dataContext.Update(violentometer);
-                await this.dataContext.SaveChangesAsync();
+                await this.repository.UpdateAsync(violentometer);
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
@@ -132,9 +131,11 @@
                 return NotFound();
             }
 
-            var violentometer = await dataContext.Violentometers
-                .Include(r => r.Reliability)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            //var violentometer = await dataContext.Violentometers
+            //    .Include(r => r.Reliability)
+            //    .FirstOrDefaultAsync(m => m.Id == id);
+
+            var violentometer = await this.repository.GetByIdAsync(id.Value);
 
             if (violentometer == null)
             {
@@ -147,11 +148,11 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var violentometer = await dataContext.Violentometers.FindAsync(id);
-            dataContext.Violentometers.Remove(violentometer);
+            var violentometer = await this.repository.GetByIdAsync(id);
+            
             try
             {
-                await dataContext.SaveChangesAsync();
+                await this.repository.DeleteAsync(violentometer);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
