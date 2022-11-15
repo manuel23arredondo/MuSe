@@ -9,5 +9,6 @@
         public IEnumerable<SelectListItem> GetComboMoods();
         public IEnumerable<SelectListItem> GetComboReliabilities();
         public IEnumerable<SelectListItem> GetComboViolentometers();
+        public IEnumerable<SelectListItem> GetComboKindOfPlaces();
     }
 }

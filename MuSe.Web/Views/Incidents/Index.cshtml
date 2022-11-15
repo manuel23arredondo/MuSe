@@ -1,5 +1,59 @@
-﻿@{
+﻿@model IEnumerable<MuSe.Web.Data.Entities.Incident>
+
+@{
     ViewData["Title"] = "Incidentes violentos";
 }
 
-<h1>Aquí se mostrarán los incidentes violentos creados</h1>
+<h1>Incidentes violentos</h1>
+<p>
+    <a asp-action="Create" class="btn btn-success">Agregar incidente violento</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Violentometer.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncidentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncidentDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgressorDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.Violentometer.Description)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.IncidentDate)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.IncidentDescription)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.AgressorDescription)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.Latitude)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.Longitude)
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

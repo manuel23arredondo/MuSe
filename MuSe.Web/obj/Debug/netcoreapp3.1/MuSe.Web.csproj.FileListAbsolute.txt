@@ -243,3 +243,6 @@ C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.MuSe.Web.Micros
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.MuSe.Web.props
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.MuSe.Web.props
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.MuSe.Web.props
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\Incidents\Create.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\OwnWomanPlaces\Create.cshtml.g.cs
+C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\Razor\Views\OwnWomanPlaces\Index.cshtml.g.cs

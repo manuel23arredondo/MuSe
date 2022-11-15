@@ -26,7 +26,7 @@
             this.repository = repository;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View(this.repository.GetWomanWithUsers());
         }
@@ -82,10 +82,9 @@
                             model.ImageFile,
                             model.User.FullName,
                             "womans") : string.Empty),
-                            User = await this.dataContext.Users.FindAsync(user.Id)
+                            User = await this.repository.GetUsersByIdAsync(user.Id)
                         };
-                        dataContext.Add(woman);
-                        await dataContext.SaveChangesAsync();
+                        await this.repository.CreateAsync(woman);
                         return RedirectToAction(nameof(AccountCreated));
                     }
                     ModelState.AddModelError(string.Empty, "El email ingresado no está disponible");

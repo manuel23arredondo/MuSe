@@ -13,14 +13,14 @@
 
     public class MonitorsController : Controller
     {
-        private readonly DataContext dataContext;
+        //private readonly DataContext dataContext;
         private readonly IUserHelper userHelper;
         private readonly IImageHelper imageHelper;
         private readonly IMonitorRepository repository;
 
-        public MonitorsController(IMonitorRepository repository, DataContext dataContext, IImageHelper imageHelper, IUserHelper userHelper)
+        public MonitorsController(IMonitorRepository repository/*, DataContext dataContext*/, IImageHelper imageHelper, IUserHelper userHelper)
         {
-            this.dataContext = dataContext;
+            //this.dataContext = dataContext;
             this.imageHelper = imageHelper;
             this.userHelper = userHelper;
             this.repository = repository;
@@ -82,10 +82,9 @@
                             model.ImageFile,
                             model.User.FullName,
                             "monitors") : string.Empty),
-                            User = await this.dataContext.Users.FindAsync(user.Id)
+                            User = await this.repository.GetUsersByIdAsync(user.Id)
                         };
-                        dataContext.Add(monitor);
-                        await dataContext.SaveChangesAsync();
+                        await this.repository.CreateAsync(monitor);
                         return RedirectToAction(nameof(AccountCreated));
                     }
                     ModelState.AddModelError(string.Empty, "El email ingresado no está disponible");

@@ -1,5 +1,41 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<MuSe.Web.Data.Entities.WomanDiary>
+
 @{
+    ViewData["Title"] = "Incidentes violentos";
 }
+
+<h1>Aquí se mostrarán los incidentes violentos creados</h1>
+<p>
+    <a asp-action="Create" class="btn btn-success">Agregar incidente violento</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mood.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mood.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaryDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

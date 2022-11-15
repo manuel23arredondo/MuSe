@@ -45,13 +45,24 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Violentometers" asp-action="Index">Violentómetro</a>
                             </li>
                             </ul>
-                        <ul class="navbar-nav flex-grow-1">
                             @if (this.User.IsInRole("Woman"))
                         {
+                            <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Incidents" asp-action="Index">Incidentes</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="WomanDiaries" asp-action="Index">Diario</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="OwnWomanPlaces" asp-action="Index">Lugares propios</a>
+                            </li>
+                        </ul>
                         }
-
-                    </ul>
                     @if (this.User.IsInRole("Admin"))
                     {
                     <ul class="navbar-nav flex-grow-1">
@@ -70,14 +81,14 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Directories" asp-action="Index">Directorio de organizaciones</a>
                         </li>
                     </ul>
-                    @if (this.User.IsInRole("Woman") && this.User.Identity.IsAuthenticated)
+@*                    @if (this.User.IsInRole("Woman") && this.User.Identity.IsAuthenticated)
                     { 
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="WomanDiaries" asp-action="Index">Diario</a>
                             </li>
                         </ul>
-                    }
+                    }*@
                 </div>
                 @if (this.User.Identity.IsAuthenticated)
                 {

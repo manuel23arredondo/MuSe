@@ -2,6 +2,7 @@
 {
     using Microsoft.AspNetCore.Identity;
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     public class User : IdentityUser
@@ -29,7 +30,9 @@
         [Display(Name = "Fecha de nacimiento")]
         public DateTime BirhtDate { get; set; }
 
-
+        public ICollection<Incident> Incidents { get; set; }
+        public ICollection<WomanDiary> WomanDiaries { get; set; }
+        public ICollection<OwnWomanPlace> OwnWomanPlaces { get; set; }
         //[Display(Name = "Edad")]
         //public int Edad
         //{

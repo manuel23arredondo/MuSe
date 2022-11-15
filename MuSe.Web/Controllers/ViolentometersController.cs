@@ -2,8 +2,6 @@
 {
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.EntityFrameworkCore;
-    using MuSe.Web.Data;
     using MuSe.Web.Data.Entities;
     using MuSe.Web.Data.Repositories;
     using MuSe.Web.Helpers;
@@ -12,16 +10,14 @@
     using System.Threading.Tasks;
     public class ViolentometersController : Controller
     {
-        private readonly DataContext dataContext;
         private readonly ICombosHelper combosHelper;
         private readonly IViolentometerRepository repository;
 
         public ViolentometersController(IViolentometerRepository repository,
-            ICombosHelper combosHelper, DataContext dataContext)
+            ICombosHelper combosHelper)
         {
             this.repository = repository;
             this.combosHelper = combosHelper;
-            this.dataContext = dataContext;
         }
 
         public IActionResult Index()
@@ -48,7 +44,7 @@
                 var violentometer = new Violentometer
                 {
                     Description = model.Description,
-                    Reliability = await this.dataContext.Reliabilities.FindAsync(model.ReliabilityId)
+                    Reliability = await this.repository.GetReliabitiesByIdAsync(model.ReliabilityId)
                 };
                 await this.repository.CreateAsync(violentometer);
                 return RedirectToAction(nameof(Index));
@@ -65,9 +61,7 @@
                 return NotFound();
             }
 
-            var violentometer = await this.dataContext.Violentometers
-                .Include(r => r.Reliability)
-                .FirstOrDefaultAsync(p => p.Id == id);
+            var violentometer = await this.repository.GetViolentometersWithReliabilitiesByIdAsync(id.Value);
 
             if (violentometer == null)
             {
@@ -94,7 +88,7 @@
                 {
                     Id = model.Id,
                     Description = model.Description,
-                    Reliability = await this.dataContext.Reliabilities.FindAsync(model.ReliabilityId)
+                    Reliability = await this.repository.GetReliabitiesByIdAsync(model.ReliabilityId)
                 };
 
                 await this.repository.UpdateAsync(violentometer);
@@ -110,9 +104,7 @@
                 return NotFound();
             }
 
-            var violentometer = await dataContext.Violentometers
-                .Include(f => f.Reliability)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var violentometer = await this.repository.GetViolentometersWithReliabilitiesByIdAsync(id.Value);
 
             if (violentometer == null)
             {
@@ -131,11 +123,7 @@
                 return NotFound();
             }
 
-            //var violentometer = await dataContext.Violentometers
-            //    .Include(r => r.Reliability)
-            //    .FirstOrDefaultAsync(m => m.Id == id);
-
-            var violentometer = await this.repository.GetByIdAsync(id.Value);
+            var violentometer = await this.repository.GetViolentometersWithReliabilitiesByIdAsync(id.Value);
 
             if (violentometer == null)
             {
@@ -148,8 +136,8 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var violentometer = await this.repository.GetByIdAsync(id);
-            
+            var violentometer = await this.repository.GetViolentometersWithReliabilitiesByIdAsync(id);
+
             try
             {
                 await this.repository.DeleteAsync(violentometer);

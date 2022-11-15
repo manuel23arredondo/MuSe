@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MuSe.Web.Data.Entities.OwnWomanPlace>
+
+@{
+    ViewData["Title"] = "Lugares de la mujer";
+}
+
+<h1>Lugares de la mujer</h1>
+<p>
+    <a asp-action="Create" class="btn btn-success">Agregar lugar propio</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KindOfPlace.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Latitud)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KindOfPlace.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Latitud)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Longitude)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

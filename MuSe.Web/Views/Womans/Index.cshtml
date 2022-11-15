@@ -22,10 +22,8 @@
                 @Html.DisplayNameFor(model => model.User.BirhtDate)
             </th>
             <th>
-            <th>
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -41,9 +39,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.User.PhoneNumber)
                 </td>
-                <th>
+                <td>
                     @Html.DisplayFor(model => item.User.BirhtDate)
-                </th>
+                </td>
                 <td>
                     @if (!string.IsNullOrEmpty(item.ImageUrl))
                     {

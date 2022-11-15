@@ -10,18 +10,19 @@
     using MuSe.Web.Models;
     using System;
     using System.Threading.Tasks;
+
     public class DirectoriesController : Controller
     {
-        private readonly DataContext dataContext;
+        //private readonly DataContext dataContext;
         private readonly ICombosHelper combosHelper;
         private readonly IHelpDirectoryRepository repository;
 
         public DirectoriesController(IHelpDirectoryRepository repository,
-            ICombosHelper combosHelper, DataContext dataContext)
+            ICombosHelper combosHelper/*, DataContext dataContext*/)
         {
             this.repository = repository;
             this.combosHelper = combosHelper;
-            this.dataContext = dataContext;
+            //this.dataContext = dataContext;
         }
 
         public IActionResult Map()
@@ -60,7 +61,7 @@
                     Colony = model.Colony,
                     PostCode = model.PostCode,
                     Email = model.Email,
-                    HelpType = await this.dataContext.HelpTypes.FindAsync(model.HelpTypeId)
+                    HelpType = await this.repository.GetHelpTypesByIdAsync(model.HelpTypeId)
                 };
                 await this.repository.CreateAsync(helpDirectory);
                 return RedirectToAction(nameof(Index));
@@ -77,11 +78,7 @@
                 return NotFound();
             }
 
-            var helpDirectory = await this.dataContext.HelpDirectories
-                .Include(h => h.HelpType)
-                .FirstOrDefaultAsync(p => p.Id == id);
-
-            //var helpDirectory = await this.repository.GetByIdAsync(id.Value);
+            var helpDirectory = await this.repository.GetHelpDirectoriesWithHelpTypesByIdAsync(id.Value);
 
             if (helpDirectory == null)
             {
@@ -122,7 +119,7 @@
                     Colony = model.Colony,
                     PostCode = model.PostCode,
                     Email = model.Email,
-                    HelpType = await this.dataContext.HelpTypes.FindAsync(model.HelpTypeId)
+                    HelpType = await this.repository.GetHelpTypesByIdAsync(model.HelpTypeId)
                 };
 
                 await this.repository.UpdateAsync(helpDirectory);
@@ -159,11 +156,7 @@
                 return NotFound();
             }
 
-            //var helpDirectory = await dataContext.HelpDirectories
-            //    .Include(h => h.HelpType)
-            //    .FirstOrDefaultAsync(m => m.Id == id);
-
-            var helpDirectory = await this.repository.GetByIdAsync(id.Value);
+            var helpDirectory = await this.repository.GetHelpDirectoriesWithHelpTypesByIdAsync(id.Value);
 
             if (helpDirectory == null)
             {
@@ -176,7 +169,7 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var helpDirectory = await this.repository.GetByIdAsync(id);
+            var helpDirectory = await this.repository.GetHelpDirectoriesWithHelpTypesByIdAsync(id);
             
             try
             {

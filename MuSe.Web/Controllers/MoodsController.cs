@@ -8,7 +8,9 @@
     using System;
     using System.Linq;
     using MuSe.Web.Data.Repositories;
+    using Microsoft.AspNetCore.Authorization;
 
+    [Authorize(Roles = "Admin")]
     public class MoodsController : Controller
     {
         private readonly IMoodRepository repository;

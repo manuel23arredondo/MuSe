@@ -73,5 +73,20 @@
             });
             return list;
         }
+
+        public IEnumerable<SelectListItem> GetComboKindOfPlaces()
+        {
+            var list = this.dataContext.KindOfPlaces.Select(b => new SelectListItem
+            {
+                Text = b.Description,
+                Value = $"{b.Id}"
+            }).ToList();
+            list.Insert(0, new SelectListItem
+            {
+                Text = "(Seleccciona el tipo de lugar)",
+                Value = "0"
+            });
+            return list;
+        }
     }
 }

@@ -1,10 +1,13 @@
 ﻿namespace MuSe.Web.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data.Entities;
     using MuSe.Web.Data.Repositories;
     using System.Threading.Tasks;
+    
+    [Authorize(Roles = "Admin")]
     public class KindOfPlacesController : Controller
     {
         private readonly IKindOfPlaceRepository repository;

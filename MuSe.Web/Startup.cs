@@ -53,6 +53,9 @@ namespace MuSe.Web
             services.AddScoped<IViolentometerRepository, ViolentometerRepository>();
             services.AddScoped<IWomanRepository, WomanRepository>();
             services.AddScoped<IMonitorRepository, MonitorRepository>();
+            services.AddScoped<IWomanDiaryRepository, WomanDiaryRepository>();
+            services.AddScoped<IIncidentRepository, IncidentRepository>();
+            services.AddScoped<IOwnWomanPlaceRepository, OwnWomanPlaceRepository>();
             //services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddControllersWithViews();

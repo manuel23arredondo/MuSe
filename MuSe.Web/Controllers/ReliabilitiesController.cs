@@ -1,5 +1,6 @@
 ﻿namespace MuSe.Web.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data;
@@ -8,6 +9,8 @@
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+
+    [Authorize(Roles = "Admin")]
     public class ReliabilitiesController : Controller
     {
         private readonly IReliabilityRepository repository;

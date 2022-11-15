@@ -6,5 +6,9 @@
     public interface IHelpDirectoryRepository : IGenericRepository<HelpDirectory>
     {
         IQueryable GetHelpDirectoriesWithHelpTypes();
+
+        Task<HelpDirectory> GetHelpDirectoriesWithHelpTypesByIdAsync(int id);
+
+        Task<HelpType> GetHelpTypesByIdAsync(int id);
     }
 }

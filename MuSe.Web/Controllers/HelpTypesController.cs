@@ -1,5 +1,6 @@
 ﻿namespace MuSe.Web.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using MuSe.Web.Data.Entities;
@@ -7,6 +8,7 @@
     using System;
     using System.Threading.Tasks;
 
+    [Authorize(Roles = "Admin")]
     public class HelpTypesController : Controller
     {
         private readonly IHelpTypeRepository repository;
