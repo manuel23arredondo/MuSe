@@ -106,10 +106,10 @@
             if (!this.dataContext.HelpDirectories.Any())
             {
                 var helpType = dataContext.HelpTypes.FirstOrDefault(c => c.Description == "Legal");
-                await CheckHelpDirectory("Centro de Atención a la violencia intrafamiliar C.A.V.I.", "5553455229", "Gral. Gabriel Hernández", "56", "Sin número", "Cuauhtémoc", 06720, "cavi@cavi.org", helpType);
+                await CheckHelpDirectory("Centro de Atención a la violencia intrafamiliar C.A.V.I.", "5553455229", "Gral. Gabriel Hernández", "56", "Sin número", "Cuauhtémoc", 06720, "cavi@cavi.org", 19.42573029772769, -99.14786782329821, helpType);
                 
                 helpType = dataContext.HelpTypes.FirstOrDefault(c => c.Description == "Atención médica");
-                await CheckHelpDirectory("Ascociación para el Desarrollo Integral de Personas Violadas A.C.", "56827969", "Santa María La Ribera", "140", "Sin número", "Cuauhtémoc", 14562, "adivac@adivac.org", helpType);
+                await CheckHelpDirectory("Ascociación para el Desarrollo Integral de Personas Violadas A.C.", "56827969", "Santa María La Ribera", "140", "Sin número", "Cuauhtémoc", 14562, "adivac@adivac.org", 19.44914740858582, -99.15915268299553, helpType);
             }
         }
             private async Task<User> CheckUser(string firstName, string lastname, string phoneNumber, DateTime birthdate, string email, string password)
@@ -199,7 +199,7 @@
             await this.dataContext.SaveChangesAsync();
         }
 
-        private async Task CheckHelpDirectory(string organizationName, string phoneNumber, string street, string outsideNumber, string insideNumber, string colony, int postCode, string email, HelpType helpType)
+        private async Task CheckHelpDirectory(string organizationName, string phoneNumber, string street, string outsideNumber, string insideNumber, string colony, int postCode, string email, double latitude, double longitude,HelpType helpType)
         {
             this.dataContext.HelpDirectories.Add(new HelpDirectory
             {
@@ -211,6 +211,8 @@
                 Colony = colony,
                 PostCode = postCode,
                 Email = email,
+                Latitude = latitude,
+                Longitude = longitude,
                 HelpType = helpType
             });
             await this.dataContext.SaveChangesAsync();

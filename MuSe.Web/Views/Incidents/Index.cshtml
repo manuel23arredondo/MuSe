@@ -6,7 +6,7 @@
 
 <h1>Incidentes violentos</h1>
 <p>
-    <a asp-action="Create" class="btn btn-success">Agregar incidente violento</a>
+    <a asp-action="Create"><img src="~/images/agregar.png" height="40" width="50" /></a>
 </p>
 <table class="table table-dark">
     <thead>
@@ -34,26 +34,30 @@
     <tbody>
         @foreach (var item in Model)
         {
-                <tr>
-                    <td>
+            <tr>
+                <td>
                     @Html.DisplayFor(modelItem => item.Violentometer.Description)
-                    </td>
-                    <td>
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.IncidentDate)
-                    </td>
-                    <td>
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.IncidentDescription)
-                    </td>
-                    <td>
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.AgressorDescription)
-                    </td>
-                    <td>
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.Latitude)
-                    </td>
-                    <td>
-                    @Html.DisplayFor(modelItem => item.Longitude)
-                    </td>
-                </tr>
+                </td>
+                <td>
+                   @Html.DisplayFor(modelItem => item.Longitude)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/images/editar.png" height="40" width="50" /></a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/images/eliminar.png" height="40" width="50" /></a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" size="16" class="form-control" type="text" />
+                <input asp-for="PhoneNumber" size="16" class="form-control" type="tel" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -30,12 +30,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="InsideNumber" class="control-label"></label>
-                <input asp-for="InsideNumber" size="16" class="form-control" type="text" />
+                <input asp-for="InsideNumber" size="16" class="form-control" type="number" />
                 <span asp-validation-for="InsideNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="OutsideNumber" class="control-label"></label>
-                <input asp-for="OutsideNumber" size="16" class="form-control" type="text" />
+                <input asp-for="OutsideNumber" size="16" class="form-control" type="number" />
                 <span asp-validation-for="OutsideNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -53,7 +53,16 @@
                 <input asp-for="Email" size="16" class="form-control" type="text" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-
+            <div class="form-group">
+                <label asp-for="Latitude" class="control-label"></label>
+                <input asp-for="Latitude" size="30" class="form-control" type="number" />
+                <span asp-validation-for="Latitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Latitude" class="control-label"></label>
+                <input asp-for="Latitude" size="30" class="form-control" type="number" />
+                <span asp-validation-for="Latitude" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="HelpTypeId" class="control-label"></label>
                 <select asp-for="HelpTypeId" asp-items="Model.HelpTypes" class="form-control"></select>

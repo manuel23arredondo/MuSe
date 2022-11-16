@@ -31,9 +31,11 @@
                 <span asp-validation-for="IncidentDescription" class="text-danger"></span>
             </div>
 
-            <label asp-for="IncidentDate" class="control-label"></label>
-            <input asp-for="IncidentDate" class="controls" type="date" name="trip-start" required />
-            <span asp-validation-for="IncidentDate" class="text-danger"></span>
+            <div>
+                <label asp-for="IncidentDate" class="control-label"></label>
+                <input asp-for="IncidentDate" class="form-control" type="date" />
+                <span asp-validation-for="IncidentDate" class="text-danger"></span>
+            </div>
 
             <div class="form-group">
                 <label asp-for="Latitude" class="control-label"></label>

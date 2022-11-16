@@ -13,14 +13,12 @@
 
     public class MonitorsController : Controller
     {
-        //private readonly DataContext dataContext;
         private readonly IUserHelper userHelper;
         private readonly IImageHelper imageHelper;
         private readonly IMonitorRepository repository;
 
-        public MonitorsController(IMonitorRepository repository/*, DataContext dataContext*/, IImageHelper imageHelper, IUserHelper userHelper)
+        public MonitorsController(IMonitorRepository repository, IImageHelper imageHelper, IUserHelper userHelper)
         {
-            //this.dataContext = dataContext;
             this.imageHelper = imageHelper;
             this.userHelper = userHelper;
             this.repository = repository;

@@ -21,6 +21,13 @@
                 .Where(c => c.User.Email == name);
         }
 
+        public async Task<Incident> GetIncidentsWithViolentometersAndUsersByIdAsync(int id)
+        {
+            return await context.Incidents
+                .Include(c => c.Violentometer)
+                .FirstOrDefaultAsync(c =>c.Id == id);
+        }
+
         public async Task<Violentometer> GetViolentometersByIdAsync(int id)
         {
             return await this.context.Violentometers

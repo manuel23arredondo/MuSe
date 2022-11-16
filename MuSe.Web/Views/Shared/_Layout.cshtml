@@ -77,9 +77,16 @@
                     </ul>
                     }
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Directories" asp-action="Index">Directorio de organizaciones</a>
-                        </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Directorio de organizaciones</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Directories" asp-action="Index">Información contacto</a>
+                                    <div class="dropdown-divider"></div>
+
+                                    <a class="dropdown-item" asp-area="" asp-controller="Directories" asp-action="Map">Localización en mapa</a>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </li>
                     </ul>
 @*                    @if (this.User.IsInRole("Woman") && this.User.Identity.IsAuthenticated)
                     { 

@@ -280,6 +280,8 @@ namespace MuSe.Web.Migrations
                     Colony = table.Column<string>(maxLength: 100, nullable: false),
                     PostCode = table.Column<int>(nullable: false),
                     Email = table.Column<string>(maxLength: 100, nullable: false),
+                    Longitude = table.Column<double>(nullable: false),
+                    Latitude = table.Column<double>(nullable: false),
                     HelpTypeId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

@@ -7,6 +7,8 @@
     {
         IQueryable GetWomanDiariesWithMoodsAndUsers(string name);
 
+        Task<WomanDiary> GetWomanDiariesWithMoodsAndUsersByIdAsync(int id);
+
         Task<Mood> GetMoodsByIdAsync(int id);
     }
 }

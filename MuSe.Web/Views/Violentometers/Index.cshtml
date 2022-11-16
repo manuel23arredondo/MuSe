@@ -11,7 +11,7 @@
 <p>
     @if (this.User.IsInRole("Admin"))
     {
-        <a asp-action="Create" class="btn btn-success">Crear acción violenta</a>
+        <a asp-action="Create"><img src="~/images/agregar.png" height="40" width="50" /></a>
     }
 </p>
 <div class="row d-flex justify-content-center">
@@ -41,8 +41,8 @@
                     <td>
                         @if (this.User.IsInRole("Admin"))
                         {
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                                <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/images/editar.png" height="40" width="50" /></a>
+                                <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/images/eliminar.png" height="40" width="50" /></a>
                         }
                     </td>
                 </tr>
@@ -60,8 +60,8 @@
                     <td>
                         @if (this.User.IsInRole("Admin"))
                         {
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                                <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/images/editar.png" height="40" width="50" /></a>
+                                <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/images/eliminar.png" height="40" width="50" /></a>
                         }
                     </td>
                 </tr>
@@ -78,8 +78,8 @@
                     <td>
                         @if (this.User.IsInRole("Admin"))
                         {
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/images/editar.png" height="40" width="50" /></a>
+                            <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/images/eliminar.png" height="40" width="50" /></a>
                         }
                     </td>
                 </tr>

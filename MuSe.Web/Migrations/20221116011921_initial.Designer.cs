@@ -10,7 +10,7 @@ using MuSe.Web.Data;
 namespace MuSe.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221115013051_initial")]
+    [Migration("20221116011921_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -240,6 +240,12 @@ namespace MuSe.Web.Migrations
                     b.Property<string>("InsideNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float");
 
                     b.Property<string>("OrganizationName")
                         .IsRequired()

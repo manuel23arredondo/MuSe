@@ -46,6 +46,14 @@
         [Display(Name = "Correo")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "{0} es obligatorio")]
+        [Display(Name = "Longitud")]
+        public double Longitude { get; set; }
+
+        [Required(ErrorMessage = "{0} es obligatorio")]
+        [Display(Name = "Latitud")]
+        public double Latitude { get; set; }
+
         public HelpType HelpType { get; set; }
     }
 }

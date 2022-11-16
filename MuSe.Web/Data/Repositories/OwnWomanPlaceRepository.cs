@@ -22,6 +22,13 @@
                 .Where(c => c.User.Email == name);
         }
 
+        public async Task<OwnWomanPlace> GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(int id)
+        {
+            return await context.OwnWomanPlaces
+                .Include(c => c.KindOfPlace)
+                .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
         public async Task<KindOfPlace> GetKindOfPlacesByIdAsync(int id)
         {
             return await this.context.KindOfPlaces

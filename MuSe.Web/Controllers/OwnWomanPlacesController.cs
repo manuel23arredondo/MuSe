@@ -10,6 +10,7 @@
     using System.Data;
     using System.Threading.Tasks;
     using Microsoft.EntityFrameworkCore;
+    using System;
 
     [Authorize(Roles = "Woman,Monitor")]
     public class OwnWomanPlacesController : Controller
@@ -35,9 +36,9 @@
         [HttpGet]
         public IActionResult Create()
         {
-            var model = new WomanDiaryViewModel
+            var model = new OwnWomanPlaceViewModel
             {
-                Moods = this.combosHelper.GetComboMoods()
+                KindOfPlaces = this.combosHelper.GetComboKindOfPlaces()
             };
             return View(model);
         }
@@ -58,6 +59,89 @@
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var ownWomanPlace = await this.repository.GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(id.Value);
+
+            if (ownWomanPlace == null)
+            {
+                return NotFound();
+            }
+
+            var model = new OwnWomanPlaceViewModel
+            {
+                Longitude = ownWomanPlace.Longitude,
+                Latitud = ownWomanPlace.Latitud,
+                KindOfPlace = ownWomanPlace.KindOfPlace,
+                KindOfPlaceId = ownWomanPlace.KindOfPlace.Id,
+                User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                KindOfPlaces = this.combosHelper.GetComboKindOfPlaces()
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(OwnWomanPlaceViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var ownWomanPlace = new OwnWomanPlace
+                {
+                    Id = model.Id,
+                    Latitud = model.Latitud,
+                    Longitude = model.Longitude,
+                    User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    KindOfPlace = await this.repository.GetKindOfPlacesByIdAsync(model.KindOfPlaceId)
+                };
+
+                await this.repository.UpdateAsync(ownWomanPlace);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var ownWomanPlace = await this.repository.GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(id.Value);
+
+            if (ownWomanPlace == null)
+            {
+                return NotFound();
+            }
+            return View(ownWomanPlace);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var ownWomanPlace = await this.repository.GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(id);
+
+            try
+            {
+                await this.repository.DeleteAsync(ownWomanPlace);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "No se pueden eliminar registros");
+            }
+            return View(ownWomanPlace);
         }
     }
 }

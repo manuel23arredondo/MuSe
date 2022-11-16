@@ -2,7 +2,6 @@
 {
     using Microsoft.AspNetCore.Mvc;
     using MuSe.Web.Data.Repositories;
-    using MuSe.Web.Helpers;
 
     [Route("api/[Controller]")]
     public class HelpDirectoriesController : Controller

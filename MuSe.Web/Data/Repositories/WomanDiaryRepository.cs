@@ -21,6 +21,13 @@
                 .Where(c => c.User.Email == name);
         }
 
+        public async Task<WomanDiary> GetWomanDiariesWithMoodsAndUsersByIdAsync(int id)
+        {
+            return await context.WomanDiaries
+                .Include(c => c.Mood)
+                .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
         public async Task<Mood> GetMoodsByIdAsync(int id)
         {
             return await this.context.Moods

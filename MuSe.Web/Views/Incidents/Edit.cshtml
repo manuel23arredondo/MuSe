@@ -1,0 +1,62 @@
+﻿@model MuSe.Web.Models.IncidentViewModel
+@{
+    ViewData["Title"] = "Editar incidente";
+}
+
+<h1>Editar</h1>
+
+<h4>Incidente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div>
+                <label asp-for="ViolentometerId" class="control-label"></label>
+                <select asp-for="ViolentometerId" asp-items="Model.Violentometers" class="form-control"></select>
+                <span asp-validation-for="Violentometer" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AgressorDescription" class="control-label"></label>
+                <input asp-for="AgressorDescription" size="16" class="form-control" type="text" />
+                <span asp-validation-for="AgressorDescription" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="IncidentDescription" class="control-label"></label>
+                <input asp-for="IncidentDescription" size="16" class="form-control" type="text" />
+                <span asp-validation-for="IncidentDescription" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="IncidentDate" class="control-label"></label>
+                <input asp-for="IncidentDate" class="form-control" type="date" />
+                <span asp-validation-for="IncidentDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Latitude" class="control-label"></label>
+                <input asp-for="Latitude" size="30" class="form-control" type="number" />
+                <span asp-validation-for="Latitude" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Longitude" class="control-label"></label>
+                <input asp-for="Longitude" size="30" class="form-control" type="number" />
+                <span asp-validation-for="Longitude" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-success" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-info">Regresar a la lista</a>
+</div>

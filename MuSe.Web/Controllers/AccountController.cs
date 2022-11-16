@@ -70,11 +70,11 @@
             return this.RedirectToAction("Index", "Home");
         }
 
-        [HttpGet]
-        public async Task <IActionResult> MyProfile()
-        {
-            return View(await dataContext.Users.ToListAsync());
-        }
+        //[HttpGet]
+        //public async Task <IActionResult> MyProfile()
+        //{
+        //    return View(await dataContext.Users.ToListAsync());
+        //}
 
         //[HttpGet]
         //public IActionResult StartRecovery()

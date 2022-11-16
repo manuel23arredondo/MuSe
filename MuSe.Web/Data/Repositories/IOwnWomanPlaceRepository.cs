@@ -8,6 +8,8 @@
     {
         IQueryable GetOwnWomanPlacesWithKindOfPlacesAndUsers(string name);
 
+        Task<OwnWomanPlace> GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(int id);
+
         Task<KindOfPlace> GetKindOfPlacesByIdAsync(int id);
     }
 }

@@ -11,6 +11,7 @@
     using MuSe.Web.Data.Entities;
     using Microsoft.EntityFrameworkCore;
     using System.Linq;
+    using System;
 
     [Authorize(Roles = "Woman,Monitor")]
     public class WomanDiariesController : Controller
@@ -59,6 +60,89 @@
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var womanDiary = await this.repository.GetWomanDiariesWithMoodsAndUsersByIdAsync(id.Value);
+
+            if (womanDiary == null)
+            {
+                return NotFound();
+            }
+
+            var model = new WomanDiaryViewModel
+            {
+                Description = womanDiary.Description,
+                DiaryDate = womanDiary.DiaryDate,
+                Mood = womanDiary.Mood,
+                MoodId = womanDiary.Mood.Id,
+                User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                Moods = this.combosHelper.GetComboMoods()
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(WomanDiaryViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var womanDiary = new WomanDiary
+                {
+                    Id = model.Id,
+                    Description = model.Description,
+                    DiaryDate = model.DiaryDate,
+                    User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    Mood = await this.repository.GetMoodsByIdAsync(model.MoodId)
+                };
+
+                await this.repository.UpdateAsync(womanDiary);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var womanDiary = await this.repository.GetWomanDiariesWithMoodsAndUsersByIdAsync(id.Value);
+
+            if (womanDiary == null)
+            {
+                return NotFound();
+            }
+            return View(womanDiary);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var womanDiary = await this.repository.GetWomanDiariesWithMoodsAndUsersByIdAsync(id);
+
+            try
+            {
+                await this.repository.DeleteAsync(womanDiary);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "No se pueden eliminar registros");
+            }
+            return View(womanDiary);
         }
     }
 }

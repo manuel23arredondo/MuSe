@@ -7,6 +7,16 @@
 <link rel="stylesheet" href="~/css/login.css" />
 
 <body>
+    <script>
+        function formatear(){
+            var num_sf=document.getElementById('tel').value;
+            var num_cf='';
+            num_cf=num_sf.substring(0,3)+"-";
+            num_cf+=num_sf.substring(3,6)+"-";
+            num_cf+=num_sf.substring(6,9);
+            document.getElementById('tel').value=num_cf;
+        }
+    </script>
     <form asp-action="Create" enctype="multipart/form-data">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <input type="hidden" asp-for="ImageUrl" />
@@ -24,9 +34,9 @@
             <input asp-for="User.PhoneNumber" class="controls" placeholder="Ingrese tu número celular" maxlength="15" required>
                 <span asp-validation-for="User.PhoneNumber" class="text-danger"></span>
 
-                <label asp-for="User.BirhtDate" class="control-label"></label>
-            <input asp-for="User.BirhtDate" class="controls" type="date" name="trip-start" required />
-                <span asp-validation-for="User.BirhtDate" class="text-danger"></span>
+            <label asp-for="User.BirhtDate" class="control-label"></label>
+            <input asp-for="User.BirhtDate" class="form-control" type="date" />
+            <span asp-validation-for="User.BirhtDate" class="text-danger"></span>
 
                 <label asp-for="User.Email" class="control-label"></label>
             <input asp-for="User.Email" class="controls" placeholder="Ingrese su email" required>
@@ -45,4 +55,7 @@
             <p><a asp-controller="Account" asp-action="Login">¿Ya tienes cuenta? Inicia sesión</a></p>
         </section>
     </form>
+    <script>
+        setTimeout("formatear()", 100);
+    </script>
 </body>

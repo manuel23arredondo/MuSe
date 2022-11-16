@@ -8,6 +8,8 @@
     {
         IQueryable GetIncidentsWithViolentometersAndUsers(string name);
 
+        Task<Incident> GetIncidentsWithViolentometersAndUsersByIdAsync(int id);
+
         Task<Violentometer> GetViolentometersByIdAsync(int id);
     }
 }

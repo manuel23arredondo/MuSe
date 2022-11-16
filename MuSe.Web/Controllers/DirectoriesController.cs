@@ -13,16 +13,14 @@
 
     public class DirectoriesController : Controller
     {
-        //private readonly DataContext dataContext;
         private readonly ICombosHelper combosHelper;
         private readonly IHelpDirectoryRepository repository;
 
         public DirectoriesController(IHelpDirectoryRepository repository,
-            ICombosHelper combosHelper/*, DataContext dataContext*/)
+            ICombosHelper combosHelper)
         {
             this.repository = repository;
             this.combosHelper = combosHelper;
-            //this.dataContext = dataContext;
         }
 
         public IActionResult Map()
@@ -60,6 +58,8 @@
                     OutsideNumber = model.OutsideNumber,
                     Colony = model.Colony,
                     PostCode = model.PostCode,
+                    Latitude = model.Latitude,
+                    Longitude = model.Longitude,
                     Email = model.Email,
                     HelpType = await this.repository.GetHelpTypesByIdAsync(model.HelpTypeId)
                 };
@@ -95,6 +95,8 @@
                 Colony = helpDirectory.Colony,
                 PostCode = helpDirectory.PostCode,
                 Email = helpDirectory.Email,
+                Longitude = helpDirectory.Longitude,
+                Latitude = helpDirectory.Latitude,
                 HelpType = helpDirectory.HelpType,
                 HelpTypeId = helpDirectory.HelpType.Id,
                 HelpTypes = this.combosHelper.GetComboHelpTypes()
@@ -119,6 +121,8 @@
                     Colony = model.Colony,
                     PostCode = model.PostCode,
                     Email = model.Email,
+                    Longitude = model.Longitude,
+                    Latitude = model.Latitude,
                     HelpType = await this.repository.GetHelpTypesByIdAsync(model.HelpTypeId)
                 };
 
