@@ -1,0 +1,213 @@
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\MuSe.Web.exe
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\login.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\mapa.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\menu.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\site.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\violentometer.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\favicon.ico
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\agregar.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\editar.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\eliminar.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\fondo.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\login.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\Logo.PNG
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\logout.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\Mapa.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\marker.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\a a10d3398c-1ace-428a-9b56-343f47e12b7d.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\a af701a85e-7bec-4e80-8538-cdb77de14595.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\ab ab51aaf6c8-71d3-4a33-955a-d343d919cbbc.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\asfasf Per5d5f9121-eca5-4701-ae41-0c5ac4fe7d14.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\b b319f9d50-ee0b-44da-88bd-d264d9bad1ff.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Carlos Cortesdffb8b2f-772b-40ad-b38c-fbc917ac699d.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Carlos Ruiz92a284c1-da47-4a8d-9ff6-856103cdafa5.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Dario Dorantes2a0736f3-f76d-4bab-910a-397fb6714f9d.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Luis Perez55b34926-1638-467d-8284-fc23938a5a4a.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Raul Juareza4777a24-bd91-4312-87a5-556428abf490.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Raul Perez317cf624-87c6-4a64-bf3b-3fddbb01dabe.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Raul Perez4c8d19a4-3b1b-4425-92ca-9cb1bb6ce74f.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Ricardo Perez177e9b49-0e30-4549-a9d8-126eb90c8ebb.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Ricardo Perezb1186c3c-48a9-403e-80bb-9e351c8dc361.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\monitors\Ricardo Perezea4886b7-b8df-4de6-ae21-bc8625c92c37.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\a a25218031-9925-4e33-9f56-1007580f9fec.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\a a4f67629e-1069-49e7-aca3-ac1607c6737f.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\a a57d12e3e-0f91-4d9c-95db-2b84ca80e637.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\a a8c91fab8-3772-44cb-8062-e845fc2d1f25.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\a aa5d53824-5680-47dd-8ece-ffb638d1250c.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\a abd2d9987-49d1-4931-b72e-03d4bbb03e9a.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\b b63f957ea-e5ff-4b31-8545-a89a32567100.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\b bdea7ce26-7420-49ec-8939-14b431b64857.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Berenice Blancanieves8fb8452a-4737-47b5-8dc5-eb2be59a2b29.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\c c53b0d7b3-be93-44bb-a385-95e7a9eb1baf.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Mari pere6b44a239-2997-492c-bda3-07305f6c0a88.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Maria Perez185f4b4f-de1d-4146-b155-94ebe86d715a.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Maria Perez6410d959-e103-4b02-910e-eac779ce6aa6.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Maria Ruiz0bd9dbef-c7d5-4cb0-a168-4aba1c729255.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Maria Sanchez54433a72-7202-404a-8ecc-a9d5c45f00ba.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Maria Sanchez61d5b57d-049a-4428-ad14-91c1ac68e974.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Ricardo Alvarez8f9703bb-3a51-4a2d-9c5b-55e512aae8ba.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Ricardo Perez364a07c3-a085-40a8-87c9-7b2cd775c8a9.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Ricardo Perez64730061-a81c-4f3e-ab89-f21ee29344fd.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Ricardo Perezabae90c4-2bd8-4de3-9a96-bed94567dbc8.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Ricardo Perezce53e381-2008-40a3-a916-0f2ce1afa81a.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Rita Alvarez5c52e190-3d6d-453f-89dc-6edc8e070177.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\womans\Rita Lopez5ad451a0-8141-469f-a63f-6423acd2e16b.png
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\mapa.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\site.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\LICENSE
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\dist\additional-methods.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\LICENSE.md
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.js
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\MuSe.Web.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\MuSe.Web.runtimeconfig.json
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\MuSe.Web.pdb
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Bcl.HashCode.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.Razor.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.Workspaces.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Data.SqlClient.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Caching.Abstractions.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Caching.Memory.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Configuration.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Configuration.Binder.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Identity.Stores.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Logging.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Options.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Primitives.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Identity.Client.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\dotnet-aspnet-codegenerator-design.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\NuGet.Frameworks.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Collections.Immutable.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.AttributedModel.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.Convention.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.Hosting.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.Runtime.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.TypedParts.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Configuration.ConfigurationManager.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Runtime.Caching.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\cs\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\de\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\es\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\fr\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\it\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ja\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ko\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\pl\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ru\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\tr\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-arm64\native\sni.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-x64\native\sni.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-x86\native\sni.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\MuSe.Web.Views.dll
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\MuSe.Web.Views.pdb
+C:\MuSe\MuSe.Web\obj\Release\netcoreapp3.1\PubTmp\Out\MuSe.Web.deps.json

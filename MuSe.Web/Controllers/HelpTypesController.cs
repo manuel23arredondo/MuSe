@@ -29,6 +29,8 @@
             return View();
         }
 
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Description")] HelpType helpType)
@@ -59,7 +61,7 @@
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Description")] HelpType helpType)
+        public async Task<IActionResult> Edit(int id, HelpType helpType)
         {
             if (id != helpType.Id)
             {

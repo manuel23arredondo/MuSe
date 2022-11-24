@@ -1,9 +1,11 @@
 ﻿namespace MuSe.Web.Controllers.API
 {
     using Microsoft.AspNetCore.Mvc;
+    using MuSe.Web.Data.Entities;
     using MuSe.Web.Data.Repositories;
+    using System.Threading.Tasks;
 
-    [Route("api/[Controller]")]
+    [Route("api/[controller]")]
     public class HelpTypesController : Controller
     {
         private readonly IHelpTypeRepository repository;
@@ -19,10 +21,18 @@
             return Ok(this.repository.GetAll());
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> PostHelpType([FromBody])
-        //{
 
-        //}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<HelpType>> GetHelpType(int id)
+        {
+            var helpType = await this.repository.GetByIdAsync(id);
+
+            if (helpType == null)
+            {
+                return NotFound();
+            }
+
+            return helpType;
+        }
     }
 }

@@ -33,19 +33,6 @@
         public ICollection<Incident> Incidents { get; set; }
         public ICollection<WomanDiary> WomanDiaries { get; set; }
         public ICollection<OwnWomanPlace> OwnWomanPlaces { get; set; }
-        //[Display(Name = "Edad")]
-        //public int Edad
-        //{
-        //    get
-        //    {
-        //        DateTime now = DateTime.Today;
-        //        int edad = DateTime.Today.Year - BirhtDate.Year;
-
-        //        if (DateTime.Today < BirhtDate.AddYears(edad))
-        //            return --edad;
-        //        else
-        //            return edad;
-        //    }
-        //}
+       
     }
 }
