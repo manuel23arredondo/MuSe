@@ -1,7 +1,9 @@
 ﻿namespace MuSe.Web.Controllers.API
 {
     using Microsoft.AspNetCore.Mvc;
+    using MuSe.Web.Data.Entities;
     using MuSe.Web.Data.Repositories;
+    using System.Threading.Tasks;
 
     [Route("api/[Controller]")]
     public class ReliabilitiesController : Controller
@@ -17,6 +19,19 @@
         public IActionResult GetReliabilities()
         {
             return Ok(this.repository.GetAll());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Reliability>> GetReliability(int id)
+        {
+            var reliability = await this.repository.GetByIdAsync(id);
+
+            if (reliability == null)
+            {
+                return NotFound();
+            }
+
+            return reliability;
         }
     }
 }

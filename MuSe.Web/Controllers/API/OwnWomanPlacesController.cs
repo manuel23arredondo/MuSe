@@ -1,7 +1,9 @@
 ﻿namespace MuSe.Web.Controllers.API
 {
     using Microsoft.AspNetCore.Mvc;
+    using MuSe.Web.Data.Entities;
     using MuSe.Web.Data.Repositories;
+    using System.Threading.Tasks;
 
     [Route("api/[Controller]")]
     public class OwnWomanPlacesController : Controller
@@ -17,6 +19,19 @@
         public IActionResult GetOwnWomanPlaces()
         {
             return Ok(this.repository.GetAll());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<OwnWomanPlace>> GetOwnWomanPlace(int id)
+        {
+            var ownWomanPlace = await this.repository.GetByIdAsync(id);
+
+            if (ownWomanPlace == null)
+            {
+                return NotFound();
+            }
+
+            return ownWomanPlace;
         }
     }
 }

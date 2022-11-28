@@ -1,7 +1,9 @@
 ﻿namespace MuSe.Web.Controllers.API
 {
     using Microsoft.AspNetCore.Mvc;
+    using MuSe.Web.Data.Entities;
     using MuSe.Web.Data.Repositories;
+    using System.Threading.Tasks;
 
     [Route("api/[Controller]")]
     public class HelpDirectoriesController : Controller
@@ -16,7 +18,20 @@
         [HttpGet]
         public IActionResult GetHelpDirectories()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetHelpDirectoriesWithHelpTypes());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<HelpDirectory>> GetHelpDirectory(int id)
+        {
+            var helpDirectory = await this.repository.GetByIdAsync(id);
+
+            if (helpDirectory == null)
+            {
+                return NotFound();
+            }
+
+            return helpDirectory;
         }
     }
 }

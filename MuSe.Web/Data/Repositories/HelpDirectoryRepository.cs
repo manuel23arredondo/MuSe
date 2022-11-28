@@ -19,6 +19,7 @@
             return this.context.HelpDirectories
                 .Include(c => c.HelpType)
                 .OrderBy(c => c.OrganizationName);
+
         }
 
         public async Task<HelpDirectory> GetHelpDirectoriesWithHelpTypesByIdAsync(int id)
