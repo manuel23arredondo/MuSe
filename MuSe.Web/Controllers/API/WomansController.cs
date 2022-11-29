@@ -18,13 +18,14 @@
         [HttpGet]
         public IActionResult GetWomans()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetWomanWithUsers());
         }
 
+        //Checar método
         [HttpGet("{id}")]
-        public async Task<ActionResult<Woman>> GetWoman(int id)
+        public async Task<ActionResult<User>> GetWoman(string id)
         {
-            var woman = await this.repository.GetByIdAsync(id);
+            var woman = await this.repository.GetUsersByIdAsync(id);
 
             if (woman == null)
             {

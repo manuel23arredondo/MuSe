@@ -18,7 +18,7 @@
         [HttpGet]
         public IActionResult GetKindOfPlaces()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetKindOfPlaceWithOwnWomanPlaces());
         }
 
         [HttpGet("{id}")]

@@ -18,13 +18,13 @@
         [HttpGet]
         public IActionResult GetOwnWomanPlaces()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetAllOwnWomanPlacesWithKindOfPlacesAndUsers());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<OwnWomanPlace>> GetOwnWomanPlace(int id)
         {
-            var ownWomanPlace = await this.repository.GetByIdAsync(id);
+            var ownWomanPlace = await this.repository.GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(id);
 
             if (ownWomanPlace == null)
             {

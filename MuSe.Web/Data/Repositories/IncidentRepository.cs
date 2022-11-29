@@ -21,10 +21,20 @@
                 .Where(c => c.User.Email == name);
         }
 
+        public IQueryable GetAllIncidentsWithViolentometersAndUsers()
+        {
+            return context.Incidents
+                .Include(c => c.Violentometer)
+                .Include(c => c.User)
+                .OrderBy(c => c.User);
+        }
+
         public async Task<Incident> GetIncidentsWithViolentometersAndUsersByIdAsync(int id)
         {
             return await context.Incidents
                 .Include(c => c.Violentometer)
+                .Include(c => c.Violentometer.Reliability)
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(c =>c.Id == id);
         }
 

@@ -18,9 +18,11 @@
         [HttpGet]
         public IActionResult GetMonitors()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetMonitorsWithUsers());
         }
 
+
+        // Checar método
         [HttpGet("{id}")]
         public async Task<ActionResult<Monitor>> GetMonitor(int id)
         {

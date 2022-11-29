@@ -16,7 +16,6 @@
         public IQueryable GetMoodWithWomanDiaries()
         {
             return this.context.Moods
-                .Include(c => c.WomanDiaries)
                 .OrderBy(c => c.Description);
         }
     }

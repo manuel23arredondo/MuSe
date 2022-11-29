@@ -22,10 +22,19 @@
                 .Where(c => c.User.Email == name);
         }
 
+        public IQueryable GetAllOwnWomanPlacesWithKindOfPlacesAndUsers()
+        {
+            return context.OwnWomanPlaces
+                .Include(c => c.KindOfPlace)
+                .Include(c => c.User)
+                .OrderBy(c => c.User);
+        }
+
         public async Task<OwnWomanPlace> GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(int id)
         {
             return await context.OwnWomanPlaces
                 .Include(c => c.KindOfPlace)
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 

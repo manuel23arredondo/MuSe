@@ -18,13 +18,13 @@
         [HttpGet]
         public IActionResult GetViolentometers()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetViolentometersWithReliabilities());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Violentometer>> GetViolentometer(int id)
         {
-            var violentometer = await this.repository.GetByIdAsync(id);
+            var violentometer = await this.repository.GetViolentometersWithReliabilitiesByIdAsync(id);
 
             if (violentometer == null)
             {

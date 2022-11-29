@@ -18,13 +18,13 @@
         [HttpGet]
         public IActionResult GetIncidents()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetAllIncidentsWithViolentometersAndUsers());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Incident>> GetIncident(int id)
         {
-            var incident = await this.repository.GetByIdAsync(id);
+            var incident = await this.repository.GetIncidentsWithViolentometersAndUsersByIdAsync(id);
 
             if (incident == null)
             {

@@ -21,10 +21,19 @@
                 .Where(c => c.User.Email == name);
         }
 
+        public IQueryable GetAllWomanDiariesWithMoodsAndUsers()
+        {
+            return context.WomanDiaries
+                .Include(c => c.Mood)
+                .Include(c => c.User)
+                .OrderBy(c => c.User);
+        }
+
         public async Task<WomanDiary> GetWomanDiariesWithMoodsAndUsersByIdAsync(int id)
         {
             return await context.WomanDiaries
                 .Include(c => c.Mood)
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 

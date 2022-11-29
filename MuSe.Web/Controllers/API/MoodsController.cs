@@ -18,7 +18,7 @@
         [HttpGet]
         public IActionResult GetMoods()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetMoodWithWomanDiaries());
         }
 
         [HttpGet("{id}")]

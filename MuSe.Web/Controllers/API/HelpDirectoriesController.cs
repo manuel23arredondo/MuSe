@@ -24,7 +24,7 @@
         [HttpGet("{id}")]
         public async Task<ActionResult<HelpDirectory>> GetHelpDirectory(int id)
         {
-            var helpDirectory = await this.repository.GetByIdAsync(id);
+            var helpDirectory = await this.repository.GetHelpDirectoriesWithHelpTypesByIdAsync(id);
 
             if (helpDirectory == null)
             {

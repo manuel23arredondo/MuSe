@@ -16,7 +16,6 @@
         public IQueryable GetReliabilityWithViolentometers()
         {
             return this.context.Reliabilities
-                .Include(c => c.Violentometers)
                 .OrderBy(c => c.Description);
         }
     }

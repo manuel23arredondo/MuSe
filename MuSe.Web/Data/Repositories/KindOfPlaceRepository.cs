@@ -15,7 +15,6 @@
         public IQueryable GetKindOfPlaceWithOwnWomanPlaces()
         {
             return this.context.KindOfPlaces
-                .Include(c => c.OwnWomanPlaces)
                 .OrderBy(c => c.Description);
         }
     }

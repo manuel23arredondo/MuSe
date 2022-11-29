@@ -18,13 +18,13 @@
         [HttpGet]
         public IActionResult GetWomanDiaries()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetAllWomanDiariesWithMoodsAndUsers());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<WomanDiary>> GetWomanDiary(int id)
         {
-            var womanDiary = await this.repository.GetByIdAsync(id);
+            var womanDiary = await this.repository.GetWomanDiariesWithMoodsAndUsersByIdAsync(id);
 
             if (womanDiary == null)
             {

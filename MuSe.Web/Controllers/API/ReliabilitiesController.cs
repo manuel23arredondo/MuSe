@@ -18,7 +18,7 @@
         [HttpGet]
         public IActionResult GetReliabilities()
         {
-            return Ok(this.repository.GetAll());
+            return Ok(this.repository.GetReliabilityWithViolentometers());
         }
 
         [HttpGet("{id}")]
