@@ -19,4 +19,8 @@
     <Folder Include="wwwroot\images\monitors\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MuSe.Common\MuSe.Common.csproj" />
+  </ItemGroup>
+
 </Project>

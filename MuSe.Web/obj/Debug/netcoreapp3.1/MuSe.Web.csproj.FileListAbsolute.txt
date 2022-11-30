@@ -326,3 +326,5 @@ C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.MuSe.Web.Micros
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.MuSe.Web.props
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.MuSe.Web.props
 C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.MuSe.Web.props
+C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\MuSe.Common.dll
+C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\MuSe.Common.pdb

@@ -3032,6 +3032,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "MuSe.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MuSe.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MuSe.Common.dll": {}
+        }
       }
     }
   },
@@ -9058,6 +9071,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "MuSe.Common/1.0.0": {
+      "type": "project",
+      "path": "../MuSe.Common/MuSe.Common.csproj",
+      "msbuildProject": "../MuSe.Common/MuSe.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9066,7 +9084,8 @@
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.30",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.30",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.30",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
+      "MuSe.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9101,7 +9120,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\MuSe\\MuSe.Common\\MuSe.Common.csproj": {
+              "projectPath": "C:\\MuSe\\MuSe.Common\\MuSe.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
