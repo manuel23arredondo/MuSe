@@ -37,7 +37,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostHelpType([ FromBody ] HelpTypeResponse helpTypeResponse)
+        public async Task<IActionResult> PostHelpType([FromBody] HelpTypeResponse helpTypeResponse)
         {
             if (!ModelState.IsValid)
             {
@@ -53,6 +53,52 @@
 
             var newHelpType = await helpTypeRepository.CreateAsync(helpType);
             return Ok(newHelpType);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutHelpType([FromRoute] int id, [FromBody] HelpTypeResponse helpTypeResponse)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != helpTypeResponse.Id)
+            {
+                return BadRequest();
+            }
+
+            var oldHelpType = await this.helpTypeRepository.GetByIdAsync(id);
+
+            if (oldHelpType == null)
+            {
+                return BadRequest("Help type not exists");
+            }
+
+            oldHelpType.Description = helpTypeResponse.Description;
+            oldHelpType.HelpDirectories = (System.Collections.Generic.ICollection<HelpDirectory>)helpTypeResponse.HelpDirectories;
+
+            var updateHelpType = await helpTypeRepository.UpdateAsync(oldHelpType);
+            return Ok(updateHelpType);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteHelpType([FromRoute] int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var helpType = await this.helpTypeRepository.GetByIdAsync(id);
+
+            if (helpType == null)
+            {
+                return BadRequest("Help type not exists");
+            }
+
+            await helpTypeRepository.DeleteAsync(helpType);
+            return Ok(helpType);
         }
     }
 }

@@ -321,10 +321,5 @@ C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspac
 C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
-C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\MuSe.Web.StaticWebAssets.Pack.cache
-C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.MuSe.Web.Microsoft.AspNetCore.StaticWebAssets.props
-C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.MuSe.Web.props
-C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.MuSe.Web.props
-C:\MuSe\MuSe.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.MuSe.Web.props
 C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\MuSe.Common.dll
 C:\MuSe\MuSe.Web\bin\Debug\netcoreapp3.1\MuSe.Common.pdb
