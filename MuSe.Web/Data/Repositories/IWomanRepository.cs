@@ -8,6 +8,8 @@
     {
         IQueryable GetWomanWithUsers();
 
-        Task<User> GetUsersByIdAsync(string id);
+        Task<User> GetUserByIdAsync(string id);
+
+        Task<Woman> GetWomanWithUserByIdAsync(string userId);
     }
 }

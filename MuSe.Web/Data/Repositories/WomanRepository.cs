@@ -21,10 +21,16 @@
                 .OrderBy(c => c.User.FirstName);
         }
 
-        public async Task<User> GetUsersByIdAsync(string id)
+        public async Task<User> GetUserByIdAsync(string id)
         {
             return await this.context.Users
                 .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public async Task<Woman> GetWomanWithUserByIdAsync(string userId)
+        {
+            return await this.context.Womans
+                .FirstOrDefaultAsync(w => w.User.Id == userId);
         }
     }
 }

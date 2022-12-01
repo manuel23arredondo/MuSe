@@ -17,14 +17,14 @@
         public IQueryable GetMonitorsWithUsers()
         {
             return this.context.Monitors
-                .Include(c => c.User)
-                .OrderBy(c => c.User.FirstName);
+                .Include(m => m.User)
+                .OrderBy(m => m.User.FirstName);
         }
 
         public async Task<User> GetUsersByIdAsync(string id)
         {
             return await this.context.Users
-                .FirstOrDefaultAsync(c => c.Id == id);
+                .FirstOrDefaultAsync(u => u.Id == id);
         }
     }
 }

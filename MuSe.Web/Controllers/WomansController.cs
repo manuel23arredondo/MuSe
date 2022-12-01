@@ -80,7 +80,7 @@
                             model.ImageFile,
                             model.User.FullName,
                             "womans") : string.Empty),
-                            User = await this.repository.GetUsersByIdAsync(user.Id)
+                            User = await this.repository.GetUserByIdAsync(user.Id)
                         };
                         await this.repository.CreateAsync(woman);
                         return RedirectToAction(nameof(AccountCreated));
