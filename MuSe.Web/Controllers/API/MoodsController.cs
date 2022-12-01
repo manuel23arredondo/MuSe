@@ -53,5 +53,51 @@
             var newMood = await moodRepository.CreateAsync(mood);
             return Ok(newMood);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutMood([FromRoute] int id, [FromBody] MoodResponse moodResponse)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != moodResponse.Id)
+            {
+                return BadRequest();
+            }
+
+            var oldMood = await this.moodRepository.GetByIdAsync(id);
+
+            if (oldMood == null)
+            {
+                return BadRequest("Mood not exists");
+            }
+
+            oldMood.Description = moodResponse.Description;
+            oldMood.WomanDiaries = (System.Collections.Generic.ICollection<WomanDiary>)moodResponse.WomanDiaries;
+
+            var updateMood = await moodRepository.UpdateAsync(oldMood);
+            return Ok(updateMood);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteMood([FromRoute] int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var mood = await this.moodRepository.GetByIdAsync(id);
+
+            if (mood == null)
+            {
+                return BadRequest("Mood not exists");
+            }
+
+            await moodRepository.DeleteAsync(mood);
+            return Ok(mood);
+        }
     }
 }

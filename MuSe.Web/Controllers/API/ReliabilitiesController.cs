@@ -53,5 +53,51 @@
             var newReliability = await reliabilityRepository.CreateAsync(reliability);
             return Ok(newReliability);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutReliability([FromRoute] int id, [FromBody] ReliabilityResponse reliabilityResponse)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != reliabilityResponse.Id)
+            {
+                return BadRequest();
+            }
+
+            var oldReliability = await this.reliabilityRepository.GetByIdAsync(id);
+
+            if (oldReliability == null)
+            {
+                return BadRequest("Reliability not exists");
+            }
+
+            oldReliability.Description = reliabilityResponse.Description;
+            oldReliability.Violentometers = (System.Collections.Generic.ICollection<Violentometer>)reliabilityResponse.Violentometers;
+
+            var updateReliability = await reliabilityRepository.UpdateAsync(oldReliability);
+            return Ok(updateReliability);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteReliability([FromRoute] int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var reliability = await this.reliabilityRepository.GetByIdAsync(id);
+
+            if (reliability == null)
+            {
+                return BadRequest("Reliability not exists");
+            }
+
+            await reliabilityRepository.DeleteAsync(reliability);
+            return Ok(reliability);
+        }
     }
 }
