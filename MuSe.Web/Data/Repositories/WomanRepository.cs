@@ -30,6 +30,7 @@
         public async Task<Woman> GetWomanWithUserByIdAsync(string userId)
         {
             return await this.context.Womans
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(w => w.User.Id == userId);
         }
     }

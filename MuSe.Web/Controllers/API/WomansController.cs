@@ -15,7 +15,6 @@
         private readonly IWomanRepository womanRepository;
         private readonly IUserHelper userHelper;
 
-
         public WomansController(IWomanRepository womanRepository, IUserHelper userHelper)
         {
             this.womanRepository = womanRepository;
@@ -28,11 +27,10 @@
             return Ok(this.womanRepository.GetWomanWithUsers());
         }
 
-        //Checar método
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetWoman(string id)
+        public async Task<ActionResult<Woman>> GetWoman(string id)
         {
-            var woman = await this.womanRepository.GetUserByIdAsync(id);
+            var woman = await this.womanRepository.GetWomanWithUserByIdAsync(id);
 
             if (woman == null)
             {
@@ -43,23 +41,22 @@
         }
 
         [HttpPost]
-        [HttpPost]
-        public async Task<IActionResult> PostWoman([FromBody] UserResponse userResponse)
+        public async Task<IActionResult> PostWoman([FromBody] WomanResponse womanResponse)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await userHelper.GetUserByEmailAsync(userResponse.Username);
+            var user = await userHelper.GetUserByEmailAsync(womanResponse.Email);
             if (user == null)
             {
                 user = new User
                 {
-                    FirstName = userResponse.firstName,
-                    LastName = userResponse.lastname,
-                    Email = userResponse.email,
-                    UserName = userResponse.email
+                    FirstName = womanResponse.FirstName,
+                    LastName = womanResponse.LastName,
+                    Email = womanResponse.Email,
+                    UserName = womanResponse.Email
                 };
                 var result = await userHelper.AddUserAsync(user, "123456");
                 if (result != IdentityResult.Success)
@@ -79,11 +76,10 @@
                 var woman = await womanRepository.GetWomanWithUserByIdAsync(user.Id);
                 if (woman != null)
                 {
-                    return BadRequest("This womamn already exists");
+                    return BadRequest("This woman already exists");
                 }
                 else
                 {
-                    //Crear usuario
                     woman = new Woman
                     {
                         User = user

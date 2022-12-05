@@ -14,17 +14,24 @@
             this.context = context;
         }
 
-        public IQueryable GetMonitorsWithUsers()
+        public IQueryable GetMonitorWithUsers()
         {
             return this.context.Monitors
                 .Include(m => m.User)
                 .OrderBy(m => m.User.FirstName);
         }
 
-        public async Task<User> GetUsersByIdAsync(string id)
+        public async Task<User> GetUserByIdAsync(string id)
         {
             return await this.context.Users
                 .FirstOrDefaultAsync(u => u.Id == id);
+        }
+
+        public async Task<Monitor> GetMonitorWithUserByIdAsync(string userId)
+        {
+            return await this.context.Monitors
+                .Include(c => c.User)
+                .FirstOrDefaultAsync(w => w.User.Id == userId);
         }
     }
 }

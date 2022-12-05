@@ -54,7 +54,7 @@
                     Latitude = model.Latitude,
                     Longitude = model.Longitude,
                     IncidentDate = model.IncidentDate,
-                    User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                     Violentometer = await this.repository.GetViolentometersByIdAsync(model.ViolentometerId)
                 };
                 await this.repository.CreateAsync(incident);
@@ -86,7 +86,7 @@
                 Latitude = incident.Latitude,
                 Violentometer = incident.Violentometer,
                 ViolentometerId = incident.Violentometer.Id,
-                User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                 Violentometers = this.combosHelper.GetComboViolentometers()
             };
             return View(model);
@@ -106,7 +106,7 @@
                     Latitude = model.Latitude,
                     Longitude = model.Longitude,
                     IncidentDate = model.IncidentDate,
-                    User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                     Violentometer = await this.repository.GetViolentometersByIdAsync(model.ViolentometerId)
                 };
 

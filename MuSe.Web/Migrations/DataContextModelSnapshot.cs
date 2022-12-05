@@ -15,7 +15,7 @@ namespace MuSe.Web.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.20")
+                .HasAnnotation("ProductVersion", "3.1.30")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -317,17 +317,17 @@ namespace MuSe.Web.Migrations
                     b.Property<double>("Longitude")
                         .HasColumnType("float");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int?>("ViolentometerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("WomanId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.HasIndex("ViolentometerId");
+
+                    b.HasIndex("WomanId");
 
                     b.ToTable("Incidents");
                 });
@@ -419,17 +419,12 @@ namespace MuSe.Web.Migrations
                     b.Property<double>("Longitude")
                         .HasColumnType("float");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int?>("WomanId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("KindOfPlaceId");
-
-                    b.HasIndex("UserId");
 
                     b.HasIndex("WomanId");
 
@@ -503,7 +498,6 @@ namespace MuSe.Web.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(15)")
                         .HasMaxLength(15);
 
@@ -593,17 +587,12 @@ namespace MuSe.Web.Migrations
                     b.Property<int?>("MoodId")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int?>("WomanId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("MoodId");
-
-                    b.HasIndex("UserId");
 
                     b.HasIndex("WomanId");
 
@@ -697,13 +686,13 @@ namespace MuSe.Web.Migrations
 
             modelBuilder.Entity("MuSe.Web.Data.Entities.Incident", b =>
                 {
-                    b.HasOne("MuSe.Web.Data.Entities.User", "User")
-                        .WithMany("Incidents")
-                        .HasForeignKey("UserId");
-
                     b.HasOne("MuSe.Web.Data.Entities.Violentometer", "Violentometer")
                         .WithMany("Incidents")
                         .HasForeignKey("ViolentometerId");
+
+                    b.HasOne("MuSe.Web.Data.Entities.Woman", "Woman")
+                        .WithMany()
+                        .HasForeignKey("WomanId");
                 });
 
             modelBuilder.Entity("MuSe.Web.Data.Entities.Monitor", b =>
@@ -726,11 +715,7 @@ namespace MuSe.Web.Migrations
                         .WithMany("OwnWomanPlaces")
                         .HasForeignKey("KindOfPlaceId");
 
-                    b.HasOne("MuSe.Web.Data.Entities.User", "User")
-                        .WithMany("OwnWomanPlaces")
-                        .HasForeignKey("UserId");
-
-                    b.HasOne("MuSe.Web.Data.Entities.Woman", null)
+                    b.HasOne("MuSe.Web.Data.Entities.Woman", "Woman")
                         .WithMany("OwnWomanPlaces")
                         .HasForeignKey("WomanId");
                 });
@@ -755,11 +740,7 @@ namespace MuSe.Web.Migrations
                         .WithMany("WomanDiaries")
                         .HasForeignKey("MoodId");
 
-                    b.HasOne("MuSe.Web.Data.Entities.User", "User")
-                        .WithMany("WomanDiaries")
-                        .HasForeignKey("UserId");
-
-                    b.HasOne("MuSe.Web.Data.Entities.Woman", null)
+                    b.HasOne("MuSe.Web.Data.Entities.Woman", "Woman")
                         .WithMany("WomanDiaries")
                         .HasForeignKey("WomanId");
                 });

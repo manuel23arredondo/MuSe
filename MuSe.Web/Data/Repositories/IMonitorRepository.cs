@@ -6,9 +6,10 @@
 
     public interface IMonitorRepository : IGenericRepository<Monitor>
     {
-        IQueryable GetMonitorsWithUsers();
+        IQueryable GetMonitorWithUsers();
 
-        Task<User> GetUsersByIdAsync(string id);
+        Task<User> GetUserByIdAsync(string id);
 
+        Task<Monitor> GetMonitorWithUserByIdAsync(string userId);
     }
 }

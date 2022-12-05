@@ -52,7 +52,7 @@
                 {
                     Latitud = model.Latitud,
                     Longitude = model.Longitude,
-                    User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                     KindOfPlace = await this.repository.GetKindOfPlacesByIdAsync(model.KindOfPlaceId)
                 };
                 await this.repository.CreateAsync(ownWomanPlace);
@@ -82,7 +82,7 @@
                 Latitud = ownWomanPlace.Latitud,
                 KindOfPlace = ownWomanPlace.KindOfPlace,
                 KindOfPlaceId = ownWomanPlace.KindOfPlace.Id,
-                User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                 KindOfPlaces = this.combosHelper.GetComboKindOfPlaces()
             };
             return View(model);
@@ -99,7 +99,7 @@
                     Id = model.Id,
                     Latitud = model.Latitud,
                     Longitude = model.Longitude,
-                    User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                     KindOfPlace = await this.repository.GetKindOfPlacesByIdAsync(model.KindOfPlaceId)
                 };
 

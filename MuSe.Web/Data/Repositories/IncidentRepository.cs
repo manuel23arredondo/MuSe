@@ -18,15 +18,15 @@
         {
             return context.Incidents
                 .Include(c => c.Violentometer)
-                .Where(c => c.User.Email == name);
+                .Where(c => c.Woman.User.Email == name);
         }
 
         public IQueryable GetAllIncidentsWithViolentometersAndUsers()
         {
             return context.Incidents
                 .Include(c => c.Violentometer)
-                .Include(c => c.User)
-                .OrderBy(c => c.User);
+                .Include(c => c.Woman.User)
+                .OrderBy(c => c.Woman.User);
         }
 
         public async Task<Incident> GetIncidentsWithViolentometersAndUsersByIdAsync(int id)
@@ -34,7 +34,7 @@
             return await context.Incidents
                 .Include(c => c.Violentometer)
                 .Include(c => c.Violentometer.Reliability)
-                .Include(c => c.User)
+                .Include(c => c.Woman.User)
                 .FirstOrDefaultAsync(c =>c.Id == id);
         }
 

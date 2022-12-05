@@ -53,7 +53,8 @@
                 {
                     Description = model.Description,
                     DiaryDate = model.DiaryDate,
-                    User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    //User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                     Mood = await this.repository.GetMoodsByIdAsync(model.MoodId)
                 };
                 await this.repository.CreateAsync(womanDiary);
@@ -83,7 +84,7 @@
                 DiaryDate = womanDiary.DiaryDate,
                 Mood = womanDiary.Mood,
                 MoodId = womanDiary.Mood.Id,
-                User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                 Moods = this.combosHelper.GetComboMoods()
             };
             return View(model);
@@ -100,7 +101,7 @@
                     Id = model.Id,
                     Description = model.Description,
                     DiaryDate = model.DiaryDate,
-                    User = await this.dataContext.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name),
+                    Woman = await this.dataContext.Womans.FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name),
                     Mood = await this.repository.GetMoodsByIdAsync(model.MoodId)
                 };
 

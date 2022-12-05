@@ -41,7 +41,7 @@ namespace MuSe.Web.Migrations
                     AccessFailedCount = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(maxLength: 50, nullable: false),
                     LastName = table.Column<string>(maxLength: 50, nullable: false),
-                    PhoneNumber = table.Column<string>(maxLength: 15, nullable: false),
+                    PhoneNumber = table.Column<string>(maxLength: 15, nullable: true),
                     BirhtDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
@@ -364,9 +364,8 @@ namespace MuSe.Web.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Latitud = table.Column<double>(nullable: false),
                     Longitude = table.Column<double>(nullable: false),
-                    UserId = table.Column<string>(nullable: true),
-                    KindOfPlaceId = table.Column<int>(nullable: true),
-                    WomanId = table.Column<int>(nullable: true)
+                    WomanId = table.Column<int>(nullable: true),
+                    KindOfPlaceId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -375,12 +374,6 @@ namespace MuSe.Web.Migrations
                         name: "FK_OwnWomanPlaces_KindOfPlaces_KindOfPlaceId",
                         column: x => x.KindOfPlaceId,
                         principalTable: "KindOfPlaces",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_OwnWomanPlaces_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -399,7 +392,6 @@ namespace MuSe.Web.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Description = table.Column<string>(maxLength: 50, nullable: false),
                     DiaryDate = table.Column<DateTime>(nullable: false),
-                    UserId = table.Column<string>(nullable: true),
                     MoodId = table.Column<int>(nullable: true),
                     WomanId = table.Column<int>(nullable: true)
                 },
@@ -410,12 +402,6 @@ namespace MuSe.Web.Migrations
                         name: "FK_WomanDiaries_Moods_MoodId",
                         column: x => x.MoodId,
                         principalTable: "Moods",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_WomanDiaries_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -437,22 +423,22 @@ namespace MuSe.Web.Migrations
                     Longitude = table.Column<double>(nullable: false),
                     Latitude = table.Column<double>(nullable: false),
                     IncidentDate = table.Column<DateTime>(nullable: false),
-                    UserId = table.Column<string>(nullable: true),
+                    WomanId = table.Column<int>(nullable: true),
                     ViolentometerId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Incidents", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Incidents_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Incidents_Violentometers_ViolentometerId",
                         column: x => x.ViolentometerId,
                         principalTable: "Violentometers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Incidents_Womans_WomanId",
+                        column: x => x.WomanId,
+                        principalTable: "Womans",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -548,14 +534,14 @@ namespace MuSe.Web.Migrations
                 column: "HelpTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Incidents_UserId",
-                table: "Incidents",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Incidents_ViolentometerId",
                 table: "Incidents",
                 column: "ViolentometerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Incidents_WomanId",
+                table: "Incidents",
+                column: "WomanId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Monitors_UserId",
@@ -573,11 +559,6 @@ namespace MuSe.Web.Migrations
                 column: "KindOfPlaceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OwnWomanPlaces_UserId",
-                table: "OwnWomanPlaces",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OwnWomanPlaces_WomanId",
                 table: "OwnWomanPlaces",
                 column: "WomanId");
@@ -591,11 +572,6 @@ namespace MuSe.Web.Migrations
                 name: "IX_WomanDiaries_MoodId",
                 table: "WomanDiaries",
                 column: "MoodId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_WomanDiaries_UserId",
-                table: "WomanDiaries",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_WomanDiaries_WomanId",

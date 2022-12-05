@@ -26,7 +26,7 @@
 
         public IActionResult Index()
         {
-            return View(this.repository.GetMonitorsWithUsers());
+            return View(this.repository.GetMonitorWithUsers());
         }
 
         public IActionResult AccountCreated()
@@ -80,7 +80,7 @@
                             model.ImageFile,
                             model.User.FullName,
                             "monitors") : string.Empty),
-                            User = await this.repository.GetUsersByIdAsync(user.Id)
+                            User = await this.repository.GetUserByIdAsync(user.Id)
                         };
                         await this.repository.CreateAsync(monitor);
                         return RedirectToAction(nameof(AccountCreated));

@@ -18,22 +18,22 @@
         {
             return context.WomanDiaries
                 .Include(c => c.Mood)
-                .Where(c => c.User.Email == name);
+                .Where(c => c.Woman.User.Email == name);
         }
 
         public IQueryable GetAllWomanDiariesWithMoodsAndUsers()
         {
             return context.WomanDiaries
                 .Include(c => c.Mood)
-                .Include(c => c.User)
-                .OrderBy(c => c.User);
+                .Include(c => c.Woman.User)
+                .OrderBy(c => c.Woman.User);
         }
 
         public async Task<WomanDiary> GetWomanDiariesWithMoodsAndUsersByIdAsync(int id)
         {
             return await context.WomanDiaries
                 .Include(c => c.Mood)
-                .Include(c => c.User)
+                .Include(c => c.Woman.User)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 

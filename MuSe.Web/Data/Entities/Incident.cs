@@ -30,7 +30,8 @@
         [Display(Name = "Fecha de incidente")]
         public DateTime IncidentDate { get; set; }
 
-        public User User { get; set; }
+        //public User User { get; set; }
+        public Woman Woman { get; set; }
         public Violentometer Violentometer { get; set; }
     }
 }

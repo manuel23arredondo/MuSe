@@ -16,7 +16,8 @@
         [Display(Name = "Fecha")]
         public DateTime DiaryDate { get; set; }
 
-        public User User { get; set; }
+        //public User User { get; set; }
         public Mood Mood { get; set; }
+        public Woman Woman { get; set; }
     }
 }

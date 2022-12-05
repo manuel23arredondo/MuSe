@@ -14,7 +14,8 @@ namespace MuSe.Web.Data.Entities
         [Display(Name = "Longitud")]
         public double Longitude { get; set; }
 
-        public User User { get; set; }
+        //public User User { get; set; }
+        public Woman Woman { get; set; }
         public KindOfPlace KindOfPlace { get; set; }
     }
 }

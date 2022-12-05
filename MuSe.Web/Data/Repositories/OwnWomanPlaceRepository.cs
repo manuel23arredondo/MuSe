@@ -19,22 +19,22 @@
         {
             return context.OwnWomanPlaces
                 .Include(c => c.KindOfPlace)
-                .Where(c => c.User.Email == name);
+                .Where(c => c.Woman.User.Email == name);
         }
 
         public IQueryable GetAllOwnWomanPlacesWithKindOfPlacesAndUsers()
         {
             return context.OwnWomanPlaces
                 .Include(c => c.KindOfPlace)
-                .Include(c => c.User)
-                .OrderBy(c => c.User);
+                .Include(c => c.Woman.User)
+                .OrderBy(c => c.Woman.User);
         }
 
         public async Task<OwnWomanPlace> GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(int id)
         {
             return await context.OwnWomanPlaces
                 .Include(c => c.KindOfPlace)
-                .Include(c => c.User)
+                .Include(c => c.Woman.User)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
