@@ -19,5 +19,11 @@
                 .Include(c => c.HelpDirectories)
                 .OrderBy(c => c.Description);
         }
+
+        public HelpType GetHelpTypeByName(string name)
+        {
+            return this.context.HelpTypes
+                .FirstOrDefault(h => h.Description == name);
+        }
     }
 }

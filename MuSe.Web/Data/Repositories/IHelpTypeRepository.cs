@@ -9,5 +9,7 @@
         //Task<HelpType> GetHelpTypeIdWithHelpDirectories(int id);
 
         IQueryable GetHelpTypeWithHelpDirectories();
+
+        HelpType GetHelpTypeByName(string name);
     }
 }

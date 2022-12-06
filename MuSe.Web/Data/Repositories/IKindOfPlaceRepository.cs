@@ -5,5 +5,7 @@
     public interface IKindOfPlaceRepository : IGenericRepository<KindOfPlace>
     {
         IQueryable GetKindOfPlaceWithOwnWomanPlaces();
+
+        KindOfPlace GetKindOfPlaceByName(string name);
     }
 }

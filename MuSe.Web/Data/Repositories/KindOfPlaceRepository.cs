@@ -17,5 +17,11 @@
             return this.context.KindOfPlaces
                 .OrderBy(c => c.Description);
         }
+
+        public KindOfPlace GetKindOfPlaceByName(string name)
+        {
+            return this.context.KindOfPlaces
+                .FirstOrDefault(h => h.Description == name);
+        }
     }
 }

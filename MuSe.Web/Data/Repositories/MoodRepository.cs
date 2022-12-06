@@ -18,5 +18,11 @@
             return this.context.Moods
                 .OrderBy(c => c.Description);
         }
+
+        public Mood GetMoodByName(string name)
+        {
+            return this.context.Moods
+                .FirstOrDefault(h => h.Description == name);
+        }
     }
 }

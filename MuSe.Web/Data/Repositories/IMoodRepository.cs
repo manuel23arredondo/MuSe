@@ -6,5 +6,7 @@
     public interface IMoodRepository : IGenericRepository<Mood>
     {
         IQueryable GetMoodWithWomanDiaries();
+
+        Mood GetMoodByName(string name);
     }
 }

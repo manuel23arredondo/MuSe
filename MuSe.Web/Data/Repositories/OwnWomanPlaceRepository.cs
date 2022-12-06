@@ -1,6 +1,7 @@
 ﻿namespace MuSe.Web.Data.Repositories
 {
     using Microsoft.EntityFrameworkCore;
+    using MuSe.Common.Models;
     using MuSe.Web.Data.Entities;
     using System.Linq;
 
@@ -42,6 +43,30 @@
         {
             return await this.context.KindOfPlaces
                 .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public IQueryable<OwnWomanPlaceResponse> GetAllOwnWomanPlacesResponse()
+        {
+            return this.context.OwnWomanPlaces
+                .Select(h => new OwnWomanPlaceResponse
+                {
+                    Id = h.Id,
+                    Latitud = h.Latitud,
+                    Longitude= h.Longitude,
+                    KindOfPlace = h.KindOfPlace.Description
+                });
+        }
+
+        public async Task<OwnWomanPlaceResponse> GetOwnWomanPlaceResponseById(int id)
+        {
+            return await this.context.OwnWomanPlaces
+                .Select(h => new OwnWomanPlaceResponse
+                {
+                    Id = h.Id,
+                    Latitud = h.Latitud,
+                    Longitude = h.Longitude,
+                    KindOfPlace = h.KindOfPlace.Description
+                }).FirstOrDefaultAsync(h => h.Id == id);
         }
     }
 }

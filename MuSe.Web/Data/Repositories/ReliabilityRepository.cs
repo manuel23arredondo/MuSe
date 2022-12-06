@@ -18,5 +18,11 @@
             return this.context.Reliabilities
                 .OrderBy(c => c.Description);
         }
+
+        public Reliability GetReliabilityByName(string name)
+        {
+            return this.context.Reliabilities
+                .FirstOrDefault(h => h.Description == name);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace MuSe.Web.Data.Repositories
 {
+    using MuSe.Common.Models;
     using MuSe.Web.Data.Entities;
     using System.Linq;
     using System.Threading.Tasks;
@@ -12,5 +13,9 @@
         Task<WomanDiary> GetWomanDiariesWithMoodsAndUsersByIdAsync(int id);
 
         Task<Mood> GetMoodsByIdAsync(int id);
+
+        IQueryable<WomanDiaryResponse> GetAllWomanDiariesResponse();
+
+        Task<WomanDiaryResponse> GetWomanDiaryResponseById(int id);
     }
 }

@@ -5,5 +5,7 @@
     public interface IReliabilityRepository : IGenericRepository<Reliability>
     {
         IQueryable GetReliabilityWithViolentometers();
+
+        Reliability GetReliabilityByName(string name);
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace MuSe.Web.Data.Repositories
 {
+    using MuSe.Common.Models;
     using MuSe.Web.Data.Entities;
     using System.Linq;
     using System.Threading.Tasks;
@@ -13,5 +14,9 @@
         Task<OwnWomanPlace> GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(int id);
 
         Task<KindOfPlace> GetKindOfPlacesByIdAsync(int id);
+
+        IQueryable<OwnWomanPlaceResponse> GetAllOwnWomanPlacesResponse();
+
+        Task<OwnWomanPlaceResponse> GetOwnWomanPlaceResponseById(int id);
     }
 }
