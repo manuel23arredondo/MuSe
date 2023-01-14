@@ -11,11 +11,13 @@
     {
         private readonly IOwnWomanPlaceRepository ownWomanPlacerepository;
         private readonly IKindOfPlaceRepository kindOfPlaceRepository;
+        private readonly IWomanRepository womanRepository;
 
-        public OwnWomanPlacesController(IOwnWomanPlaceRepository ownWomanPlacerepository, IKindOfPlaceRepository kindOfPlaceRepository)
+        public OwnWomanPlacesController(IOwnWomanPlaceRepository ownWomanPlacerepository, IKindOfPlaceRepository kindOfPlaceRepository, IWomanRepository womanRepository)
         {
             this.ownWomanPlacerepository = ownWomanPlacerepository;
             this.kindOfPlaceRepository = kindOfPlaceRepository;
+            this.womanRepository = womanRepository;
         }
 
         [HttpGet]
@@ -31,7 +33,7 @@
 
             if (ownWomanPlace == null)
             {
-                return NotFound();
+                return BadRequest("Own woman place does not exist");
             }
 
             return ownWomanPlace;
@@ -47,13 +49,17 @@
 
             var kindOfPlace = kindOfPlaceRepository.GetKindOfPlaceByName(ownWomanPlaceResponse.KindOfPlace);
             if (kindOfPlace == null)
-                return BadRequest("Kind Of Place doesn´t exist");
+                return BadRequest("Kind Of Place does not exist");
+
+            var woman = womanRepository.GetWomanUserById(ownWomanPlaceResponse.WomanUserId);
+            if (woman == null)
+                return BadRequest("Woman does not exist");
 
             var ownWomaPlace = new OwnWomanPlace
             {
                 Latitud = ownWomanPlaceResponse.Latitud,
                 Longitude= ownWomanPlaceResponse.Longitude,
-                //Woman = await incidentRepository.GetWoman(),
+                Woman = woman,
                 KindOfPlace = kindOfPlace
             };
 
@@ -68,18 +74,23 @@
                 return BadRequest(ModelState);
 
             if (id != ownWomanPlaceResponse.Id)
-                return BadRequest();
+                return BadRequest("Own woman place does not exists");
 
             var oldOwnWomanPlace= await this.ownWomanPlacerepository.GetByIdAsync(id);
             if (oldOwnWomanPlace == null)
-                return BadRequest("The Incident does not exist.");
+                return BadRequest("Incident does not exist");
 
             var kindOfPlace = kindOfPlaceRepository.GetKindOfPlaceByName(ownWomanPlaceResponse.KindOfPlace);
             if (kindOfPlace == null)
-                return BadRequest("Kind Of Place doesn´t exist");
+                return BadRequest("Kind Of Place does not exist");
+
+            var woman = womanRepository.GetWomanUserById(ownWomanPlaceResponse.WomanUserId);
+            if (woman == null)
+                return BadRequest("Woman does not exist");
 
             oldOwnWomanPlace.Latitud = ownWomanPlaceResponse.Latitud;
             oldOwnWomanPlace.Longitude = ownWomanPlaceResponse.Longitude;
+            oldOwnWomanPlace.Woman = woman;
             oldOwnWomanPlace.KindOfPlace = kindOfPlace;
 
             var updatedOwnWomanPlace = await this.ownWomanPlacerepository.UpdateAsync(oldOwnWomanPlace);
@@ -92,9 +103,9 @@
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var ownWomanPlace = await this.ownWomanPlacerepository.GetByIdAsync(id);
+            var ownWomanPlace = await this.ownWomanPlacerepository.GetOwnWomanPlacesByIdAsync(id);
             if (ownWomanPlace == null)
-                return BadRequest("Own woman place not exists");
+                return BadRequest("Own woman place does not exist");
 
             await ownWomanPlacerepository.DeleteAsync(ownWomanPlace);
             return Ok(ownWomanPlace);

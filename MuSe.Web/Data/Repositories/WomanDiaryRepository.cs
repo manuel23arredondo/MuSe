@@ -52,6 +52,7 @@
                     Id = h.Id,
                     Description = h.Description,
                     DiaryDate= h.DiaryDate,
+                    WomanUserId = h.Woman.Id,
                     Mood = h.Mood.Description
                 });
         }
@@ -64,8 +65,17 @@
                     Id = h.Id,
                     Description = h.Description,
                     DiaryDate = h.DiaryDate,
+                    WomanUserId = h.Woman.Id,
                     Mood = h.Mood.Description
                 }).FirstOrDefaultAsync(h => h.Id == id);
+        }
+
+        public async Task<WomanDiary> GetWomanDiariesByIdAsync(int id)
+        {
+            return await this.context.WomanDiaries
+                .Include(c => c.Mood)
+                .Include(c => c.Woman)
+                .FirstOrDefaultAsync(c => c.Id == id);
         }
     }
 }

@@ -14,7 +14,7 @@
         public double Longitude { get; set; }
 
         [JsonProperty("woman")]
-        public string? WomanUserId { get; set; }
+        public int WomanUserId { get; set; }
 
         [JsonProperty("kindOfPlace")]
         public string KindOfPlace { get; set; }

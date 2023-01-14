@@ -24,7 +24,7 @@
         public DateTime IncidentDate { get; set; }
 
         [JsonProperty("woman")]
-        public string? WomanUserId { get; set; }
+        public int WomanUserId { get; set; }
 
         [JsonProperty("violentometer")]
         public string Violentometer { get; set; }

@@ -11,11 +11,13 @@
     {
         private readonly IWomanDiaryRepository womanDiaryRepository;
         private readonly IMoodRepository moodRepository;
+        private readonly IWomanRepository womanRepository;
 
-        public WomanDiariesController(IWomanDiaryRepository womanDiaryRepository, IMoodRepository moodRepository)
+        public WomanDiariesController(IWomanDiaryRepository womanDiaryRepository, IMoodRepository moodRepository, IWomanRepository womanRepository)
         {
             this.womanDiaryRepository = womanDiaryRepository;
-            this.moodRepository = moodRepository;   
+            this.moodRepository = moodRepository;
+            this.womanRepository = womanRepository;
         }
 
         [HttpGet]
@@ -45,15 +47,19 @@
                 return BadRequest(ModelState);
             }
 
+            var woman = womanRepository.GetWomanUserById(womanDiaryResponse.WomanUserId);
+            if (woman == null)
+                return BadRequest("Woman does not exist");
+
             var mood = moodRepository.GetMoodByName(womanDiaryResponse.Mood);
             if (mood == null)
-                return BadRequest("Mood doesn´t exist");
+                return BadRequest("Mood does not exist");
 
             var womanDiary = new WomanDiary
             {
                 Description = womanDiaryResponse.Description,
                 DiaryDate = womanDiaryResponse.DiaryDate,
-                //Woman = await incidentRepository.GetWoman(),
+                Woman = woman,
                 Mood = mood
             };
 
@@ -76,10 +82,15 @@
 
             var mood = moodRepository.GetMoodByName(womanDiaryResponse.Mood);
             if (mood == null)
-                return BadRequest("Mood doesn´t exist");
+                return BadRequest("Mood does not exist");
+
+            var woman = womanRepository.GetWomanUserById(womanDiaryResponse.WomanUserId);
+            if (woman == null)
+                return BadRequest("Woman does not exist");
 
             oldWomanDiary.Description = womanDiaryResponse.Description;
             oldWomanDiary.DiaryDate = womanDiaryResponse.DiaryDate;
+            oldWomanDiary.Woman = woman;
             oldWomanDiary.Mood = mood;
 
             var updatedWomanDiary = await this.womanDiaryRepository.UpdateAsync(oldWomanDiary);
@@ -93,9 +104,9 @@
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var womanDiary = await this.womanDiaryRepository.GetByIdAsync(id);
+            var womanDiary = await this.womanDiaryRepository.GetWomanDiariesByIdAsync(id);
             if (womanDiary == null)
-                return BadRequest("Woman Diary not exists");
+                return BadRequest("Woman Diary does not exist");
 
             await womanDiaryRepository.DeleteAsync(womanDiary);
             return Ok(womanDiary);

@@ -33,5 +33,11 @@
                 .Include(c => c.User)
                 .FirstOrDefaultAsync(w => w.User.Id == userId);
         }
+
+        public Woman GetWomanUserById(int id)
+        {
+            return this.context.Womans
+                .FirstOrDefault(h => h.Id == id);
+        }
     }
 }

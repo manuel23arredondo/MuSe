@@ -14,6 +14,8 @@
 
         Task<Mood> GetMoodsByIdAsync(int id);
 
+        Task<WomanDiary> GetWomanDiariesByIdAsync(int id);
+
         IQueryable<WomanDiaryResponse> GetAllWomanDiariesResponse();
 
         Task<WomanDiaryResponse> GetWomanDiaryResponseById(int id);

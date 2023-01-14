@@ -11,5 +11,7 @@
         Task<User> GetUserByIdAsync(string id);
 
         Task<Woman> GetWomanWithUserByIdAsync(string userId);
+
+        Woman GetWomanUserById(int id);
     }
 }

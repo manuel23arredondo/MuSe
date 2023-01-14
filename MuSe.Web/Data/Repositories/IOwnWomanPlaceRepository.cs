@@ -17,6 +17,8 @@
 
         IQueryable<OwnWomanPlaceResponse> GetAllOwnWomanPlacesResponse();
 
+        Task<OwnWomanPlace> GetOwnWomanPlacesByIdAsync(int id);
+
         Task<OwnWomanPlaceResponse> GetOwnWomanPlaceResponseById(int id);
     }
 }

@@ -11,11 +11,13 @@
     {
         private readonly IIncidentRepository incidentRepository;
         private readonly IViolentometerRepository violentometerRepository;
+        private readonly IWomanRepository womanRepository;
 
-        public IncidentsController(IIncidentRepository incidentRepository, IViolentometerRepository violentometerRepository)
+        public IncidentsController(IIncidentRepository incidentRepository, IViolentometerRepository violentometerRepository, IWomanRepository womanRepository)
         {
             this.incidentRepository = incidentRepository;
             this.violentometerRepository = violentometerRepository;
+            this.womanRepository = womanRepository;
         }
 
         [HttpGet]
@@ -31,7 +33,7 @@
 
             if (incident == null)
             {
-                return NotFound();
+                return BadRequest("Incident does not exist");
             }
 
             return incident;
@@ -45,9 +47,13 @@
                 return BadRequest(ModelState);
             }
 
+            var woman = womanRepository.GetWomanUserById(incidentResponse.WomanUserId);
+            if (woman == null)
+                return BadRequest("Woman does not exist");
+
             var violentometer = violentometerRepository.GetViolentometerByName(incidentResponse.Violentometer);
             if (violentometer == null)
-                return BadRequest("Violentometer doesn´t exist");
+                return BadRequest("Violentometer does not exist");
 
             var incident = new Incident
             {
@@ -56,7 +62,7 @@
                 Longitude=incidentResponse.Longitude,
                 Latitude=incidentResponse.Latitude,
                 IncidentDate=incidentResponse.IncidentDate,
-                //Woman = await incidentRepository.GetWoman(),
+                Woman = woman,
                 Violentometer=violentometer
             };
 
@@ -75,17 +81,22 @@
 
             var oldIncident = await this.incidentRepository.GetByIdAsync(id);
             if (oldIncident == null)
-                return BadRequest("The Incident does not exist.");
+                return BadRequest("Incident does not exist.");
 
             var violentometer = violentometerRepository.GetViolentometerByName(incidentResponse.Violentometer);
             if (violentometer == null)
-                return BadRequest("Violentometer doesn´t exist");
+                return BadRequest("Violentometer does not exist");
+
+            var woman = womanRepository.GetWomanUserById(incidentResponse.WomanUserId);
+            if (woman == null)
+                return BadRequest("Woman does not exist");
 
             oldIncident.IncidentDescription= incidentResponse.IncidentDescription;
             oldIncident.AgressorDescription= incidentResponse.AgressorDescription;
             oldIncident.Longitude=incidentResponse.Longitude;
             oldIncident.Latitude=incidentResponse.Latitude;
             oldIncident.IncidentDate=incidentResponse.IncidentDate;
+            oldIncident.Woman = woman;
             oldIncident.Violentometer=violentometer;
 
             var updatedIncident = await this.incidentRepository.UpdateAsync(oldIncident);
@@ -99,9 +110,9 @@
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var incident = await this.incidentRepository.GetByIdAsync(id);
+            var incident = await this.incidentRepository.GetIncidentsByIdAsync(id);
             if (incident == null)
-                return BadRequest("Incident not exists");
+                return BadRequest("Incident does not exist");
 
             await incidentRepository.DeleteAsync(incident);
             return Ok(incident);

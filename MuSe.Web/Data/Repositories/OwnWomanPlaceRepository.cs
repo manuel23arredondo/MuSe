@@ -31,17 +31,17 @@
                 .OrderBy(c => c.Woman.User);
         }
 
-        public async Task<OwnWomanPlace> GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(int id)
-        {
-            return await context.OwnWomanPlaces
-                .Include(c => c.KindOfPlace)
-                .Include(c => c.Woman.User)
-                .FirstOrDefaultAsync(c => c.Id == id);
-        }
-
         public async Task<KindOfPlace> GetKindOfPlacesByIdAsync(int id)
         {
             return await this.context.KindOfPlaces
+                .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public async Task<OwnWomanPlace> GetOwnWomanPlacesByIdAsync(int id)
+        {
+            return await this.context.OwnWomanPlaces
+                .Include(c => c.KindOfPlace)
+                .Include(c => c.Woman)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
@@ -53,6 +53,7 @@
                     Id = h.Id,
                     Latitud = h.Latitud,
                     Longitude= h.Longitude,
+                    WomanUserId = h.Woman.Id,
                     KindOfPlace = h.KindOfPlace.Description
                 });
         }
@@ -65,8 +66,17 @@
                     Id = h.Id,
                     Latitud = h.Latitud,
                     Longitude = h.Longitude,
+                    WomanUserId = h.Woman.Id,
                     KindOfPlace = h.KindOfPlace.Description
                 }).FirstOrDefaultAsync(h => h.Id == id);
+        }
+
+        public async Task<OwnWomanPlace> GetOwnWomanPlacesWithKindOfPlacesAndUsersByIdAsync(int id)
+        {
+            return await this.context.OwnWomanPlaces
+                .Include(c => c.KindOfPlace)
+                .Include(c => c.Woman)
+                .FirstOrDefaultAsync(c => c.Id == id);
         }
     }
 }

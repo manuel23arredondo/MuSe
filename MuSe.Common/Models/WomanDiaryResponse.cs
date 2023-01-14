@@ -17,6 +17,6 @@
         public string Mood { get; set; }
 
         [JsonProperty("woman")]
-        public string? WomanUserId { get; set; }
+        public int WomanUserId { get; set; }
     }
 }

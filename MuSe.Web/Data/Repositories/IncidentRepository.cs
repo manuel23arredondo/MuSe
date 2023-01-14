@@ -5,6 +5,8 @@
     using MuSe.Web.Data.Entities;
     using System.Linq;
     using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Http;
 
     public class IncidentRepository : GenericRepository<Incident>, IIncidentRepository
     {
@@ -30,10 +32,19 @@
                 .OrderBy(c => c.Woman.User);
         }
 
+        public async Task<Incident> GetIncidentsByIdAsync(int id)
+        {
+            return await this.context.Incidents
+                .Include(c => c.Violentometer)
+                .Include(c => c.Woman)
+                .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
         public async Task<Woman> GetWoman()
         {
+            //var user = HttpContext.
             //return await context.Womans
-            //    .Include(w => w.User)
+             //   .Include(w => w.User)
             //    .FirstOrDefaultAsync(u => u.User.UserName == User.Identity.Name);
             return null;
         }
@@ -63,6 +74,7 @@
                     IncidentDescription= h.IncidentDescription,
                     AgressorDescription= h.AgressorDescription,
                     Longitude = h.Longitude,
+                    WomanUserId = h.Woman.Id,
                     Latitude = h.Latitude,
                     Violentometer = h.Violentometer.Description
                 });
@@ -79,6 +91,7 @@
                     AgressorDescription = h.AgressorDescription,
                     Longitude = h.Longitude,
                     Latitude = h.Latitude,
+                    WomanUserId = h.Woman.Id,
                     Violentometer = h.Violentometer.Description
                 }).FirstOrDefaultAsync(h => h.Id == id);
         }

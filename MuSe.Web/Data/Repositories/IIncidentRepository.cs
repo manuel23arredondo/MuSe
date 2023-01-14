@@ -15,6 +15,8 @@
 
         Task<Violentometer> GetViolentometersByIdAsync(int id);
 
+        Task<Incident> GetIncidentsByIdAsync(int id);
+
         Task<Woman> GetWoman();
         IQueryable<IncidentResponse> GetAllIncidentsResponse();
 
